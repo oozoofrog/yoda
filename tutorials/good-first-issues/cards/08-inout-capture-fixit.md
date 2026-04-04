@@ -50,6 +50,12 @@ swiftc /tmp/gfi-87830.swift
 rg "escaping_inout_capture|capture a copy" include/swift/AST/DiagnosticsSIL.def lib/SILOptimizer/Mandatory/DiagnoseInvalidEscapingCaptures.cpp
 ```
 
+## 실제 repo 테스트 후보
+
+- `swift/test/SILOptimizer/access_enforcement_noescape_error.swift` — captured inout 관련 compile-time diagnostics가 모여 있는 핵심 테스트
+- `swift/test/SILOptimizer/access_enforcement_noescape.swift` — 관련 케이스를 더 넓게 보기에 좋음
+- `swift/test/expr/capture/inout.swift` — inout capture의 기본 semantic surface를 확인할 수 있음
+
 ---
 
 ## 예상 수정 유형

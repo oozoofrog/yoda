@@ -4,6 +4,9 @@
 
 현재 제공 코스:
 - [30-day-diagnostics-track.md](30-day-diagnostics-track.md)
+- [30-day-optimizer-track.md](30-day-optimizer-track.md)
+- [30-day-compiler-core-track.md](30-day-compiler-core-track.md)
+- [samples/README.md](samples/README.md)
 
 원칙:
 - 문서는 많아도 하루에 소비하는 양은 적게 유지합니다.

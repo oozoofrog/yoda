@@ -44,6 +44,11 @@ swiftc /tmp/gfi-86693.swift
 rg "typeattr_not_inheritance_clause|resolveGlobalActor" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckType.cpp
 ```
 
+## 실제 repo 테스트 후보
+
+- `swift/test/attr/global_actor.swift` — global actor attribute 관련 진단의 핵심 테스트 파일
+- `swift/test/Concurrency/global_actor_inference.swift` — global actor / actor isolation 경계 보조 파일
+
 ---
 
 ## 예상 수정 유형

@@ -44,6 +44,12 @@ swiftc /tmp/gfi-83344.swift
 rg "@dynamicMemberLookup|subscript\(dynamicMember" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckAttr.cpp
 ```
 
+## 실제 repo 테스트 후보
+
+- `swift/test/attr/attr_dynamic_member_lookup.swift` — @dynamicMemberLookup 요구사항 진단의 핵심 테스트 파일
+- `swift/test/attr/attr_dynamic_member_lookup_swift7.swift` — 언어 모드 차이와 접근성 진단까지 함께 보는 보조 파일
+- `swift/test/Constraints/keypath_dynamic_member_lookup.swift` — key path 기반 dynamic member lookup 경계를 함께 확인 가능
+
 ---
 
 ## 예상 수정 유형

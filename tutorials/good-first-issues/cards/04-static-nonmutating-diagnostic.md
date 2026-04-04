@@ -46,6 +46,12 @@ swiftc /tmp/gfi-77835.swift
 rg "static_functions_not_mutating" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckAttr.cpp
 ```
 
+## 실제 repo 테스트 후보
+
+- `swift/test/Sema/immutability.swift` — mutating/static modifier 조합 진단이 이미 들어있는 테스트
+- `swift/test/decl/subscript/static.swift` — static accessor modifier 조합 진단과 비교하기 좋음
+- `swift/test/decl/overload.swift` — static mutating 관련 추가 진단 케이스
+
 ---
 
 ## 예상 수정 유형

@@ -15,6 +15,9 @@
   - 관찰 로그 3줄 이상
   - 다음 날 첫 질문 1개
 
+### 로그 예시
+- [samples/diagnostics-track-log-samples.md](samples/diagnostics-track-log-samples.md)
+
 ---
 
 ## Week 1 — 환경과 관찰 루프 만들기

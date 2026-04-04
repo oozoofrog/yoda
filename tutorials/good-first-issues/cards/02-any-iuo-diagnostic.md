@@ -44,6 +44,11 @@ swiftc /tmp/gfi-72662.swift
 rg "incorrect_optional_any|implicitly_unwrapped_optional" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckType.cpp
 ```
 
+## 실제 repo 테스트 후보
+
+- `swift/test/type/explicit_existential.swift` — `any HasAssoc?` 류 optional-any spelling 진단이 이미 존재하는 핵심 테스트
+- `swift/test/type/implicit_some/explicit_existential.swift` — implicit some / explicit existential 경계에서 optional any 진단을 다루는 테스트
+
 ---
 
 ## 예상 수정 유형

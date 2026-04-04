@@ -57,7 +57,7 @@
 | [07-open-issue-analysis-workbook.md](07-open-issue-analysis-workbook.md) | open issue를 분석하는 실전 워크북 | 분석 로그와 가설 기록 |
 | [good-first-issues/README.md](good-first-issues/README.md) | open `good first issue` 카드 허브 | 짧은 실전 탐색 카드 |
 | [open-issue-templates/](open-issue-templates/) | open issue 분석 템플릿 | 분석 템플릿 / 세션 로그 |
-| [courses/README.md](courses/README.md) | 장기 학습 코스 허브 | 30일 단위 운영 가이드 |
+| [courses/README.md](courses/README.md) | 장기 학습 코스 허브 | diagnostics / optimizer / core 30일 코스 |
 | [case-studies/README.md](case-studies/README.md) | 사례 카탈로그와 백로그 | 다음 사례 선택 기준 |
 | [case-studies/cards/](case-studies/cards/) | 많은 사례를 빠르게 탐색하는 case card 모음 | 짧은 사례 기반 학습 |
 | [case-studies/](case-studies/) | 실제 merged fix를 부모 커밋에서 다시 구현하는 실습 | worktree 기반 수정 경험 |

@@ -50,6 +50,12 @@ swiftc /tmp/gfi-69241.swift
 rg "property definition has inferred type|opaque result type as its type by type inference" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckStorage.cpp
 ```
 
+## 실제 repo 테스트 후보
+
+- `swift/test/SILGen/opaque_result_type_class_property.swift` — property 위치에서 opaque result type이 나타나는 대표 테스트
+- `swift/test/SILGen/lazy_typecheck_opaque_result_type.swift` — lazy typecheck와 opaque result type이 만나는 경계 사례
+- `swift/test/ModuleInterface/opaque-result-types.swift` — interface 레벨에서 opaque result type 관련 surface를 확인할 수 있는 테스트
+
 ---
 
 ## 예상 수정 유형

@@ -48,6 +48,12 @@ swiftc /tmp/gfi-87322.swift
 rg "computed_property_missing_type|cannot_infer_type_for_pattern" include/swift/AST/DiagnosticsParse.def include/swift/AST/DiagnosticsSema.def lib/Parse/ParseDecl.cpp lib/Sema/TypeCheckPattern.cpp
 ```
 
+## 실제 repo 테스트 후보
+
+- `swift/test/decl/var/properties.swift` — computed property explicit type + pattern error가 함께 나오는 대표 테스트
+- `swift/test/decl/var/static_var.swift` — 같은 오류 surface를 static property에서 다시 확인할 수 있음
+- `swift/test/decl/protocol/protocols.swift` — property without type와 pattern error가 같이 드러나는 파일
+
 ---
 
 ## 예상 수정 유형

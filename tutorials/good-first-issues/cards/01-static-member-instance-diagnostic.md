@@ -52,6 +52,12 @@ swiftc /tmp/gfi-48759.swift
 rg "could_not_use_type_member_on_instance|static member" include/swift/AST/DiagnosticsSema.def lib/Sema/CSDiagnostics.cpp
 ```
 
+## 실제 repo 테스트 후보
+
+- `swift/test/Constraints/members.swift` — 인스턴스에서 static member를 잘못 참조할 때의 대표 diagnostics 모음
+- `swift/test/decl/subscript/static.swift` — static subscript를 instance처럼 쓰는 오류 케이스
+- `swift/test/NameLookup/name_lookup.swift` — lookup 경로가 복잡한 static member misuse 사례
+
 ---
 
 ## 예상 수정 유형

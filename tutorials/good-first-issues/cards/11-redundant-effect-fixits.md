@@ -52,6 +52,12 @@ swiftc /tmp/gfi-85882.swift
 rg "no_throw_in_try|effect_marker_on_single_value_stmt" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckEffects.cpp
 ```
 
+## 실제 repo 테스트 후보
+
+- `swift/test/Parse/try.swift` — `try` 관련 parse/diagnostic surface가 가장 넓게 모여 있음
+- `swift/test/SIL/diagnose_effects.swift` — effect 관련 진단을 모아둔 테스트
+- `swift/test/Unsafe/unsafe_in_unsafe.swift` — `unsafe` marker surface를 별도로 확인 가능
+
 ---
 
 ## 예상 수정 유형

@@ -46,6 +46,11 @@ swiftc /tmp/gfi-87324.swift
 rg "computed_property_missing_type" include/swift/AST/DiagnosticsParse.def lib/Parse/ParseDecl.cpp
 ```
 
+## 실제 repo 테스트 후보
+
+- `swift/test/decl/var/properties.swift` — computed property missing type 진단과 fix-it이 들어갈 가장 직접적인 후보
+- `swift/test/decl/var/static_var.swift` — placeholder fix-it을 static property surface에도 확장할 수 있는 후보
+
 ---
 
 ## 예상 수정 유형

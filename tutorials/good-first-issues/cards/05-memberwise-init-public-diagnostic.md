@@ -47,6 +47,11 @@ swiftc /tmp/gfi-78362.swift
 rg "witness_not_accessible_proto|memberwise initializer" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckProtocol.cpp lib/Sema/CodeSynthesis.cpp
 ```
 
+## 실제 repo 테스트 후보
+
+- `swift/test/decl/memberwise_init_compat_diag.swift` — memberwise initializer 관련 진단과 note/fix-it 패턴을 확인하기 좋음
+- `swift/test/Sema/enum_raw_representable.swift` — RawRepresentable 관련 synthesis/conformance 진단이 모여 있음
+
 ---
 
 ## 예상 수정 유형

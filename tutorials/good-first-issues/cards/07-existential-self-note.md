@@ -51,6 +51,12 @@ swiftc /tmp/gfi-76320.swift
 rg "generic constraint instead|member .* cannot be used on value of type" include/swift/AST/DiagnosticsSema.def lib/Sema/CSDiagnostics.cpp
 ```
 
+## 실제 repo 테스트 후보
+
+- `swift/test/decl/protocol/existential_member_access/basic.swift` — existential에서 member 사용 제한 진단이 가장 풍부한 파일
+- `swift/test/decl/protocol/existential_member_access/constraint_failure.swift` — generic requirement 실패를 세분화해 보는 데 유리
+- `swift/test/Constraints/protocols.swift` — 간단한 `consider using a generic constraint instead` 진단 사례
+
 ---
 
 ## 예상 수정 유형

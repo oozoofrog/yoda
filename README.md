@@ -66,7 +66,7 @@
 | [tutorials/06-good-first-issues-swift-6.0-6.3.md](tutorials/06-good-first-issues-swift-6.0-6.3.md) | Swift 6.0~6.3 `good first issue` 학습 코스 | open issue 기반 실전 진입 |
 | [tutorials/07-open-issue-analysis-workbook.md](tutorials/07-open-issue-analysis-workbook.md) | open issue 분석 워크북 | 분석 로그와 가설 훈련 |
 | [tutorials/good-first-issues/README.md](tutorials/good-first-issues/README.md) | open `good first issue` 카드 허브 | 버전별 짧은 실전 과제 |
-| [tutorials/courses/README.md](tutorials/courses/README.md) | 장기 학습 코스 허브 | 30일 단위 코스 |
+| [tutorials/courses/README.md](tutorials/courses/README.md) | 장기 학습 코스 허브 | diagnostics / optimizer / compiler core 30일 코스 |
 | [tutorials/case-studies/README.md](tutorials/case-studies/README.md) | 사례 카탈로그와 백로그 | 다음 사례 선택과 난이도 조절 |
 | [tutorials/case-studies/cards/](tutorials/case-studies/cards/) | 많은 사례를 빠르게 탐색하는 case card 모음 | 넓은 사례 학습 |
 | [tutorials/case-studies/](tutorials/case-studies/) | 부모 커밋에서 merged fix를 다시 구현하는 사례 실습 | 사례별 worktree 실습 기록 |
