@@ -40,5 +40,5 @@
 ## 메타데이터
 
 - 메타데이터 원본: [index.yaml](index.yaml)
-- 각 카드에는 단계 추정, 첫 진입 파일 후보, 첫 재현 명령 후보가 포함됩니다.
+- 각 카드에는 단계 추정, 첫 진입 파일 후보, 첫 재현 명령 후보, 실제 repo 테스트 후보가 포함됩니다.
 - 이 라이브러리는 open issue용이므로, merged 사례 라이브러리인 [../case-studies/README.md](../case-studies/README.md)와 구분해서 사용하세요.

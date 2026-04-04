@@ -38,6 +38,13 @@ swiftc /tmp/gfi-48759.swift"
     related_full_tutorials:
       - "../../case-studies/01-sema-fixit-source-locs.md"
     doc_path: "tutorials/good-first-issues/cards/01-static-member-instance-diagnostic.md"
+    repo_test_candidates:
+      - path: "swift/test/Constraints/members.swift"
+        why: "인스턴스에서 static member를 잘못 참조할 때의 대표 diagnostics 모음"
+      - path: "swift/test/decl/subscript/static.swift"
+        why: "static subscript를 instance처럼 쓰는 오류 케이스"
+      - path: "swift/test/NameLookup/name_lookup.swift"
+        why: "lookup 경로가 복잡한 static member misuse 사례"
   - id: "gfi-02"
     issue_number: 72662
     title: "`any P!`에 대한 중복 진단 정리"
@@ -73,6 +80,11 @@ swiftc /tmp/gfi-72662.swift"
     related_full_tutorials:
       - "../../case-studies/01-sema-fixit-source-locs.md"
     doc_path: "tutorials/good-first-issues/cards/02-any-iuo-diagnostic.md"
+    repo_test_candidates:
+      - path: "swift/test/type/explicit_existential.swift"
+        why: "optional any spelling 진단이 이미 들어 있는 핵심 테스트"
+      - path: "swift/test/type/implicit_some/explicit_existential.swift"
+        why: "implicit some / explicit existential 경계 테스트"
   - id: "gfi-03"
     issue_number: 69241
     title: "opaque property inferred type에 대한 fix-it 추가"
@@ -110,6 +122,13 @@ swiftc /tmp/gfi-69241.swift"
     related_full_tutorials:
       - "../../case-studies/01-sema-fixit-source-locs.md"
     doc_path: "tutorials/good-first-issues/cards/03-opaque-property-fixit.md"
+    repo_test_candidates:
+      - path: "swift/test/SILGen/opaque_result_type_class_property.swift"
+        why: "property 위치의 opaque result type surface를 확인 가능"
+      - path: "swift/test/SILGen/lazy_typecheck_opaque_result_type.swift"
+        why: "opaque result type와 lazy typecheck 경계 사례"
+      - path: "swift/test/ModuleInterface/opaque-result-types.swift"
+        why: "opaque 관련 인터페이스 surface를 같이 볼 수 있음"
   - id: "gfi-04"
     issue_number: 77835
     title: "`static nonmutating` 조합에 대한 진단 개선"
@@ -144,6 +163,13 @@ swiftc /tmp/gfi-77835.swift"
     related_full_tutorials:
       - "../../case-studies/01-sema-fixit-source-locs.md"
     doc_path: "tutorials/good-first-issues/cards/04-static-nonmutating-diagnostic.md"
+    repo_test_candidates:
+      - path: "swift/test/Sema/immutability.swift"
+        why: "mutating/static modifier 조합 진단 확인"
+      - path: "swift/test/decl/subscript/static.swift"
+        why: "static accessor modifier 진단 비교용"
+      - path: "swift/test/decl/overload.swift"
+        why: "static mutating 관련 보조 진단 케이스"
   - id: "gfi-05"
     issue_number: 78362
     title: "memberwise init 공개성 진단과 fix-it 개선"
@@ -180,6 +206,11 @@ swiftc /tmp/gfi-78362.swift"
     related_full_tutorials:
       - "../../case-studies/01-sema-fixit-source-locs.md"
     doc_path: "tutorials/good-first-issues/cards/05-memberwise-init-public-diagnostic.md"
+    repo_test_candidates:
+      - path: "swift/test/decl/memberwise_init_compat_diag.swift"
+        why: "memberwise initializer 관련 진단과 note/fix-it 패턴"
+      - path: "swift/test/Sema/enum_raw_representable.swift"
+        why: "RawRepresentable synthesis/conformance 진단 모음"
   - id: "gfi-06"
     issue_number: 83344
     title: "`@dynamicMemberLookup` 요구사항 누락 시 fix-it 추가"
@@ -214,6 +245,13 @@ swiftc /tmp/gfi-83344.swift"
     related_full_tutorials:
       - "../../case-studies/01-sema-fixit-source-locs.md"
     doc_path: "tutorials/good-first-issues/cards/06-dynamicmemberlookup-fixits.md"
+    repo_test_candidates:
+      - path: "swift/test/attr/attr_dynamic_member_lookup.swift"
+        why: "@dynamicMemberLookup 요구사항 핵심 테스트"
+      - path: "swift/test/attr/attr_dynamic_member_lookup_swift7.swift"
+        why: "언어 모드/접근성 관련 보조 테스트"
+      - path: "swift/test/Constraints/keypath_dynamic_member_lookup.swift"
+        why: "key path 기반 dynamic member lookup 경계"
   - id: "gfi-07"
     issue_number: 76320
     title: "existential에서 Self-reference 메서드를 못 쓰는 이유 note 추가"
@@ -249,6 +287,13 @@ swiftc /tmp/gfi-76320.swift"
     related_full_tutorials:
       - "../../case-studies/03-irgen-fast-existential-casts.md"
     doc_path: "tutorials/good-first-issues/cards/07-existential-self-note.md"
+    repo_test_candidates:
+      - path: "swift/test/decl/protocol/existential_member_access/basic.swift"
+        why: "existential member access 제한 진단 핵심 테스트"
+      - path: "swift/test/decl/protocol/existential_member_access/constraint_failure.swift"
+        why: "generic requirement 실패 세분화 테스트"
+      - path: "swift/test/Constraints/protocols.swift"
+        why: "간단한 generic constraint 진단 예시"
   - id: "gfi-08"
     issue_number: 87830
     title: "escaping closure가 `inout`를 캡처할 때 fix-it 추가"
@@ -285,6 +330,13 @@ swiftc /tmp/gfi-87830.swift"
     related_full_tutorials:
       - "../../case-studies/02-sil-location-explicitness.md"
     doc_path: "tutorials/good-first-issues/cards/08-inout-capture-fixit.md"
+    repo_test_candidates:
+      - path: "swift/test/SILOptimizer/access_enforcement_noescape_error.swift"
+        why: "captured inout 관련 compile-time diagnostics 모음"
+      - path: "swift/test/SILOptimizer/access_enforcement_noescape.swift"
+        why: "관련 exclusivity 케이스 확장"
+      - path: "swift/test/expr/capture/inout.swift"
+        why: "inout capture의 기본 semantic surface"
   - id: "gfi-09"
     issue_number: 87322
     title: "computed property의 중복 진단 제거"
@@ -321,6 +373,13 @@ swiftc /tmp/gfi-87322.swift"
     related_full_tutorials:
       - "../../case-studies/01-sema-fixit-source-locs.md"
     doc_path: "tutorials/good-first-issues/cards/09-computed-property-redundant-diagnostic.md"
+    repo_test_candidates:
+      - path: "swift/test/decl/var/properties.swift"
+        why: "computed property explicit type + pattern error 대표 테스트"
+      - path: "swift/test/decl/var/static_var.swift"
+        why: "static property에서 같은 오류 surface 확인"
+      - path: "swift/test/decl/protocol/protocols.swift"
+        why: "property without type 관련 보조 케이스"
   - id: "gfi-10"
     issue_number: 87324
     title: "computed property의 type annotation fix-it 추가"
@@ -355,6 +414,11 @@ swiftc /tmp/gfi-87324.swift"
     related_full_tutorials:
       - "../../case-studies/01-sema-fixit-source-locs.md"
     doc_path: "tutorials/good-first-issues/cards/10-computed-property-type-fixit.md"
+    repo_test_candidates:
+      - path: "swift/test/decl/var/properties.swift"
+        why: "computed property missing type fix-it의 직접 후보"
+      - path: "swift/test/decl/var/static_var.swift"
+        why: "static property에도 같은 placeholder fix-it surface 존재"
   - id: "gfi-11"
     issue_number: 85882
     title: "redundant effect marker에 fix-it 추가"
@@ -393,6 +457,13 @@ swiftc /tmp/gfi-85882.swift"
     related_full_tutorials:
       - "../../case-studies/01-sema-fixit-source-locs.md"
     doc_path: "tutorials/good-first-issues/cards/11-redundant-effect-fixits.md"
+    repo_test_candidates:
+      - path: "swift/test/Parse/try.swift"
+        why: "try 관련 parse/diagnostic surface가 넓게 모여 있음"
+      - path: "swift/test/SIL/diagnose_effects.swift"
+        why: "effect 관련 진단 모음"
+      - path: "swift/test/Unsafe/unsafe_in_unsafe.swift"
+        why: "unsafe marker 관련 보조 테스트"
   - id: "gfi-12"
     issue_number: 86693
     title: "inheritance clause의 global actor annotation 금지"
@@ -427,3 +498,8 @@ swiftc /tmp/gfi-86693.swift"
     related_full_tutorials:
       - "../../case-studies/01-sema-fixit-source-locs.md"
     doc_path: "tutorials/good-first-issues/cards/12-global-actor-inheritance-clause.md"
+    repo_test_candidates:
+      - path: "swift/test/attr/global_actor.swift"
+        why: "global actor attribute 관련 핵심 테스트"
+      - path: "swift/test/Concurrency/global_actor_inference.swift"
+        why: "global actor / actor isolation 보조 테스트"
