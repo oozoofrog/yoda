@@ -25,6 +25,7 @@
    - [01-sema-fixit-source-locs.md](case-studies/01-sema-fixit-source-locs.md)
    - [02-sil-location-explicitness.md](case-studies/02-sil-location-explicitness.md)
    - [03-irgen-fast-existential-casts.md](case-studies/03-irgen-fast-existential-casts.md)
+7. 이후 [case-studies/README.md](case-studies/README.md)에서 다음 사례를 고릅니다
 
 ### 목표별 추천 경로
 - **환경부터 익히기**: 01 → 02
@@ -43,6 +44,7 @@
 | [02-debugging-environment-lab.md](02-debugging-environment-lab.md) | AST/SIL/IR/LLDB 관찰 루프 실습 | 디버깅 커맨드 셋, 관찰 로그 |
 | [03-pipeline-entrypoints-and-knowledge-map.md](03-pipeline-entrypoints-and-knowledge-map.md) | 단계별 진입점과 읽기 순서 지도 | 단계-파일-문서 매핑표 |
 | [04-stage-modification-workflow.md](04-stage-modification-workflow.md) | 특정 단계 수정의 공통 절차 | 재현/수정/검증 체크리스트 |
+| [case-studies/README.md](case-studies/README.md) | 사례 카탈로그와 백로그 | 다음 사례 선택 기준 |
 | [case-studies/](case-studies/) | 실제 merged fix를 부모 커밋에서 다시 구현하는 실습 | worktree 기반 수정 경험 |
 
 ---

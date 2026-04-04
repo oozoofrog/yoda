@@ -63,6 +63,7 @@
 | [tutorials/02-debugging-environment-lab.md](tutorials/02-debugging-environment-lab.md) | AST/SIL/IR/LLDB 관찰 루프 실습 | 디버깅 명령 세트 |
 | [tutorials/03-pipeline-entrypoints-and-knowledge-map.md](tutorials/03-pipeline-entrypoints-and-knowledge-map.md) | 단계별 진입점과 지식 지도 | 단계-파일-문서 매핑 |
 | [tutorials/04-stage-modification-workflow.md](tutorials/04-stage-modification-workflow.md) | 재현 → 수정 → 검증 공통 절차 | 수정 체크리스트 |
+| [tutorials/case-studies/README.md](tutorials/case-studies/README.md) | 사례 카탈로그와 백로그 | 다음 사례 선택과 난이도 조절 |
 | [tutorials/case-studies/](tutorials/case-studies/) | 부모 커밋에서 merged fix를 다시 구현하는 사례 실습 | 사례별 worktree 실습 기록 |
 
 ---
