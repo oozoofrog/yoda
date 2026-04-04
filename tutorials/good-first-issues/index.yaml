@@ -1,0 +1,429 @@
+version: 1
+issues:
+  - id: "gfi-01"
+    issue_number: 48759
+    title: "정적 멤버를 인스턴스에서 쓸 때의 진단 문구 개선"
+    swift_version_focus: "6.0"
+    status: "open"
+    stage_guess: "Sema / diagnostics"
+    difficulty: "하"
+    duration_minutes: 30
+    kind: "diagnostics wording"
+    labels:
+      - "good first issue"
+      - "diagnostics quality"
+      - "type checker"
+      - "swift 6.0"
+    repro_code_present: true
+    entry_file_guesses:
+      - "include/swift/AST/DiagnosticsSema.def"
+      - "lib/Sema/CSDiagnostics.cpp"
+    repro_command_guesses:
+      - "cat > /tmp/gfi-48759.swift <<'SWIFT'
+struct HasStatic {
+    func foo() {
+        print(cvar)
+    }
+    static let cvar = 123
+}
+SWIFT
+swiftc /tmp/gfi-48759.swift"
+      - "rg \"could_not_use_type_member_on_instance|static member\" include/swift/AST/DiagnosticsSema.def lib/Sema/CSDiagnostics.cpp"
+    expected_change_kind: "diagnostics wording / note refinement"
+    related_reference_docs:
+      - "../03-pipeline-entrypoints-and-knowledge-map.md"
+      - "../04-stage-modification-workflow.md"
+    related_case_cards:
+      - "../../case-studies/cards/08-sema-nonisolated-unsafe-fixit-range.md"
+    related_full_tutorials:
+      - "../../case-studies/01-sema-fixit-source-locs.md"
+    doc_path: "tutorials/good-first-issues/cards/01-static-member-instance-diagnostic.md"
+  - id: "gfi-02"
+    issue_number: 72662
+    title: "`any P!`에 대한 중복 진단 정리"
+    swift_version_focus: "6.0"
+    status: "open"
+    stage_guess: "Sema / type resolution"
+    difficulty: "중"
+    duration_minutes: 45
+    kind: "diagnostics deduplication + spelling"
+    labels:
+      - "good first issue"
+      - "diagnostics quality"
+      - "fix-its"
+      - "existentials"
+      - "swift 6.0"
+    repro_code_present: true
+    entry_file_guesses:
+      - "include/swift/AST/DiagnosticsSema.def"
+      - "lib/Sema/TypeCheckType.cpp"
+    repro_command_guesses:
+      - "cat > /tmp/gfi-72662.swift <<'SWIFT'
+protocol P {}
+let _: any P!
+SWIFT
+swiftc /tmp/gfi-72662.swift"
+      - "rg \"incorrect_optional_any|implicitly_unwrapped_optional\" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckType.cpp"
+    expected_change_kind: "diagnostic consolidation / fix-it spelling"
+    related_reference_docs:
+      - "../03-pipeline-entrypoints-and-knowledge-map.md"
+      - "../04-stage-modification-workflow.md"
+    related_case_cards:
+      - "../../case-studies/cards/07-sema-implicit-available-source-loc.md"
+    related_full_tutorials:
+      - "../../case-studies/01-sema-fixit-source-locs.md"
+    doc_path: "tutorials/good-first-issues/cards/02-any-iuo-diagnostic.md"
+  - id: "gfi-03"
+    issue_number: 69241
+    title: "opaque property inferred type에 대한 fix-it 추가"
+    swift_version_focus: "6.0"
+    status: "open"
+    stage_guess: "Sema / storage type checking"
+    difficulty: "중"
+    duration_minutes: 45
+    kind: "fix-it insertion"
+    labels:
+      - "good first issue"
+      - "diagnostics quality"
+      - "fix-its"
+      - "opaque types"
+      - "swift 6.0"
+    repro_code_present: true
+    entry_file_guesses:
+      - "include/swift/AST/DiagnosticsSema.def"
+      - "lib/Sema/TypeCheckStorage.cpp"
+    repro_command_guesses:
+      - "cat > /tmp/gfi-69241.swift <<'SWIFT'
+protocol Proto {}
+struct Concrete: Proto {}
+func getProto() -> some Proto { Concrete() }
+
+let value = getProto()
+SWIFT
+swiftc /tmp/gfi-69241.swift"
+      - "rg \"property definition has inferred type|opaque result type as its type by type inference\" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckStorage.cpp"
+    expected_change_kind: "fix-it insertion"
+    related_reference_docs:
+      - "../03-pipeline-entrypoints-and-knowledge-map.md"
+    related_case_cards:
+      - "../../case-studies/cards/03-sema-anyappleos-diagnostic-group.md"
+    related_full_tutorials:
+      - "../../case-studies/01-sema-fixit-source-locs.md"
+    doc_path: "tutorials/good-first-issues/cards/03-opaque-property-fixit.md"
+  - id: "gfi-04"
+    issue_number: 77835
+    title: "`static nonmutating` 조합에 대한 진단 개선"
+    swift_version_focus: "6.1"
+    status: "open"
+    stage_guess: "Sema / attributes"
+    difficulty: "하"
+    duration_minutes: 30
+    kind: "diagnostics wording"
+    labels:
+      - "good first issue"
+      - "diagnostics quality"
+      - "type checker"
+      - "swift 6.1"
+    repro_code_present: true
+    entry_file_guesses:
+      - "include/swift/AST/DiagnosticsSema.def"
+      - "lib/Sema/TypeCheckAttr.cpp"
+    repro_command_guesses:
+      - "cat > /tmp/gfi-77835.swift <<'SWIFT'
+struct S {
+  nonmutating static func foo() {}
+}
+SWIFT
+swiftc /tmp/gfi-77835.swift"
+      - "rg \"static_functions_not_mutating\" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckAttr.cpp"
+    expected_change_kind: "diagnostic wording / note refinement"
+    related_reference_docs:
+      - "../04-stage-modification-workflow.md"
+    related_case_cards:
+      - "../../case-studies/cards/08-sema-nonisolated-unsafe-fixit-range.md"
+    related_full_tutorials:
+      - "../../case-studies/01-sema-fixit-source-locs.md"
+    doc_path: "tutorials/good-first-issues/cards/04-static-nonmutating-diagnostic.md"
+  - id: "gfi-05"
+    issue_number: 78362
+    title: "memberwise init 공개성 진단과 fix-it 개선"
+    swift_version_focus: "6.2"
+    status: "open"
+    stage_guess: "Sema / protocol conformance + synthesis"
+    difficulty: "중"
+    duration_minutes: 45
+    kind: "diagnostics + fix-it guidance"
+    labels:
+      - "good first issue"
+      - "diagnostics quality"
+      - "fix-its"
+      - "memberwise init"
+      - "swift 6.2"
+    repro_code_present: true
+    entry_file_guesses:
+      - "include/swift/AST/DiagnosticsSema.def"
+      - "lib/Sema/TypeCheckProtocol.cpp"
+      - "lib/Sema/CodeSynthesis.cpp"
+    repro_command_guesses:
+      - "cat > /tmp/gfi-78362.swift <<'SWIFT'
+public struct Number: RawRepresentable {
+  public let rawValue: Int
+}
+SWIFT
+swiftc /tmp/gfi-78362.swift"
+      - "rg \"witness_not_accessible_proto|memberwise initializer\" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckProtocol.cpp lib/Sema/CodeSynthesis.cpp"
+    expected_change_kind: "diagnostic improvement + fix-it guidance"
+    related_reference_docs:
+      - "../03-pipeline-entrypoints-and-knowledge-map.md"
+    related_case_cards:
+      - "../../case-studies/cards/03-sema-anyappleos-diagnostic-group.md"
+    related_full_tutorials:
+      - "../../case-studies/01-sema-fixit-source-locs.md"
+    doc_path: "tutorials/good-first-issues/cards/05-memberwise-init-public-diagnostic.md"
+  - id: "gfi-06"
+    issue_number: 83344
+    title: "`@dynamicMemberLookup` 요구사항 누락 시 fix-it 추가"
+    swift_version_focus: "6.2"
+    status: "open"
+    stage_guess: "Sema / attribute validation"
+    difficulty: "중"
+    duration_minutes: 45
+    kind: "fix-it insertion"
+    labels:
+      - "good first issue"
+      - "diagnostics quality"
+      - "fix-its"
+      - "attributes"
+      - "swift 6.2"
+    repro_code_present: true
+    entry_file_guesses:
+      - "include/swift/AST/DiagnosticsSema.def"
+      - "lib/Sema/TypeCheckAttr.cpp"
+    repro_command_guesses:
+      - "cat > /tmp/gfi-83344.swift <<'SWIFT'
+@dynamicMemberLookup
+struct Test {}
+SWIFT
+swiftc /tmp/gfi-83344.swift"
+      - "rg \"@dynamicMemberLookup|subscript\(dynamicMember\" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckAttr.cpp"
+    expected_change_kind: "fix-it insertion / note addition"
+    related_reference_docs:
+      - "../03-pipeline-entrypoints-and-knowledge-map.md"
+    related_case_cards:
+      - "../../case-studies/cards/03-sema-anyappleos-diagnostic-group.md"
+    related_full_tutorials:
+      - "../../case-studies/01-sema-fixit-source-locs.md"
+    doc_path: "tutorials/good-first-issues/cards/06-dynamicmemberlookup-fixits.md"
+  - id: "gfi-07"
+    issue_number: 76320
+    title: "existential에서 Self-reference 메서드를 못 쓰는 이유 note 추가"
+    swift_version_focus: "6.2"
+    status: "open"
+    stage_guess: "Sema / diagnostics for existentials"
+    difficulty: "중상"
+    duration_minutes: 60
+    kind: "note addition"
+    labels:
+      - "good first issue"
+      - "diagnostics quality"
+      - "type checker"
+      - "existentials"
+      - "swift 6.2"
+    repro_code_present: true
+    entry_file_guesses:
+      - "include/swift/AST/DiagnosticsSema.def"
+      - "lib/Sema/CSDiagnostics.cpp"
+    repro_command_guesses:
+      - "cat > /tmp/gfi-76320.swift <<'SWIFT'
+protocol Base { associatedtype SomeID: Hashable }
+protocol Alpha: Base { func take(id: Self.SomeID) }
+struct Use { let alpha: any Alpha; func test() { alpha.take(id: 12) } }
+SWIFT
+swiftc /tmp/gfi-76320.swift"
+      - "rg \"generic constraint instead|member .* cannot be used on value of type\" include/swift/AST/DiagnosticsSema.def lib/Sema/CSDiagnostics.cpp"
+    expected_change_kind: "note addition / diagnostic explanation"
+    related_reference_docs:
+      - "../03-pipeline-entrypoints-and-knowledge-map.md"
+    related_case_cards:
+      - "../../case-studies/cards/06-irgen-typed-throws-crash.md"
+    related_full_tutorials:
+      - "../../case-studies/03-irgen-fast-existential-casts.md"
+    doc_path: "tutorials/good-first-issues/cards/07-existential-self-note.md"
+  - id: "gfi-08"
+    issue_number: 87830
+    title: "escaping closure가 `inout`를 캡처할 때 fix-it 추가"
+    swift_version_focus: "6.3"
+    status: "open"
+    stage_guess: "Sema / closures + capture semantics"
+    difficulty: "중"
+    duration_minutes: 45
+    kind: "fix-it + note addition"
+    labels:
+      - "good first issue"
+      - "diagnostics quality"
+      - "fix-its"
+      - "closures"
+      - "swift 6.3"
+    repro_code_present: true
+    entry_file_guesses:
+      - "include/swift/AST/DiagnosticsSIL.def"
+      - "lib/SILOptimizer/Mandatory/DiagnoseInvalidEscapingCaptures.cpp"
+    repro_command_guesses:
+      - "cat > /tmp/gfi-87830.swift <<'SWIFT'
+func bar(_: @escaping () -> Void) {}
+func foo(_ i: inout Int) {
+  bar { _ = i }
+}
+SWIFT
+swiftc /tmp/gfi-87830.swift"
+      - "rg \"escaping_inout_capture|capture a copy\" include/swift/AST/DiagnosticsSIL.def lib/SILOptimizer/Mandatory/DiagnoseInvalidEscapingCaptures.cpp"
+    expected_change_kind: "note addition + fix-it insertion"
+    related_reference_docs:
+      - "../04-stage-modification-workflow.md"
+    related_case_cards:
+      - "../../case-studies/cards/10-sil-memaccessutils-assert.md"
+    related_full_tutorials:
+      - "../../case-studies/02-sil-location-explicitness.md"
+    doc_path: "tutorials/good-first-issues/cards/08-inout-capture-fixit.md"
+  - id: "gfi-09"
+    issue_number: 87322
+    title: "computed property의 중복 진단 제거"
+    swift_version_focus: "6.3"
+    status: "open"
+    stage_guess: "Parse + Sema diagnostics interplay"
+    difficulty: "중"
+    duration_minutes: 45
+    kind: "diagnostic suppression / deduplication"
+    labels:
+      - "good first issue"
+      - "diagnostics quality"
+      - "type checker"
+      - "swift 6.3"
+    repro_code_present: true
+    entry_file_guesses:
+      - "include/swift/AST/DiagnosticsParse.def"
+      - "include/swift/AST/DiagnosticsSema.def"
+      - "lib/Parse/ParseDecl.cpp"
+      - "lib/Sema/TypeCheckPattern.cpp"
+    repro_command_guesses:
+      - "cat > /tmp/gfi-87322.swift <<'SWIFT'
+func foo() {
+  var int {}
+}
+SWIFT
+swiftc /tmp/gfi-87322.swift"
+      - "rg \"computed_property_missing_type|cannot_infer_type_for_pattern\" include/swift/AST/DiagnosticsParse.def include/swift/AST/DiagnosticsSema.def lib/Parse/ParseDecl.cpp lib/Sema/TypeCheckPattern.cpp"
+    expected_change_kind: "diagnostic suppression / duplicate removal"
+    related_reference_docs:
+      - "../03-pipeline-entrypoints-and-knowledge-map.md"
+    related_case_cards:
+      - "../../case-studies/cards/08-sema-nonisolated-unsafe-fixit-range.md"
+    related_full_tutorials:
+      - "../../case-studies/01-sema-fixit-source-locs.md"
+    doc_path: "tutorials/good-first-issues/cards/09-computed-property-redundant-diagnostic.md"
+  - id: "gfi-10"
+    issue_number: 87324
+    title: "computed property의 type annotation fix-it 추가"
+    swift_version_focus: "6.3"
+    status: "open"
+    stage_guess: "Parse diagnostics / fix-it"
+    difficulty: "하"
+    duration_minutes: 30
+    kind: "fix-it insertion"
+    labels:
+      - "good first issue"
+      - "diagnostics quality"
+      - "fix-its"
+      - "swift 6.3"
+    repro_code_present: true
+    entry_file_guesses:
+      - "include/swift/AST/DiagnosticsParse.def"
+      - "lib/Parse/ParseDecl.cpp"
+    repro_command_guesses:
+      - "cat > /tmp/gfi-87324.swift <<'SWIFT'
+func foo() {
+  var int {}
+}
+SWIFT
+swiftc /tmp/gfi-87324.swift"
+      - "rg \"computed_property_missing_type\" include/swift/AST/DiagnosticsParse.def lib/Parse/ParseDecl.cpp"
+    expected_change_kind: "fix-it insertion"
+    related_reference_docs:
+      - "../04-stage-modification-workflow.md"
+    related_case_cards:
+      - "../../case-studies/cards/08-sema-nonisolated-unsafe-fixit-range.md"
+    related_full_tutorials:
+      - "../../case-studies/01-sema-fixit-source-locs.md"
+    doc_path: "tutorials/good-first-issues/cards/10-computed-property-type-fixit.md"
+  - id: "gfi-11"
+    issue_number: 85882
+    title: "redundant effect marker에 fix-it 추가"
+    swift_version_focus: "6.3"
+    status: "open"
+    stage_guess: "Sema / effects diagnostics"
+    difficulty: "중"
+    duration_minutes: 45
+    kind: "fix-it insertion"
+    labels:
+      - "good first issue"
+      - "diagnostics quality"
+      - "fix-its"
+      - "error handling"
+      - "swift 6.3"
+    repro_code_present: true
+    entry_file_guesses:
+      - "include/swift/AST/DiagnosticsSema.def"
+      - "lib/Sema/TypeCheckEffects.cpp"
+    repro_command_guesses:
+      - "cat > /tmp/gfi-85882.swift <<'SWIFT'
+@discardableResult
+func g() -> Int? { nil }
+
+_ = try g()
+_ = try switch g() { default: 0 }
+_ = unsafe switch g() { default: 0 }
+SWIFT
+swiftc /tmp/gfi-85882.swift"
+      - "rg \"no_throw_in_try|effect_marker_on_single_value_stmt\" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckEffects.cpp"
+    expected_change_kind: "fix-it insertion"
+    related_reference_docs:
+      - "../04-stage-modification-workflow.md"
+    related_case_cards:
+      - "../../case-studies/cards/08-sema-nonisolated-unsafe-fixit-range.md"
+    related_full_tutorials:
+      - "../../case-studies/01-sema-fixit-source-locs.md"
+    doc_path: "tutorials/good-first-issues/cards/11-redundant-effect-fixits.md"
+  - id: "gfi-12"
+    issue_number: 86693
+    title: "inheritance clause의 global actor annotation 금지"
+    swift_version_focus: "6.3"
+    status: "open"
+    stage_guess: "Type resolution / attributes in inheritance clauses"
+    difficulty: "중"
+    duration_minutes: 45
+    kind: "accepts invalid / rule enforcement"
+    labels:
+      - "good first issue"
+      - "type checker"
+      - "accepts invalid"
+      - "concurrency"
+      - "swift 6.3"
+    repro_code_present: true
+    entry_file_guesses:
+      - "include/swift/AST/DiagnosticsSema.def"
+      - "lib/Sema/TypeCheckType.cpp"
+    repro_command_guesses:
+      - "cat > /tmp/gfi-86693.swift <<'SWIFT'
+class Base {}
+class Derived: @MainActor Base {}
+SWIFT
+swiftc /tmp/gfi-86693.swift"
+      - "rg \"typeattr_not_inheritance_clause|resolveGlobalActor\" include/swift/AST/DiagnosticsSema.def lib/Sema/TypeCheckType.cpp"
+    expected_change_kind: "rule enforcement + targeted diagnostic"
+    related_reference_docs:
+      - "../03-pipeline-entrypoints-and-knowledge-map.md"
+    related_case_cards:
+      - "../../case-studies/cards/03-sema-anyappleos-diagnostic-group.md"
+    related_full_tutorials:
+      - "../../case-studies/01-sema-fixit-source-locs.md"
+    doc_path: "tutorials/good-first-issues/cards/12-global-actor-inheritance-clause.md"

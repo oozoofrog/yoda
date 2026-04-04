@@ -64,6 +64,9 @@
 | [tutorials/03-pipeline-entrypoints-and-knowledge-map.md](tutorials/03-pipeline-entrypoints-and-knowledge-map.md) | 단계별 진입점과 지식 지도 | 단계-파일-문서 매핑 |
 | [tutorials/04-stage-modification-workflow.md](tutorials/04-stage-modification-workflow.md) | 재현 → 수정 → 검증 공통 절차 | 수정 체크리스트 |
 | [tutorials/06-good-first-issues-swift-6.0-6.3.md](tutorials/06-good-first-issues-swift-6.0-6.3.md) | Swift 6.0~6.3 `good first issue` 학습 코스 | open issue 기반 실전 진입 |
+| [tutorials/07-open-issue-analysis-workbook.md](tutorials/07-open-issue-analysis-workbook.md) | open issue 분석 워크북 | 분석 로그와 가설 훈련 |
+| [tutorials/good-first-issues/README.md](tutorials/good-first-issues/README.md) | open `good first issue` 카드 허브 | 버전별 짧은 실전 과제 |
+| [tutorials/courses/README.md](tutorials/courses/README.md) | 장기 학습 코스 허브 | 30일 단위 코스 |
 | [tutorials/case-studies/README.md](tutorials/case-studies/README.md) | 사례 카탈로그와 백로그 | 다음 사례 선택과 난이도 조절 |
 | [tutorials/case-studies/cards/](tutorials/case-studies/cards/) | 많은 사례를 빠르게 탐색하는 case card 모음 | 넓은 사례 학습 |
 | [tutorials/case-studies/](tutorials/case-studies/) | 부모 커밋에서 merged fix를 다시 구현하는 사례 실습 | 사례별 worktree 실습 기록 |
@@ -89,7 +92,8 @@
 5. [tutorials/03-pipeline-entrypoints-and-knowledge-map.md](tutorials/03-pipeline-entrypoints-and-knowledge-map.md)
 6. [tutorials/04-stage-modification-workflow.md](tutorials/04-stage-modification-workflow.md)
 7. [tutorials/06-good-first-issues-swift-6.0-6.3.md](tutorials/06-good-first-issues-swift-6.0-6.3.md)로 open issue 코스를 섞어 본다
-8. full tutorial 5개를 순서대로 진행하거나, `tutorials/case-studies/cards/`에서 짧은 사례를 병행
+8. [tutorials/07-open-issue-analysis-workbook.md](tutorials/07-open-issue-analysis-workbook.md)로 실제 issue 분석 로그를 남긴다
+9. full tutorial 5개를 순서대로 진행하거나, `tutorials/case-studies/cards/`와 `tutorials/good-first-issues/cards/`에서 짧은 사례를 병행
 
 ### 2) SIL 트랙
 SILOptimizer, SILGen, Ownership SSA, 검증기 흐름을 이해하려면 이 순서가 좋습니다.
@@ -123,6 +127,13 @@ SILOptimizer, SILGen, Ownership SSA, 검증기 흐름을 이해하려면 이 순
 2. diagnostics/fix-it 계열 open issue 1개 선택
 3. [tutorials/04-stage-modification-workflow.md](tutorials/04-stage-modification-workflow.md) 체크리스트로 분석
 4. 관련 case card / full tutorial과 교차 학습
+
+### 6) “30일 루프로 꾸준히 밀어붙이기” 트랙
+문서를 읽는 데서 그치지 않고 실제 학습 프로그램으로 운영하고 싶다면 아래 순서가 좋습니다.
+
+1. [tutorials/courses/30-day-diagnostics-track.md](tutorials/courses/30-day-diagnostics-track.md)
+2. 매일 해당 day의 문서 / 카드 / issue를 수행
+3. [tutorials/open-issue-templates/session-log-template.md](tutorials/open-issue-templates/session-log-template.md)으로 로그 축적
 
 ---
 
