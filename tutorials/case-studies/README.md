@@ -92,6 +92,7 @@
 
 - 메타데이터 원본: [index.yaml](index.yaml)
 - 새 사례 템플릿: [_case-template.md](_case-template.md)
+- 첫 웨이브 조사 원자료: [research/2026-04-05-wave1-source-dossier.md](research/2026-04-05-wave1-source-dossier.md)
 
 반드시 포함해야 하는 요소:
 - merged fix anchor

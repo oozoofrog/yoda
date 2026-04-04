@@ -22,18 +22,20 @@
 3. [02-debugging-environment-lab.md](02-debugging-environment-lab.md)
 4. [03-pipeline-entrypoints-and-knowledge-map.md](03-pipeline-entrypoints-and-knowledge-map.md)
 5. [04-stage-modification-workflow.md](04-stage-modification-workflow.md)
-6. full tutorial 5개를 순서대로 진행
+6. [06-good-first-issues-swift-6.0-6.3.md](06-good-first-issues-swift-6.0-6.3.md)로 open issue 코스를 훑습니다
+7. full tutorial 5개를 순서대로 진행
    - [01-sema-fixit-source-locs.md](case-studies/01-sema-fixit-source-locs.md)
    - [02-sil-location-explicitness.md](case-studies/02-sil-location-explicitness.md)
    - [03-irgen-fast-existential-casts.md](case-studies/03-irgen-fast-existential-casts.md)
    - [04-optimizer-cond-fail-pass-architecture.md](case-studies/04-optimizer-cond-fail-pass-architecture.md)
    - [05-optimizer-enum-tag-comparison-correctness.md](case-studies/05-optimizer-enum-tag-comparison-correctness.md)
-7. 이후 [case-studies/README.md](case-studies/README.md)와 `case-studies/cards/`에서 다음 사례를 고릅니다
+8. 이후 [case-studies/README.md](case-studies/README.md)와 `case-studies/cards/`에서 다음 사례를 고릅니다
 
 ### 목표별 추천 경로
 - **환경부터 익히기**: 01 → 02
 - **컴파일러 단계 지도를 익히기**: 03
 - **실제 수정 절차를 익히기**: 04
+- **버전별 open issue로 실전 감각 익히기**: 06
 - **진짜 이슈를 고쳐보며 배우기**: case-studies/
 - **많은 사례를 짧게 넓게 보기**: `case-studies/cards/`
 
@@ -48,9 +50,11 @@
 | [02-debugging-environment-lab.md](02-debugging-environment-lab.md) | AST/SIL/IR/LLDB 관찰 루프 실습 | 디버깅 커맨드 셋, 관찰 로그 |
 | [03-pipeline-entrypoints-and-knowledge-map.md](03-pipeline-entrypoints-and-knowledge-map.md) | 단계별 진입점과 읽기 순서 지도 | 단계-파일-문서 매핑표 |
 | [04-stage-modification-workflow.md](04-stage-modification-workflow.md) | 특정 단계 수정의 공통 절차 | 재현/수정/검증 체크리스트 |
+| [06-good-first-issues-swift-6.0-6.3.md](06-good-first-issues-swift-6.0-6.3.md) | Swift 6.0~6.3 `good first issue` 학습 코스 | open issue 기반 실전 과제 |
 | [case-studies/README.md](case-studies/README.md) | 사례 카탈로그와 백로그 | 다음 사례 선택 기준 |
 | [case-studies/cards/](case-studies/cards/) | 많은 사례를 빠르게 탐색하는 case card 모음 | 짧은 사례 기반 학습 |
 | [case-studies/](case-studies/) | 실제 merged fix를 부모 커밋에서 다시 구현하는 실습 | worktree 기반 수정 경험 |
+| [case-studies/research/](case-studies/research/) | 사례화 전 원자료 정리 노트 | PR/issue 맥락 조사 원본 |
 
 ---
 
