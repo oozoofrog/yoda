@@ -7,6 +7,7 @@
 - 환경 구성 → 관찰 → 디버깅 → 수정 → 검증 루프
 - 이미 main에서 고쳐진 사례를 부모 커밋에서 다시 재현하고 고쳐보는 연습
 - 학습과학/인지심리학 근거를 반영한 반복 가능한 학습 절차
+- 많은 사례를 짧게 훑는 case card와, 대표 사례를 깊게 따라가는 full tutorial의 2층 구조
 
 처음이라면 먼저 [00-curriculum-and-method.md](00-curriculum-and-method.md)부터 읽고,  
 그 다음 [01-build-environment-lab.md](01-build-environment-lab.md) → [02-debugging-environment-lab.md](02-debugging-environment-lab.md) 순서로 진행하세요.
@@ -21,17 +22,20 @@
 3. [02-debugging-environment-lab.md](02-debugging-environment-lab.md)
 4. [03-pipeline-entrypoints-and-knowledge-map.md](03-pipeline-entrypoints-and-knowledge-map.md)
 5. [04-stage-modification-workflow.md](04-stage-modification-workflow.md)
-6. 사례 3개를 순서대로 진행
+6. full tutorial 5개를 순서대로 진행
    - [01-sema-fixit-source-locs.md](case-studies/01-sema-fixit-source-locs.md)
    - [02-sil-location-explicitness.md](case-studies/02-sil-location-explicitness.md)
    - [03-irgen-fast-existential-casts.md](case-studies/03-irgen-fast-existential-casts.md)
-7. 이후 [case-studies/README.md](case-studies/README.md)에서 다음 사례를 고릅니다
+   - [04-optimizer-cond-fail-pass-architecture.md](case-studies/04-optimizer-cond-fail-pass-architecture.md)
+   - [05-optimizer-enum-tag-comparison-correctness.md](case-studies/05-optimizer-enum-tag-comparison-correctness.md)
+7. 이후 [case-studies/README.md](case-studies/README.md)와 `case-studies/cards/`에서 다음 사례를 고릅니다
 
 ### 목표별 추천 경로
 - **환경부터 익히기**: 01 → 02
 - **컴파일러 단계 지도를 익히기**: 03
 - **실제 수정 절차를 익히기**: 04
 - **진짜 이슈를 고쳐보며 배우기**: case-studies/
+- **많은 사례를 짧게 넓게 보기**: `case-studies/cards/`
 
 ---
 
@@ -45,6 +49,7 @@
 | [03-pipeline-entrypoints-and-knowledge-map.md](03-pipeline-entrypoints-and-knowledge-map.md) | 단계별 진입점과 읽기 순서 지도 | 단계-파일-문서 매핑표 |
 | [04-stage-modification-workflow.md](04-stage-modification-workflow.md) | 특정 단계 수정의 공통 절차 | 재현/수정/검증 체크리스트 |
 | [case-studies/README.md](case-studies/README.md) | 사례 카탈로그와 백로그 | 다음 사례 선택 기준 |
+| [case-studies/cards/](case-studies/cards/) | 많은 사례를 빠르게 탐색하는 case card 모음 | 짧은 사례 기반 학습 |
 | [case-studies/](case-studies/) | 실제 merged fix를 부모 커밋에서 다시 구현하는 실습 | worktree 기반 수정 경험 |
 
 ---
@@ -62,7 +67,12 @@
 
 ## 이 튜토리얼 세트의 학습 원칙
 
-각 문서는 공통적으로 다음 구조를 따릅니다.
+이 튜토리얼 세트는 두 층으로 운영합니다.
+
+- **full tutorial**: 하나의 사례를 깊게 추적
+- **case card**: 많은 사례를 짧게 탐색
+
+full tutorial 문서는 공통적으로 다음 구조를 따릅니다.
 
 1. **사전 회상 질문**: 이미 아는 것과 모르는 것을 분리
 2. **worked example**: 먼저 완성된 예를 관찰
@@ -70,7 +80,7 @@
 4. **independent transfer**: 비슷하지만 동일하지 않은 문제에 적용
 5. **reflection**: 내가 왜 그렇게 판단했는지 기록
 
-자세한 근거와 원문 링크는 [00-curriculum-and-method.md](00-curriculum-and-method.md)에 정리합니다.
+case card는 이 구조를 축약해서 유지하며, 자세한 근거와 원문 링크는 [00-curriculum-and-method.md](00-curriculum-and-method.md)에 정리합니다.
 
 ---
 

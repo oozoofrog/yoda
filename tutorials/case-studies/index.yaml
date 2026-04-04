@@ -1,0 +1,447 @@
+version: 1
+cases:
+  - id: "tutorial-sema-fixit-source-locs"
+    title: "Sema fix-it source location 복원"
+    kind: "tutorial"
+    stage: "Sema / Diagnostics"
+    difficulty: "하"
+    duration_minutes: 90
+    status: "published"
+    source_kind: "pr"
+    merged_pr: 88222
+    fix_commit: "a8e7b1a887ebb43da03496e0ac9f112d28c583ca"
+    parent_commit: "dd03302d7b71dc2c60f87daa1f00eb632ed9ada2"
+    doc_path: "tutorials/case-studies/01-sema-fixit-source-locs.md"
+    review_signal: "low"
+    reproduction_quality: "high"
+    issue_urls: []
+    primary_files:
+      - "lib/Sema/TypeCheckAttr.cpp"
+    primary_tests:
+      - "test/Availability/availability_suggest_any_apple_os.swift"
+    concepts:
+      - "fix-it range"
+      - "grouped availability attrs"
+      - "source locations"
+    why_it_matters: "fix-it range bug를 통해 front-end diagnostics와 source range 계산을 훈련하는 대표 사례"
+    pr_context_summary: "fix-it이 마지막 availability spec만 교체하던 문제를 전체 그룹 범위 계산으로 수정한 사례"
+  - id: "tutorial-sil-location-explicitness"
+    title: "SILLocation explicitness와 DebugInfo 회귀 테스트"
+    kind: "tutorial"
+    stage: "SIL / DebugInfo"
+    difficulty: "중"
+    duration_minutes: 90
+    status: "published"
+    source_kind: "pr"
+    merged_pr: 88166
+    fix_commit: "ed743259c5c57f2b0a30309b151ccbfed5c95676"
+    parent_commit: "cdd4049fb644a9505e1731843382dfc9d077e119"
+    doc_path: "tutorials/case-studies/02-sil-location-explicitness.md"
+    review_signal: "medium"
+    reproduction_quality: "high"
+    issue_urls: []
+    primary_files:
+      - "lib/SIL/IR/SILLocation.cpp"
+    primary_tests:
+      - "test/DebugInfo/if-bool-var.swift"
+    concepts:
+      - "explicit vs implicit"
+      - "debug info"
+      - "regression test restoration"
+    why_it_matters: "새 회귀 테스트를 복원하고 location semantics를 이해하는 경계 사례"
+    pr_context_summary: "implicit conversion이 감싼 explicit node를 explicit로 다루어 debugger stop 위치를 복원한 사례"
+  - id: "tutorial-irgen-fast-existential-casts"
+    title: "IRGen fast existential cast 최적화 복원"
+    kind: "tutorial"
+    stage: "IRGen / Serialization"
+    difficulty: "중상"
+    duration_minutes: 120
+    status: "published"
+    source_kind: "pr"
+    merged_pr: 88270
+    fix_commit: "ae6e5ee9b99f2a5340c028bb5d8e7e28b9397d95"
+    parent_commit: "68b55ff3ce1cd8d31ee9d1100fd10392a4f06038"
+    doc_path: "tutorials/case-studies/03-irgen-fast-existential-casts.md"
+    review_signal: "medium"
+    reproduction_quality: "high"
+    issue_urls: []
+    primary_files:
+      - "lib/IRGen/GenCast.cpp"
+      - "lib/Serialization/DeserializeSIL.cpp"
+    primary_tests:
+      - "test/IRGen/vtable_conformance_entries.sil"
+      - "test/SILOptimizer/conformance_lookup.swift"
+    concepts:
+      - "fast cast"
+      - "vtable conformance entries"
+      - "declaration-only deserialization"
+    why_it_matters: "IRGen과 serialization 경계에서 성능 최적화와 correctness를 함께 보는 대표 사례"
+    pr_context_summary: "vtable conformance entry를 이용한 fast existential cast와 lowered-stage declaration loading 허용을 함께 배운다"
+  - id: "tutorial-optimizer-cond-fail-pass-architecture"
+    title: "`cond_fail true` 최적화의 패스 이동과 OSSA 불변식"
+    kind: "tutorial"
+    stage: "Optimizer / SILCombine"
+    difficulty: "중상"
+    duration_minutes: 120
+    status: "published"
+    source_kind: "pr"
+    merged_pr: 88258
+    fix_commit: "cc3c701462078ca24387a116743d633726a12d3d"
+    parent_commit: "a0ba1f70800f2c21e80c26d550b7d9380c9e00d9"
+    doc_path: "tutorials/case-studies/04-optimizer-cond-fail-pass-architecture.md"
+    review_signal: "medium"
+    reproduction_quality: "high"
+    issue_urls: []
+    primary_files:
+      - "SwiftCompilerSources/Sources/Optimizer/FunctionPasses/CondFailOptimization.swift"
+      - "SwiftCompilerSources/Sources/Optimizer/InstructionSimplification/SimplifyCondFail.swift"
+    primary_tests:
+      - "test/SILOptimizer/simplify_cond_fail.sil"
+      - "test/SILOptimizer/constant_propagation.sil"
+    concepts:
+      - "function pass vs simplification"
+      - "OSSA lifetime completion"
+      - "verifier-driven design"
+    why_it_matters: "최적화를 어디에 두느냐가 correctness를 좌우하는 대표 사례"
+    pr_context_summary: "단순해 보이는 cond_fail 최적화가 왜 SILCombine이 아니라 별도 function pass로 옮겨가야 했는지 추적한다"
+  - id: "tutorial-optimizer-enum-tag-comparison-correctness"
+    title: "enum tag comparison 최적화와 miscompile 방지"
+    kind: "tutorial"
+    stage: "Optimizer / Correctness"
+    difficulty: "중상"
+    duration_minutes: 120
+    status: "published"
+    source_kind: "pr"
+    merged_pr: 88052
+    fix_commit: "bd1af9283f6af5219fdba64b1f4f89c28873eaa4"
+    parent_commit: "594c32a89d9545b2a7eefc6748305f16c2fbfc85"
+    doc_path: "tutorials/case-studies/05-optimizer-enum-tag-comparison-correctness.md"
+    review_signal: "high"
+    reproduction_quality: "high"
+    issue_urls:
+      - "https://github.com/swiftlang/swift/issues/87906"
+    primary_files:
+      - "SwiftCompilerSources/Sources/Optimizer/InstructionSimplification/SimplifyApply.swift"
+    primary_tests:
+      - "test/SILOptimizer/enum-comparison.swift"
+      - "test/SILOptimizer/simplify_apply.sil"
+    concepts:
+      - "optimization legality"
+      - "miscompile analysis"
+      - "known stdlib raw types"
+    why_it_matters: "성능 최적화가 correctness를 침범할 때 어떤 경계 조건이 필요한지 배우는 사례"
+    pr_context_summary: "raw representable enum 비교 최적화가 custom raw type에서 잘못될 수 있음을 재현하고, known stdlib type으로 제한하는 패치를 이해한다"
+  - id: "card-optimizer-cond-fail-pass"
+    title: "`cond_fail true` 최적화를 SILCombine 밖 패스로 이동"
+    kind: "card"
+    stage: "Optimizer / SILCombine"
+    difficulty: "중"
+    duration_minutes: 45
+    status: "published"
+    source_kind: "pr"
+    merged_pr: 88258
+    fix_commit: "cc3c701462078ca24387a116743d633726a12d3d"
+    parent_commit: "a0ba1f70800f2c21e80c26d550b7d9380c9e00d9"
+    doc_path: "tutorials/case-studies/cards/01-optimizer-cond-fail-pass.md"
+    review_signal: "medium"
+    reproduction_quality: "high"
+    issue_urls: []
+    primary_files:
+      - "SwiftCompilerSources/Sources/Optimizer/FunctionPasses/CondFailOptimization.swift"
+      - "SwiftCompilerSources/Sources/Optimizer/InstructionSimplification/SimplifyCondFail.swift"
+    primary_tests:
+      - "test/SILOptimizer/simplify_cond_fail.sil"
+      - "test/SILOptimizer/constant_propagation.sil"
+    concepts:
+      - "OSSA lifetime completion"
+      - "instruction simplification vs function pass"
+      - "SIL verifier"
+    why_it_matters: "이 사례는 “똑같이 보이는 최적화라도 어느 레벨에서 수행하느냐”가 왜 중요한지를 보여줍니다. 단순 peephole을 function pass로 승격해야 하는 이유를 OSSA 불변식 관점에서 배울 수 있습니다."
+    pr_context_summary: "PR 본문은 unconditional `cond_fail` 뒤에 `unreachable`를 삽입하는 단순화가 SILCombine 단계에서는 OSSA lifetime을 깨뜨릴 수 있다고 설명합니다. 즉, 버그의 핵심은 최적화 아이디어가 아니라 최적화의 실행 위치였습니다."
+  - id: "card-optimizer-enum-tag-comparison"
+    title: "enum tag comparison 최적화의 miscompile 수정"
+    kind: "card"
+    stage: "Optimizer / Correctness"
+    difficulty: "중"
+    duration_minutes: 45
+    status: "published"
+    source_kind: "pr"
+    merged_pr: 88052
+    fix_commit: "bd1af9283f6af5219fdba64b1f4f89c28873eaa4"
+    parent_commit: "594c32a89d9545b2a7eefc6748305f16c2fbfc85"
+    doc_path: "tutorials/case-studies/cards/02-optimizer-enum-tag-comparison.md"
+    review_signal: "high"
+    reproduction_quality: "high"
+    issue_urls:
+      - "https://github.com/swiftlang/swift/issues/87906"
+    primary_files:
+      - "SwiftCompilerSources/Sources/Optimizer/InstructionSimplification/SimplifyApply.swift"
+    primary_tests:
+      - "test/SILOptimizer/enum-comparison.swift"
+      - "test/SILOptimizer/simplify_apply.sil"
+    concepts:
+      - "miscompile triage"
+      - "known stdlib type restriction"
+      - "optimization legality"
+    why_it_matters: "이 사례는 성능 최적화가 잘못 적용되면 조용한 miscompile로 이어질 수 있음을 보여줍니다. “빠르다”보다 “언제 합법적인가”를 먼저 따져야 한다는 교훈이 선명합니다."
+    pr_context_summary: "PR 설명은 RawRepresentable 비교를 enum tag 비교로 치환하는 최적화가 custom raw type에서 잘못될 수 있다고 지적합니다. 리뷰에서는 `String`과 custom raw type의 비교 semantics를 어디까지 신뢰할지에 대한 논쟁이 드러납니다."
+  - id: "card-sema-anyappleos-diagnostic-group"
+    title: "`UseAnyAppleOSAvailability` 진단 그룹 도입"
+    kind: "card"
+    stage: "Sema / Availability"
+    difficulty: "하"
+    duration_minutes: 30
+    status: "published"
+    source_kind: "pr"
+    merged_pr: 87935
+    fix_commit: "1f26971a88180fccb7149c86a08bb87f8e975a11"
+    parent_commit: "ce2de43ecbb5c9d51e92a2441a65ecc8366c64f7"
+    doc_path: "tutorials/case-studies/cards/03-sema-anyappleos-diagnostic-group.md"
+    review_signal: "medium"
+    reproduction_quality: "high"
+    issue_urls: []
+    primary_files:
+      - "include/swift/AST/DiagnosticGroups.def"
+      - "include/swift/AST/DiagnosticsSema.def"
+      - "lib/Sema/TypeCheckAttr.cpp"
+    primary_tests:
+      - "test/Availability/availability_suggest_any_apple_os.swift"
+    concepts:
+      - "opt-in diagnostic group"
+      - "availability migration"
+      - "diagnostic policy"
+    why_it_matters: "이 사례는 “기능 추가”가 아니라 “진단을 어떤 조건에서 켤 것인가”를 다룹니다. 단순 경고 추가보다 정책적 선택이 더 중요할 수 있음을 배웁니다."
+    pr_context_summary: "PR은 `anyAppleOS`를 사용할 수 있는 선언을 opt-in 그룹으로 진단하게 만듭니다. 즉, 기술적으로 가능한 진단을 바로 상시 경고로 만들지 않고, 사용자 migration 부담과 정책을 함께 고려한 사례입니다."
+  - id: "card-csoptimizer-operator-erasure-scoring"
+    title: "operator overload scoring에서 erasure lower 처리"
+    kind: "card"
+    stage: "Sema / CSOptimizer"
+    difficulty: "중상"
+    duration_minutes: 60
+    status: "published"
+    source_kind: "pr"
+    merged_pr: 88188
+    fix_commit: "1280a27d70da4e875be13b34ad77f71758839f62"
+    parent_commit: "aa649de3ca776247b23a9b70c38e85a77a6addf0"
+    doc_path: "tutorials/case-studies/cards/04-csoptimizer-operator-erasure-scoring.md"
+    review_signal: "medium"
+    reproduction_quality: "high"
+    issue_urls:
+      - "https://github.com/swiftlang/swift/issues/88193"
+    primary_files:
+      - "lib/Sema/CSOptimizer.cpp"
+    primary_tests:
+      - "test/Constraints/operator_generics_vs_erasure.swift"
+    concepts:
+      - "constraint solver heuristics"
+      - "operator overload resolution"
+      - "concrete vs generic preference"
+    why_it_matters: "타입 체커의 heuristic은 작은 점수 조정 하나가 사용자 체감 동작을 바꿉니다. 이 사례는 알고리즘 버그가 아니라 ranking policy의 미세 조정이 어떻게 동작 의미를 바꾸는지 보여줍니다."
+    pr_context_summary: "PR 설명은 pre-6.3 operator overload selection 동작을 복원한다고 말합니다. generic requirement 충족과 erasure lower가 얽힌 경우 concrete overload를 더 강하게 선호하도록 scoring을 조정합니다."
+  - id: "card-concurrency-async-deinit-regression"
+    title: "generic actor의 async deinit 회귀 테스트 확대"
+    kind: "card"
+    stage: "Concurrency / Tests"
+    difficulty: "하"
+    duration_minutes: 30
+    status: "published"
+    source_kind: "pr"
+    merged_pr: 88231
+    fix_commit: "1b999288aa3de00da5d5c2b0ff6f786a159f6000"
+    parent_commit: "a0ba1f70800f2c21e80c26d550b7d9380c9e00d9"
+    doc_path: "tutorials/case-studies/cards/05-concurrency-async-deinit-regression.md"
+    review_signal: "low"
+    reproduction_quality: "high"
+    issue_urls:
+      - "https://github.com/swiftlang/swift/issues/88197"
+    primary_files:
+      - "test/SILGen/deinit_isolation_generic.swift"
+    primary_tests:
+      - "test/SILGen/deinit_isolation_generic.swift"
+    concepts:
+      - "regression test design"
+      - "coverage expansion"
+      - "validation-test to test migration"
+    why_it_matters: "항상 구현 수정만 배우는 것은 아닙니다. 이 사례는 이미 고쳐진 버그를 더 넓은 모드와 경로에서 다시 잡히게 만드는 regression test의 가치를 보여줍니다."
+    pr_context_summary: "PR 본문은 실제 버그 수정은 earlier commit에서 끝났고, 이 PR은 normal test suite로 coverage를 확대한다고 설명합니다. 즉 “버그를 고쳤다”가 끝이 아니라 “다시 안 깨지게 묶는다”가 학습 포인트입니다."
+  - id: "card-irgen-typed-throws-crash"
+    title: "typed throws 관련 IRGen crash 수정"
+    kind: "card"
+    stage: "IRGen"
+    difficulty: "중상"
+    duration_minutes: 60
+    status: "published"
+    source_kind: "pr"
+    merged_pr: 86387
+    fix_commit: "d09c773536ac90695f00f07f7eeb1e56824d4c82"
+    parent_commit: "e6911d7711f68face792b39897be2990e1f56789"
+    doc_path: "tutorials/case-studies/cards/06-irgen-typed-throws-crash.md"
+    review_signal: "medium"
+    reproduction_quality: "medium"
+    issue_urls:
+      - "https://github.com/swiftlang/swift/issues/86347"
+    primary_files:
+      - "lib/IRGen/GenCall.cpp"
+      - "lib/IRGen/IRGenSIL.cpp"
+    primary_tests:
+      - "test/IRGen/typed_throws_generic.swift"
+      - "test/SILGen/typed_throws_generic.swift"
+    concepts:
+      - "typed throws lowering"
+      - "IRGen crash triage"
+      - "cross-stage regression tests"
+    why_it_matters: "typed throws는 여러 단계에 영향을 미치는 feature라, 한 지점의 crash도 SILGen과 IRGen 테스트를 함께 봐야 합니다. 이 사례는 feature work가 왜 다층 테스트를 요구하는지 보여줍니다."
+    pr_context_summary: "PR은 issue #86347의 crash를 고친다고 매우 짧게 설명하지만, 수정 파일 목록은 call emission과 thunk, ObjC, distributed 경계까지 넓게 퍼져 있습니다. 작은 증상이 넓은 설계면을 건드릴 수 있다는 예입니다."
+  - id: "card-sema-implicit-available-source-loc"
+    title: "implicit available attr 진단의 source loc 개선"
+    kind: "card"
+    stage: "Sema / Diagnostics"
+    difficulty: "하"
+    duration_minutes: 30
+    status: "published"
+    source_kind: "pr"
+    merged_pr: 87843
+    fix_commit: "efdcfbe8ac8871014977ef6f04fe9d77fd4ec7cc"
+    parent_commit: "8631532bd2b465ba1d2e7fcd94afdbdd4db578e2"
+    doc_path: "tutorials/case-studies/cards/07-sema-implicit-available-source-loc.md"
+    review_signal: "low"
+    reproduction_quality: "medium"
+    issue_urls: []
+    primary_files:
+      - "lib/Sema/TypeCheckAttr.cpp"
+      - "include/swift/AST/DiagnosticsSema.def"
+    primary_tests:
+      - "(PR에 테스트 추가는 없음; diagnostics 경로 추적 중심)"
+    concepts:
+      - "diagnostic source location policy"
+      - "implicit declaration description"
+      - "availability diagnostics UX"
+    why_it_matters: "이 사례는 “정답 위치에 진단을 찍는 것”이 얼마나 중요한지 보여줍니다. 컴파일러 diagnostics 품질은 메시지 텍스트뿐 아니라 어디에 찍는가에도 달려 있습니다."
+    pr_context_summary: "PR 설명은 implicit declaration이 enclosing scope보다 availability가 높을 때, 실제 사용자 코드에서 가장 이해하기 쉬운 enclosing declaration 위치에 진단해야 한다고 말합니다."
+  - id: "card-sema-nonisolated-unsafe-fixit-range"
+    title: "`nonisolated(unsafe)` fix-it이 전체 attribute를 교체하도록 수정"
+    kind: "card"
+    stage: "Sema / Fix-It"
+    difficulty: "하"
+    duration_minutes: 30
+    status: "published"
+    source_kind: "pr"
+    merged_pr: 88086
+    fix_commit: "bf7d2551864c4edd02db4848beaa5570915cfedf"
+    parent_commit: "5478f521ae394007fdbcae92ee6a1539b001ad69"
+    doc_path: "tutorials/case-studies/cards/08-sema-nonisolated-unsafe-fixit-range.md"
+    review_signal: "medium"
+    reproduction_quality: "high"
+    issue_urls:
+      - "https://github.com/swiftlang/swift/issues/87342"
+    primary_files:
+      - "lib/Sema/TypeCheckAttr.cpp"
+    primary_tests:
+      - "test/FixCode/nonisolated_unsafe_fixit.swift"
+    concepts:
+      - "fixItReplace range choice"
+      - "attribute text replacement"
+      - "regression test minimalism"
+    why_it_matters: "이 사례는 한 줄짜리 수정도 학습 가치가 클 수 있음을 보여줍니다. 특히 fix-it은 사용자가 editor에서 즉시 체감하기 때문에 작은 range 버그도 UX impact가 큽니다."
+    pr_context_summary: "PR 본문은 기존 fix-it이 `nonisolated`만 교체해서 “Replace nonisolated with nonisolated”처럼 무의미한 제안을 만들었다고 설명합니다. 핵심은 `getStartLoc()`에서 `getRange()`로의 전환입니다."
+  - id: "card-optimizer-simplify-struct-extract-silcombine"
+    title: "`SimplifyStructExtract`를 SILCombine에도 적용"
+    kind: "card"
+    stage: "Optimizer / SIL"
+    difficulty: "하"
+    duration_minutes: 30
+    status: "published"
+    source_kind: "commit"
+    merged_pr: null
+    fix_commit: "77f64398e58f5c6a67f40ead34a9494925dc59b9"
+    parent_commit: "c20593cd584b1d3bd7d6fa9600e206aa2aa81a5c"
+    doc_path: "tutorials/case-studies/cards/09-optimizer-simplify-struct-extract-silcombine.md"
+    review_signal: "low"
+    reproduction_quality: "low"
+    issue_urls: []
+    primary_files:
+      - "SwiftCompilerSources/Sources/Optimizer/InstructionSimplification/SimplifyStructExtract.swift"
+      - "lib/SILOptimizer/SILCombiner/Simplifications.def"
+    primary_tests:
+      - "(관련 테스트는 부모/후속 커밋을 함께 탐색하는 방식 권장)"
+    concepts:
+      - "optimization reuse"
+      - "SILCombine hookup"
+      - "pass registration"
+    why_it_matters: "새 최적화를 만드는 것만큼 중요한 것이 이미 있는 단순화를 다른 최적화 경로에 연결하는 일입니다. 이 카드는 “등록 위치가 곧 동작 범위”라는 감각을 줍니다."
+    pr_context_summary: "커밋 메시지는 단순하지만, 실제로는 이미 존재하던 simplification을 SILCombine 쪽에도 활성화하는 wiring 변화입니다. 이런 종류의 변경은 코드 양은 적어도 효과 범위가 넓습니다."
+  - id: "card-sil-memaccessutils-assert"
+    title: "`MemAccessUtils`의 잘못된 assert 제거"
+    kind: "card"
+    stage: "SIL / Utils"
+    difficulty: "하"
+    duration_minutes: 30
+    status: "published"
+    source_kind: "commit"
+    merged_pr: null
+    fix_commit: "7c8f61c36105914549160959925b8098a9aa10cd"
+    parent_commit: "864c08f5ef3f71b5f01d57eb614a063f4cc294de"
+    doc_path: "tutorials/case-studies/cards/10-sil-memaccessutils-assert.md"
+    review_signal: "low"
+    reproduction_quality: "medium"
+    issue_urls: []
+    primary_files:
+      - "include/swift/SIL/MemAccessUtils.h"
+    primary_tests:
+      - "test/SILOptimizer/cse_ossa.sil"
+    concepts:
+      - "assert triage"
+      - "analysis utilities"
+      - "small crash fix workflow"
+    why_it_matters: "assert 제거 사례는 “실제 잘못된 불변식 가정”을 배우기에 좋습니다. crash가 크지 않아도 underlying model이 틀렸다는 뜻이기 때문입니다."
+    pr_context_summary: "이 커밋은 분석 유틸리티 쪽의 잘못된 assert를 제거합니다. 보통 이런 사례는 재현이 작고 수정은 짧지만, 왜 assert가 잘못됐는지 설명하는 것이 핵심입니다."
+  - id: "card-irgen-save-ir-options"
+    title: "IRGen 디버깅 옵션 `-save-irgen`, `-save-ir` 추가"
+    kind: "card"
+    stage: "IRGen / Debugging"
+    difficulty: "하"
+    duration_minutes: 20
+    status: "published"
+    source_kind: "commit"
+    merged_pr: null
+    fix_commit: "6f3a4b04c3dac966512ce72afefdf4775c920c1c"
+    parent_commit: "956cf51d6fc1b47b2dd643019598ff862aee7983"
+    doc_path: "tutorials/case-studies/cards/11-irgen-save-ir-options.md"
+    review_signal: "low"
+    reproduction_quality: "medium"
+    issue_urls: []
+    primary_files:
+      - "lib/IRGen/IRGen.cpp"
+    primary_tests:
+      - "(옵션 동작 확인용 수동 실습 권장)"
+    concepts:
+      - "debugging UX"
+      - "developer tooling"
+      - "IRGen observability"
+    why_it_matters: "모든 학습이 bug fix일 필요는 없습니다. 디버깅 옵션 추가 사례는 “도구를 개선하면 이후 학습/디버깅이 얼마나 쉬워지는가”를 보여줍니다."
+    pr_context_summary: "이 커밋은 `-save-irgen <file>`와 `-save-ir <file>` 옵션을 추가해 관찰 결과를 파일로 남길 수 있게 합니다. 튜토리얼 관점에서는 관찰 가능성(observability) 자체를 개선한 사례입니다."
+  - id: "card-silgen-top-level-prettystacktrace"
+    title: "top-level decl visitor에 `PrettyStackTraceDecl` 추가"
+    kind: "card"
+    stage: "SILGen / Diagnostics"
+    difficulty: "하"
+    duration_minutes: 30
+    status: "published"
+    source_kind: "commit"
+    merged_pr: null
+    fix_commit: "cb85ded480ca705d762479c6940ae6e66b0bc4ff"
+    parent_commit: "68768aeac321e67313a44e336750e3bff3a2642c"
+    doc_path: "tutorials/case-studies/cards/12-silgen-top-level-prettystacktrace.md"
+    review_signal: "low"
+    reproduction_quality: "low"
+    issue_urls: []
+    primary_files:
+      - "lib/SILGen/SILGen.cpp"
+    primary_tests:
+      - "(주로 crash 진단 개선 사례; 수동 관찰 중심)"
+    concepts:
+      - "pretty stack trace"
+      - "compiler crash diagnosability"
+      - "top-level visitor instrumentation"
+    why_it_matters: "학습자가 실제 crash를 만났을 때 좋은 stack trace의 가치를 바로 느낄 수 있습니다. 이런 도구성 수정은 디버깅 경험을 바꾸지만 코드 크기는 작습니다."
+    pr_context_summary: "이 커밋은 top-level decl visitor에 `PrettyStackTraceDecl`를 추가해 crash 시 어떤 선언을 처리 중이었는지 더 잘 보이게 만듭니다. 즉, 코어 로직이 아니라 “문제 분석 비용”을 낮추는 변경입니다."

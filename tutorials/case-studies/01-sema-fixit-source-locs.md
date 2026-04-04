@@ -2,6 +2,7 @@
 
 > **단계**: Sema / Diagnostics
 > **난이도**: 입문 사례
+> **anchor PR**: [#88222](https://github.com/swiftlang/swift/pull/88222)
 > **merged fix commit**: `a8e7b1a887e`
 > **parent commit**: `dd03302d7b71dc2c60f87daa1f00eb632ed9ada2`
 > **핵심 파일**: `lib/Sema/TypeCheckAttr.cpp`
@@ -30,6 +31,32 @@
 - 왜 이 문제가 `lib/Sema/TypeCheckAttr.cpp`에 있을 가능성이 큰가
 - grouped availability attribute를 순회할 때 source range 계산이 왜 꼬일 수 있는가
 - 단일 테스트로 front-end fix-it을 어떻게 검증하는가
+
+### 함께 볼 카드
+
+- [03-sema-anyappleos-diagnostic-group.md](cards/03-sema-anyappleos-diagnostic-group.md)
+- [08-sema-nonisolated-unsafe-fixit-range.md](cards/08-sema-nonisolated-unsafe-fixit-range.md)
+
+---
+
+## 문제 맥락 (PR / issue)
+
+PR [#88222](https://github.com/swiftlang/swift/pull/88222)는 `UseAnyAppleOSAvailability` fix-it이
+실제로는 마지막 availability spec만 바꾸고 전체 spec을 바꾸지 못한다고 설명합니다.
+
+핵심 맥락은 아주 실용적입니다.
+
+- 컴파일러는 warning을 잘 내고 있었지만
+- editor에서 apply 가능한 fix-it은 잘못된 source range를 가리키고 있었고
+- 작성자는 이 문제를 **에디터에서 직접 적용해보다가** 발견했습니다.
+
+즉, 이 사례는 “진단 메시지”와 “수정 제안의 적용 범위”가 서로 다른 품질 축이라는 점을 보여줍니다.
+
+### 이 PR에서 특히 배울 점
+
+- 구현은 작아도 사용자 체감은 큽니다.
+- fix-it 버그는 대개 텍스트 치환 정책과 source range 계산 문제로 귀결됩니다.
+- 리뷰 대화 자체는 짧았지만, PR 본문과 테스트 diff만으로도 충분히 좋은 학습 사례가 됩니다.
 
 ---
 

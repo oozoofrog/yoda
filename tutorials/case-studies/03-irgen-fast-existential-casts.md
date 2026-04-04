@@ -2,6 +2,7 @@
 
 > **단계**: IRGen (SIL/Serialization 경계 포함)
 > **난이도**: 중상
+> **anchor PR**: [#88270](https://github.com/swiftlang/swift/pull/88270)
 > **merged fix commit**: `ae6e5ee9b99`
 > **parent commit**: `68b55ff3ce1cd8d31ee9d1100fd10392a4f06038`
 > **핵심 파일**: `lib/IRGen/GenCast.cpp`, `lib/Serialization/DeserializeSIL.cpp`
@@ -26,6 +27,32 @@
 - existential cast가 IRGen에서 어떤 최적화 기회를 가지는지 이해하기
 - vtable conformance entries와 witness table lookup의 관계를 이해하기
 - 고수준 실행 테스트와 저수준 IR 패턴 테스트를 함께 사용하는 검증 방식을 익히기
+
+### 함께 볼 카드
+
+- [06-irgen-typed-throws-crash.md](cards/06-irgen-typed-throws-crash.md)
+- [11-irgen-save-ir-options.md](cards/11-irgen-save-ir-options.md)
+
+---
+
+## 문제 맥락 (PR / issue)
+
+이 사례는 PR [#88270](https://github.com/swiftlang/swift/pull/88270)의 일부 커밋을 중심으로 봅니다.
+PR 전체 주제는 **fast conformance cast를 도입해 compile time을 줄이는 것**입니다.
+
+PR 설명에서 드러나는 큰 맥락은 다음과 같습니다.
+
+- SwiftCompilerSources의 existential cast가 runtime conformance lookup에 많이 의존하고 있었고
+- 이것이 compile time hot path로 관찰되었으며
+- class-bound protocol + vtable conformance entry를 이용하면 fast path를 만들 수 있었습니다.
+
+이 튜토리얼이 `ae6e5ee9b99`에 집중하는 이유는, 큰 PR 안에서도 **하나의 학습 단위로 잘 분리되는 correctness/IRGen 경계 사례**이기 때문입니다.
+
+### 이 PR에서 특히 배울 점
+
+- 큰 성능 PR도 실제로는 여러 개의 작은 학습 단위로 분해할 수 있습니다.
+- PR 본문은 설계서 역할을 하고, 개별 커밋은 구현 단위 역할을 합니다.
+- 이 사례는 “성능 최적화”와 “serialization 경계 수정”이 한 학습 단위에서 만나는 예입니다.
 
 ---
 

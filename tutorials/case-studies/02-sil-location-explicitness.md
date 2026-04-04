@@ -2,6 +2,7 @@
 
 > **단계**: SIL / DebugInfo 경계
 > **난이도**: 중간
+> **anchor PR**: [#88166](https://github.com/swiftlang/swift/pull/88166)
 > **merged fix commit**: `ed743259c5c`
 > **parent commit**: `cdd4049fb644a9505e1731843382dfc9d077e119`
 > **핵심 파일**: `lib/SIL/IR/SILLocation.cpp`
@@ -26,6 +27,38 @@
 - 새 regression test를 merged commit에서 복원하는 법 익히기
 - `SILLocation`의 explicit/implicit 전파가 debug info에 왜 중요한지 이해하기
 - “겉으로는 SILLocation 변경이지만 실제 관찰은 IR debug metadata에서 한다”는 경계 사례 감각 익히기
+
+### 함께 볼 카드
+
+- [07-sema-implicit-available-source-loc.md](cards/07-sema-implicit-available-source-loc.md)
+- [12-silgen-top-level-prettystacktrace.md](cards/12-silgen-top-level-prettystacktrace.md)
+
+---
+
+## 문제 맥락 (PR / issue)
+
+PR [#88166](https://github.com/swiftlang/swift/pull/88166)는 아래와 같은 코드를 디버깅할 때
+LLDB가 `if mutable` 조건 줄을 건너뛰는 문제를 설명합니다.
+
+```swift
+func hello(param: Bool) {
+    var mutable = param
+    if mutable {
+        print("true")
+    }
+}
+```
+
+PR 설명과 작성자의 코멘트에서 중요한 포인트는 다음입니다.
+
+- AST에서 `if mutable` 조건은 `load_expr implicit`로 감싸져 있습니다.
+- 이 암시적 변환 때문에 `cond_br`의 `SILLocation`도 implicit로 분류될 수 있습니다.
+- 하지만 사용자 관점에서는 실제 멈춰야 하는 위치가 분명히 explicit 코드 줄입니다.
+
+### 이 PR에서 특히 배울 점
+
+- debug info 문제는 출력이 IR/LLDB에서 보이더라도, 원인은 AST→SIL location 전파에 있을 수 있습니다.
+- PR 코멘트가 AST 모양과 SIL 결과를 같이 보여주기 때문에, “경계 단계 문제를 어떻게 설명하는가”를 배우기 좋습니다.
 
 ---
 

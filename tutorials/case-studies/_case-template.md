@@ -1,5 +1,6 @@
 # 사례 N — <짧은 제목>
 
+> **문서 종류**: <card / tutorial>
 > **단계**: <Sema / SILGen / SIL / IRGen / ...>
 > **난이도**: <하 / 중 / 상>
 > **merged fix commit**: `<sha>`

@@ -64,6 +64,7 @@
 | [tutorials/03-pipeline-entrypoints-and-knowledge-map.md](tutorials/03-pipeline-entrypoints-and-knowledge-map.md) | 단계별 진입점과 지식 지도 | 단계-파일-문서 매핑 |
 | [tutorials/04-stage-modification-workflow.md](tutorials/04-stage-modification-workflow.md) | 재현 → 수정 → 검증 공통 절차 | 수정 체크리스트 |
 | [tutorials/case-studies/README.md](tutorials/case-studies/README.md) | 사례 카탈로그와 백로그 | 다음 사례 선택과 난이도 조절 |
+| [tutorials/case-studies/cards/](tutorials/case-studies/cards/) | 많은 사례를 빠르게 탐색하는 case card 모음 | 넓은 사례 학습 |
 | [tutorials/case-studies/](tutorials/case-studies/) | 부모 커밋에서 merged fix를 다시 구현하는 사례 실습 | 사례별 worktree 실습 기록 |
 
 ---
@@ -86,7 +87,7 @@
 4. [tutorials/02-debugging-environment-lab.md](tutorials/02-debugging-environment-lab.md)
 5. [tutorials/03-pipeline-entrypoints-and-knowledge-map.md](tutorials/03-pipeline-entrypoints-and-knowledge-map.md)
 6. [tutorials/04-stage-modification-workflow.md](tutorials/04-stage-modification-workflow.md)
-7. 사례 3개를 순서대로 진행
+7. full tutorial 5개를 순서대로 진행하거나, `tutorials/case-studies/cards/`에서 짧은 사례를 병행
 
 ### 2) SIL 트랙
 SILOptimizer, SILGen, Ownership SSA, 검증기 흐름을 이해하려면 이 순서가 좋습니다.
@@ -110,6 +111,8 @@ SILOptimizer, SILGen, Ownership SSA, 검증기 흐름을 이해하려면 이 순
 2. [tutorials/case-studies/01-sema-fixit-source-locs.md](tutorials/case-studies/01-sema-fixit-source-locs.md)
 3. [tutorials/case-studies/02-sil-location-explicitness.md](tutorials/case-studies/02-sil-location-explicitness.md)
 4. [tutorials/case-studies/03-irgen-fast-existential-casts.md](tutorials/case-studies/03-irgen-fast-existential-casts.md)
+5. [tutorials/case-studies/04-optimizer-cond-fail-pass-architecture.md](tutorials/case-studies/04-optimizer-cond-fail-pass-architecture.md)
+6. [tutorials/case-studies/05-optimizer-enum-tag-comparison-correctness.md](tutorials/case-studies/05-optimizer-enum-tag-comparison-correctness.md)
 
 ---
 
