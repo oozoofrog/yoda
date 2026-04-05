@@ -21,8 +21,8 @@
 
 `yoda/docs/`에는 이 Markdown 문서들을 바탕으로 만든 **정적 인터랙티브 학습 웹앱**이 있습니다.
 
-- 기본 UX: **Coursera식 3열 코스 구조**
-- 보강 요소: **practice card / mastery / review queue / notes**
+- 기본 UX: **개인용 2단 문서 뷰어**
+- 좌측: 전체 문서 목차 / 우측: 선택한 문서 내용 + 개인 메모
 - 배포 방식: **GitHub Pages용 정적 문서**
 
 로컬에서 미리보려면:

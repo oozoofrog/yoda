@@ -18,10 +18,10 @@
 튜토리얼과 사례 문서는 `../docs/`의 정적 웹앱에서도 탐색할 수 있습니다.
 웹앱은 다음 흐름을 지원합니다.
 
-- track/library 전환
-- 문서별 progress / mastery / notes
-- 1/3/7일 review queue
-- good first issue 카드와 merged 사례를 같은 UI에서 탐색
+- 좌측 전체 목차 / 우측 현재 문서 내용
+- 현재 문서 목차 바로가기
+- 문서별 개인 메모(localStorage 저장)
+- 내부 링크를 따라가며 연속해서 읽기
 
 로컬 미리보기:
 

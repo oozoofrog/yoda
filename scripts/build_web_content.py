@@ -751,8 +751,8 @@ def main() -> None:
         'categories': categories,
         'tracks': tracks,
         'uiRecommendation': {
-            'primary': 'coursera-hybrid',
-            'summary': 'Coursera식 3열 코스 구조를 기본으로 하되, Codecademy식 practice card, Khan식 mastery/consistency, Duolingo식 review resurfacing을 결합합니다.',
+            'primary': 'personal-two-pane-reader',
+            'summary': '좌측 전체 문서 목차와 우측 현재 문서 내용만 두는 개인용 2단 리더를 기본으로 합니다.',
         },
     }
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
