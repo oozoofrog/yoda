@@ -11,7 +11,7 @@
   --radius-xl: 18px;
   --radius-lg: 14px;
   --radius-md: 12px;
-  --nav-width: 320px;
+  --nav-width: 620px;
 }
 
 body.theme-dark {
@@ -45,8 +45,8 @@ button { color: inherit; }
   top: 24px;
   width: var(--nav-width);
   height: calc(100vh - 48px);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 14px;
   z-index: 20;
 }
@@ -61,15 +61,15 @@ button { color: inherit; }
 }
 
 .floating-global-card {
-  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .floating-current-card {
-  flex: 0 0 34vh;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .floating-card-header {
@@ -361,8 +361,12 @@ button { color: inherit; }
   margin-top: 10px;
 }
 
+@media (max-width: 1400px) {
+  :root { --nav-width: 560px; }
+}
+
 @media (max-width: 1180px) {
-  :root { --nav-width: 280px; }
+  :root { --nav-width: 520px; }
   .app-shell { padding-left: calc(var(--nav-width) + 40px); }
 }
 
@@ -378,6 +382,7 @@ button { color: inherit; }
     width: auto;
     height: calc(100vh - 96px);
     display: none;
+    grid-template-columns: 1fr;
   }
 
   .floating-nav-column.open {
