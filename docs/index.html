@@ -55,6 +55,22 @@
       </div>
     </div>
 
+    <button id="floatingOutlineToggle" class="floating-outline-toggle" type="button" aria-expanded="false" aria-controls="floatingOutlinePanel">
+      현재 위치
+    </button>
+    <aside id="floatingOutlinePanel" class="floating-outline-panel" aria-label="현재 문서 목차">
+      <div class="floating-outline-card">
+        <div class="floating-outline-header">
+          <div>
+            <div class="floating-outline-kicker">현재 문서 목차</div>
+            <strong id="floatingCurrentSection">문서 상단</strong>
+          </div>
+          <button id="floatingOutlineClose" class="ghost-button compact-button" type="button" aria-label="목차 닫기">닫기</button>
+        </div>
+        <div id="floatingOutlineList" class="floating-outline-list"></div>
+      </div>
+    </aside>
+
     <script src="app.js" type="module"></script>
   </body>
 </html>
