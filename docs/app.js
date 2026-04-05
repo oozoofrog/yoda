@@ -56,7 +56,7 @@ function loadStore() {
     theme: 'light',
     notes: {},
     lastDocId: null,
-    floatingOutlineOpen: false,
+    floatingOutlineOpen: true,
   };
   try {
     return { ...base, ...(JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}) };
