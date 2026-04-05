@@ -5,6 +5,8 @@
 가장 먼저 봐야 할 코스:
 - [00-swift-compiler-first-contribution-track.md](00-swift-compiler-first-contribution-track.md)
 
+처음이라면 이 문서 하나만 먼저 열고, 나머지 코스는 **첫 기여 이후의 반복 훈련용**으로 생각하세요.
+
 현재 제공 코스:
 - [30-day-diagnostics-track.md](30-day-diagnostics-track.md)
 - [30-day-optimizer-track.md](30-day-optimizer-track.md)

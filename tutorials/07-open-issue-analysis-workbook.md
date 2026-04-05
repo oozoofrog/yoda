@@ -4,6 +4,8 @@
 > **목표**: open issue를 읽고 재현·단계 추정·진입 파일 후보·수정 유형 가설까지 스스로 정리할 수 있는 루프 만들기
 > **전제**: [06-good-first-issues-swift-6.0-6.3.md](06-good-first-issues-swift-6.0-6.3.md)에서 관심 있는 이슈 하나를 고른 상태
 
+> **핵심 코스 연결**: 이 문서는 [첫 기여 핵심 코스](courses/00-swift-compiler-first-contribution-track.md)의 **Step 10**에서 여는 보조 문서입니다. 처음에는 open issue를 해결하려 하지 말고, **탐색 계획을 쓰는 것**만 목표로 사용하세요.
+
 ---
 
 ## 빠른 시작

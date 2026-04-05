@@ -71,6 +71,24 @@ TRACK_LABEL = {
     'template': '템플릿/도구',
 }
 
+CORE_DOC_PRIORITIES = {
+    'tutorials/courses/00-swift-compiler-first-contribution-track.md': (0, 'core'),
+    'tutorials/01-build-environment-lab.md': (1, 'support'),
+    'tutorials/02-debugging-environment-lab.md': (2, 'support'),
+    'tutorials/03-pipeline-entrypoints-and-knowledge-map.md': (3, 'support'),
+    'tutorials/04-stage-modification-workflow.md': (4, 'support'),
+    'tutorials/case-studies/01-sema-fixit-source-locs.md': (5, 'next'),
+    'tutorials/06-good-first-issues-swift-6.0-6.3.md': (6, 'next'),
+    'tutorials/good-first-issues/README.md': (7, 'next'),
+    'tutorials/07-open-issue-analysis-workbook.md': (8, 'next'),
+    'tutorials/good-first-issues/cards/01-static-member-instance-diagnostic.md': (9, 'next'),
+    'tutorials/good-first-issues/cards/03-opaque-property-fixit.md': (10, 'next'),
+    'tutorials/good-first-issues/cards/06-dynamicmemberlookup-fixits.md': (11, 'next'),
+    'README.md': (20, 'support'),
+    'tutorials/README.md': (21, 'support'),
+    'tutorials/courses/README.md': (22, 'support'),
+}
+
 
 def iter_markdown_files() -> list[Path]:
     files: list[Path] = []
@@ -592,6 +610,24 @@ def review_days_for(category: str, track: str) -> list[int]:
     return [3, 7]
 
 
+def core_priority_for(rel: str) -> tuple[int, str]:
+    if rel in CORE_DOC_PRIORITIES:
+        return CORE_DOC_PRIORITIES[rel]
+    if rel.startswith('tutorials/case-studies/cards/'):
+        return (100, 'later')
+    if rel.startswith('tutorials/case-studies/'):
+        return (90, 'later')
+    if rel.startswith('tutorials/good-first-issues/cards/'):
+        return (110, 'later')
+    if rel.startswith('tutorials/good-first-issues/'):
+        return (95, 'later')
+    if rel.startswith('tutorials/courses/'):
+        return (120, 'later')
+    if rel.startswith('tutorials/'):
+        return (80, 'later')
+    return (130, 'later')
+
+
 def build_index_metadata() -> dict[str, dict[str, Any]]:
     by_path: dict[str, dict[str, Any]] = {}
     for path, key in [
@@ -665,6 +701,7 @@ def collect_docs() -> tuple[list[dict[str, object]], list[dict[str, object]], li
         labels = index_meta.get('labels') or []
         concepts = index_meta.get('concepts') or []
         source_links = build_source_links(index_meta)
+        core_order, focus_group = core_priority_for(rel)
         doc = {
             'id': rel.replace('/', '__').replace('.md', ''),
             'path': rel,
@@ -692,6 +729,9 @@ def collect_docs() -> tuple[list[dict[str, object]], list[dict[str, object]], li
             'whyItMatters': index_meta.get('why_it_matters'),
             'prContextSummary': index_meta.get('pr_context_summary'),
             'relatedDocs': dedup_related,
+            'isPrimaryCourse': rel == 'tutorials/courses/00-swift-compiler-first-contribution-track.md',
+            'focusGroup': focus_group,
+            'coreOrder': core_order,
             'repoTestCandidates': repo_test_candidates,
             'entryFileGuesses': entry_file_guesses,
             'reproCommandGuesses': repro_command_guesses,
@@ -727,7 +767,7 @@ def collect_docs() -> tuple[list[dict[str, object]], list[dict[str, object]], li
         doc['practiceCount'] = len(doc['practiceCards'])
         docs.append(doc)
 
-    docs = sorted(docs, key=lambda d: (d['order'], d['title']))
+    docs = sorted(docs, key=lambda d: (d['coreOrder'], d['order'], d['title']))
     categories = [
         {'id': key, 'label': CATEGORY_LABEL[key], 'order': CATEGORY_ORDER[key]}
         for key in sorted(CATEGORY_ORDER, key=lambda k: CATEGORY_ORDER[k])

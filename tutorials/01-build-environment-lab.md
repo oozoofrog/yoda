@@ -5,6 +5,8 @@
 > **예상 시간**: 60~120분
 > **레퍼런스**: [../2026-04-04-swift-compiler-dev-environment.md](../2026-04-04-swift-compiler-dev-environment.md)
 
+> **핵심 코스 연결**: 이 문서는 [첫 기여 핵심 코스](courses/00-swift-compiler-first-contribution-track.md)의 **Step 1~2**에서 여는 보조 문서입니다. 처음 시작이라면 이 문서만 단독으로 읽지 말고, 핵심 코스의 해당 Step 지시에 따라 사용하세요.
+
 ---
 
 ## 빠른 시작

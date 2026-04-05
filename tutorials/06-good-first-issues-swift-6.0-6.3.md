@@ -4,6 +4,8 @@
 > **목표**: Swift 6.0 ~ 6.3의 `good first issue`를 버전/증상/난이도 기준으로 탐색하고, 분석 워크북과 카드 라이브러리로 연결하기
 > **전제**: [01-build-environment-lab.md](01-build-environment-lab.md), [04-stage-modification-workflow.md](04-stage-modification-workflow.md)를 끝낸 상태 권장
 
+> **핵심 코스 연결**: 이 문서는 [첫 기여 핵심 코스](courses/00-swift-compiler-first-contribution-track.md)의 **Step 8~9**에서 여는 보조 문서입니다. 처음에는 여러 issue를 고르지 말고, 핵심 코스에서 지정한 **한 개의 기본 issue**만 선택하세요.
+
 ---
 
 ## 빠른 시작

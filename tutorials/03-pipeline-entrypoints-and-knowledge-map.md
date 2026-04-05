@@ -5,6 +5,8 @@
 > **예상 시간**: 60~90분
 > **선행 실습**: [01-build-environment-lab.md](01-build-environment-lab.md), [02-debugging-environment-lab.md](02-debugging-environment-lab.md)
 
+> **핵심 코스 연결**: 이 문서는 [첫 기여 핵심 코스](courses/00-swift-compiler-first-contribution-track.md)의 **Step 3~4**에서 여는 보조 문서입니다. 전체를 외우기보다, 현재 보고 있는 문제의 첫 진입 단계만 찾는 용도로 사용하세요.
+
 ---
 
 ## 빠른 시작

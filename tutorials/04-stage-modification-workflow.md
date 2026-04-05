@@ -5,6 +5,8 @@
 > **예상 시간**: 60~90분
 > **선행 실습**: [03-pipeline-entrypoints-and-knowledge-map.md](03-pipeline-entrypoints-and-knowledge-map.md)
 
+> **핵심 코스 연결**: 이 문서는 [첫 기여 핵심 코스](courses/00-swift-compiler-first-contribution-track.md)의 **Step 4, Step 6, Step 12~13**에서 여는 보조 문서입니다. 문제를 넓게 보지 말고, 재현 → 최소 수정 → 좁은 검증 순서만 가져가세요.
+
 ---
 
 ## 빠른 시작
