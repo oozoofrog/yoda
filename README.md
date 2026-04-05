@@ -17,6 +17,20 @@
 다른 문서들은 모두 로컬 빌드/테스트 루프가 잡혀 있다는 전제를 공유합니다.
 
 
+## 가장 먼저 해야 할 일
+
+Swift는 알지만 Swift 컴파일러는 처음이라면, **이 README에서 길을 찾으려 하지 말고 아래 문서 하나만 먼저 여세요.**
+
+- [tutorials/courses/00-swift-compiler-first-contribution-track.md](tutorials/courses/00-swift-compiler-first-contribution-track.md)
+
+이 문서는
+- 지금 뭘 해야 하는지
+- 왜 그 순서가 맞는지
+- 어디서 멈추고 다음 단계로 넘어가야 하는지
+를 한 번에 정해줍니다.
+
+---
+
 ## 인터랙티브 웹 문서
 
 `yoda/docs/`에는 이 Markdown 문서들을 바탕으로 만든 **정적 인터랙티브 학습 웹앱**이 있습니다.
@@ -75,6 +89,7 @@ cd yoda
 
 | 문서 | 역할 | 산출물 |
 |---|---|---|
+| [tutorials/courses/00-swift-compiler-first-contribution-track.md](tutorials/courses/00-swift-compiler-first-contribution-track.md) | Swift 개발자에서 첫 컴파일러 기여까지 가는 단일 핵심 코스 | 빌드→테스트→관찰→작은 수정→PR 준비 |
 | [tutorials/README.md](tutorials/README.md) | 튜토리얼 허브와 추천 순서 | 개인 학습 진입점 |
 | [tutorials/00-curriculum-and-method.md](tutorials/00-curriculum-and-method.md) | 학습법, 복습 루프, 연구 기반 설계 원칙 | 학습 로그와 주간 계획 |
 | [tutorials/01-build-environment-lab.md](tutorials/01-build-environment-lab.md) | 빌드 환경 실습 | 첫 빌드/첫 증분 빌드/첫 테스트 |

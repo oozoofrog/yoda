@@ -121,7 +121,8 @@ function getInitialDocId() {
   if (state.store.lastDocId && state.docById.has(state.store.lastDocId)) {
     return state.store.lastDocId;
   }
-  return state.docs[0]?.id || null;
+  const starter = state.docs.find((doc) => doc.path === 'tutorials/courses/00-swift-compiler-first-contribution-track.md');
+  return starter?.id || state.docs[0]?.id || null;
 }
 
 function getCurrentDoc() {

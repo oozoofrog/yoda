@@ -9,8 +9,9 @@
 - 학습과학/인지심리학 근거를 반영한 반복 가능한 학습 절차
 - 많은 사례를 짧게 훑는 case card와, 대표 사례를 깊게 따라가는 full tutorial의 2층 구조
 
-처음이라면 먼저 [00-curriculum-and-method.md](00-curriculum-and-method.md)부터 읽고,  
-그 다음 [01-build-environment-lab.md](01-build-environment-lab.md) → [02-debugging-environment-lab.md](02-debugging-environment-lab.md) 순서로 진행하세요.
+처음이라면 **다른 문서들을 고르지 말고 먼저** [courses/00-swift-compiler-first-contribution-track.md](courses/00-swift-compiler-first-contribution-track.md)부터 여세요.
+
+그 문서가 지금 무엇을 해야 하는지 순서를 고정해 줍니다.
 
 
 ## 인터랙티브 웹앱으로 보는 방법
@@ -35,20 +36,21 @@ cd yoda
 ## 이 디렉토리를 어떻게 사용할까
 
 ### 가장 추천하는 순서
-1. [00-curriculum-and-method.md](00-curriculum-and-method.md)
-2. [01-build-environment-lab.md](01-build-environment-lab.md)
-3. [02-debugging-environment-lab.md](02-debugging-environment-lab.md)
-4. [03-pipeline-entrypoints-and-knowledge-map.md](03-pipeline-entrypoints-and-knowledge-map.md)
-5. [04-stage-modification-workflow.md](04-stage-modification-workflow.md)
-6. [06-good-first-issues-swift-6.0-6.3.md](06-good-first-issues-swift-6.0-6.3.md)와 [good-first-issues/README.md](good-first-issues/README.md)에서 open issue 카드를 고릅니다
-7. [07-open-issue-analysis-workbook.md](07-open-issue-analysis-workbook.md)로 분석 로그를 시작합니다
-8. full tutorial 5개를 순서대로 진행
+1. [courses/00-swift-compiler-first-contribution-track.md](courses/00-swift-compiler-first-contribution-track.md)
+2. [00-curriculum-and-method.md](00-curriculum-and-method.md)
+3. [01-build-environment-lab.md](01-build-environment-lab.md)
+4. [02-debugging-environment-lab.md](02-debugging-environment-lab.md)
+5. [03-pipeline-entrypoints-and-knowledge-map.md](03-pipeline-entrypoints-and-knowledge-map.md)
+6. [04-stage-modification-workflow.md](04-stage-modification-workflow.md)
+7. [06-good-first-issues-swift-6.0-6.3.md](06-good-first-issues-swift-6.0-6.3.md)와 [good-first-issues/README.md](good-first-issues/README.md)에서 open issue 카드를 고릅니다
+8. [07-open-issue-analysis-workbook.md](07-open-issue-analysis-workbook.md)로 분석 로그를 시작합니다
+9. full tutorial 5개를 순서대로 진행
    - [01-sema-fixit-source-locs.md](case-studies/01-sema-fixit-source-locs.md)
    - [02-sil-location-explicitness.md](case-studies/02-sil-location-explicitness.md)
    - [03-irgen-fast-existential-casts.md](case-studies/03-irgen-fast-existential-casts.md)
    - [04-optimizer-cond-fail-pass-architecture.md](case-studies/04-optimizer-cond-fail-pass-architecture.md)
    - [05-optimizer-enum-tag-comparison-correctness.md](case-studies/05-optimizer-enum-tag-comparison-correctness.md)
-9. 이후 [case-studies/README.md](case-studies/README.md)와 `case-studies/cards/`에서 다음 사례를 고릅니다
+10. 이후 [case-studies/README.md](case-studies/README.md)와 `case-studies/cards/`에서 다음 사례를 고릅니다
 
 ### 목표별 추천 경로
 - **환경부터 익히기**: 01 → 02
@@ -66,6 +68,7 @@ cd yoda
 
 | 문서 | 역할 | 산출물 |
 |---|---|---|
+| [courses/00-swift-compiler-first-contribution-track.md](courses/00-swift-compiler-first-contribution-track.md) | Swift 개발자에서 첫 컴파일러 기여까지 가는 단일 핵심 코스 | 빌드→테스트→관찰→작은 수정→PR 준비 순서 |
 | [00-curriculum-and-method.md](00-curriculum-and-method.md) | 전체 학습법, 복습 루프, 연구 기반 설계 원칙 | 주간 학습 계획, 학습 로그 템플릿 |
 | [01-build-environment-lab.md](01-build-environment-lab.md) | 빌드/테스트 루프를 직접 구축하는 실습 | `BUILD` 변수, 증분 빌드 루프 |
 | [02-debugging-environment-lab.md](02-debugging-environment-lab.md) | AST/SIL/IR/LLDB 관찰 루프 실습 | 디버깅 커맨드 셋, 관찰 로그 |
@@ -73,7 +76,7 @@ cd yoda
 | [04-stage-modification-workflow.md](04-stage-modification-workflow.md) | 특정 단계 수정의 공통 절차 | 재현/수정/검증 체크리스트 |
 | [06-good-first-issues-swift-6.0-6.3.md](06-good-first-issues-swift-6.0-6.3.md) | Swift 6.0~6.3 `good first issue` 학습 코스 | open issue 기반 실전 과제 |
 | [07-open-issue-analysis-workbook.md](07-open-issue-analysis-workbook.md) | open issue를 분석하는 실전 워크북 | 분석 로그와 가설 기록 |
-| [08-interactive-web-learning-ui-rationale.md](08-interactive-web-learning-ui-rationale.md) | 인터랙티브 웹 UI 설계 배경 | Coursera 하이브리드 선택 근거 |
+| [08-interactive-web-learning-ui-rationale.md](08-interactive-web-learning-ui-rationale.md) | 인터랙티브 웹 UI 설계 배경 | 개인용 2단 문서 리더 선택 근거 |
 | [good-first-issues/README.md](good-first-issues/README.md) | open `good first issue` 카드 허브 | 짧은 실전 탐색 카드 |
 | [open-issue-templates/](open-issue-templates/) | open issue 분석 템플릿 | 분석 템플릿 / 세션 로그 |
 | [courses/README.md](courses/README.md) | 장기 학습 코스 허브 | diagnostics / optimizer / core 30일 코스 |

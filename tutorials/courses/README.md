@@ -2,6 +2,9 @@
 
 이 디렉토리는 `yoda/tutorials/`에 흩어진 문서들을 **실제 학습 순서**로 묶은 코스 문서를 모아둡니다.
 
+가장 먼저 봐야 할 코스:
+- [00-swift-compiler-first-contribution-track.md](00-swift-compiler-first-contribution-track.md)
+
 현재 제공 코스:
 - [30-day-diagnostics-track.md](30-day-diagnostics-track.md)
 - [30-day-optimizer-track.md](30-day-optimizer-track.md)
@@ -20,6 +23,10 @@ cd yoda
 ```
 
 ---
+이 코스부터 시작해야 하는 이유:
+- 처음 기여를 목표로 할 때 필요한 순서만 남긴 단일 핵심 코스입니다.
+- 이 문서 하나만 따라가면 빌드 → 테스트 → 관찰 → 작은 수정 → PR 준비까지 갑니다.
+
 원칙:
 - 문서는 많아도 하루에 소비하는 양은 적게 유지합니다.
 - merged 사례와 open issue를 섞어서 배웁니다.
