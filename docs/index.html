@@ -6,18 +6,45 @@
     <title>yoda learning reader</title>
     <meta
       name="description"
-      content="Swift 컴파일러 학습 문서를 개인용 2단 리더 형태로 탐색하는 정적 웹 문서"
+      content="Swift 컴파일러 학습 문서를 개인용 리더 형태로 탐색하는 정적 웹 문서"
     />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="floatingNavColumn" class="floating-nav-column" aria-label="문서 탐색 목차">
+      <section class="floating-card floating-global-card">
+        <div class="floating-card-header">
+          <div>
+            <div class="floating-kicker">전체 문서</div>
+            <h2>전체 목차</h2>
+          </div>
+          <span id="tocCount" class="count-pill"></span>
+        </div>
+        <div id="docList" class="doc-list"></div>
+      </section>
+
+      <section class="floating-card floating-current-card">
+        <div class="floating-card-header">
+          <div>
+            <div class="floating-kicker">현재 문서</div>
+            <h2 id="floatingCurrentSection">문서 상단</h2>
+          </div>
+        </div>
+        <div id="floatingOutlineList" class="floating-outline-list"></div>
+      </section>
+    </div>
+
+    <button id="navToggle" class="floating-nav-toggle" type="button" aria-expanded="false" aria-controls="floatingNavColumn">
+      목차 보기
+    </button>
+
     <div class="app-shell">
       <header class="topbar">
         <div class="title-block">
           <div class="eyebrow">yoda personal learning reader</div>
           <h1>학습 문서 뷰어</h1>
-          <p>좌측에서 순서대로 문서를 고르고, 우측에서 내용을 읽고 메모합니다.</p>
+          <p>왼쪽에는 전체 목차와 현재 문서 목차가 떠 있고, 오른쪽에서 현재 문서를 읽고 메모합니다.</p>
         </div>
         <div class="toolbar">
           <label class="search-box">
@@ -28,48 +55,19 @@
         </div>
       </header>
 
-      <div class="reader-layout">
-        <aside class="toc-pane">
-          <div class="pane-card sticky-pane">
-            <div class="pane-header">
-              <h2>전체 목차</h2>
-              <span id="tocCount" class="count-pill"></span>
-            </div>
-            <div id="docList" class="doc-list"></div>
-          </div>
-        </aside>
+      <main class="content-pane">
+        <article class="pane-card reader-card">
+          <header id="docHeader" class="doc-header"></header>
+          <div id="docContent" class="doc-content"></div>
+        </article>
 
-        <main class="content-pane">
-          <article class="pane-card reader-card">
-            <header id="docHeader" class="doc-header"></header>
-            <section id="docOutline" class="doc-outline"></section>
-            <div id="docContent" class="doc-content"></div>
-          </article>
-
-          <section class="pane-card notes-card">
-            <h2>개인 메모</h2>
-            <p class="muted">현재 문서에 대한 요약, 다음에 볼 파일, 막힌 점을 자유롭게 남깁니다.</p>
-            <textarea id="docNotesArea" class="notes-textarea" placeholder="여기에 개인 메모를 적습니다."></textarea>
-          </section>
-        </main>
-      </div>
+        <section class="pane-card notes-card">
+          <h2>개인 메모</h2>
+          <p class="muted">현재 문서에 대한 요약, 다음에 볼 파일, 막힌 점을 자유롭게 남깁니다.</p>
+          <textarea id="docNotesArea" class="notes-textarea" placeholder="여기에 개인 메모를 적습니다."></textarea>
+        </section>
+      </main>
     </div>
-
-    <button id="floatingOutlineToggle" class="floating-outline-toggle" type="button" aria-expanded="false" aria-controls="floatingOutlinePanel">
-      현재 위치 · 목차
-    </button>
-    <aside id="floatingOutlinePanel" class="floating-outline-panel" aria-label="현재 문서 목차">
-      <div class="floating-outline-card">
-        <div class="floating-outline-header">
-          <div>
-            <div class="floating-outline-kicker">현재 문서 목차</div>
-            <strong id="floatingCurrentSection">문서 상단</strong>
-          </div>
-          <button id="floatingOutlineClose" class="ghost-button compact-button" type="button" aria-label="목차 닫기">닫기</button>
-        </div>
-        <div id="floatingOutlineList" class="floating-outline-list"></div>
-      </div>
-    </aside>
 
     <script src="app.js" type="module"></script>
   </body>

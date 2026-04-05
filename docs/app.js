@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'yoda-learning-reader-v2';
+const STORAGE_KEY = 'yoda-learning-reader-v3';
 
 const state = {
   docs: [],
@@ -7,7 +7,7 @@ const state = {
   currentDocId: null,
   pendingAnchor: null,
   currentHeadingId: null,
-  outlineOpen: false,
+  navOpen: false,
   search: '',
   store: loadStore(),
 };
@@ -15,15 +15,13 @@ const state = {
 const el = {
   searchInput: document.getElementById('searchInput'),
   themeToggle: document.getElementById('themeToggle'),
+  navToggle: document.getElementById('navToggle'),
+  floatingNavColumn: document.getElementById('floatingNavColumn'),
   tocCount: document.getElementById('tocCount'),
   docList: document.getElementById('docList'),
   docHeader: document.getElementById('docHeader'),
-  docOutline: document.getElementById('docOutline'),
   docContent: document.getElementById('docContent'),
   notesArea: document.getElementById('docNotesArea'),
-  floatingOutlineToggle: document.getElementById('floatingOutlineToggle'),
-  floatingOutlinePanel: document.getElementById('floatingOutlinePanel'),
-  floatingOutlineClose: document.getElementById('floatingOutlineClose'),
   floatingOutlineList: document.getElementById('floatingOutlineList'),
   floatingCurrentSection: document.getElementById('floatingCurrentSection'),
 };
@@ -40,13 +38,13 @@ async function init() {
   if (!response.ok) throw new Error(`content.json load failed: ${response.status}`);
   const payload = await response.json();
   state.docs = payload.docs || [];
-  state.outlineOpen = !!state.store.floatingOutlineOpen;
+  state.navOpen = !!state.store.navOpen;
   state.docs.forEach((doc) => {
     state.docById.set(doc.id, doc);
     state.docByPath.set(doc.path, doc);
   });
   state.currentDocId = getInitialDocId();
-  renderFloatingOutlineVisibility();
+  renderNavVisibility();
   renderSidebar();
   renderCurrentDoc();
 }
@@ -56,7 +54,7 @@ function loadStore() {
     theme: 'light',
     notes: {},
     lastDocId: null,
-    floatingOutlineOpen: true,
+    navOpen: false,
   };
   try {
     return { ...base, ...(JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}) };
@@ -81,18 +79,11 @@ function bindGlobalEvents() {
     applyTheme();
   });
 
-  el.floatingOutlineToggle.addEventListener('click', () => {
-    state.outlineOpen = !state.outlineOpen;
-    state.store.floatingOutlineOpen = state.outlineOpen;
+  el.navToggle.addEventListener('click', () => {
+    state.navOpen = !state.navOpen;
+    state.store.navOpen = state.navOpen;
     persistStore();
-    renderFloatingOutlineVisibility();
-  });
-
-  el.floatingOutlineClose.addEventListener('click', () => {
-    state.outlineOpen = false;
-    state.store.floatingOutlineOpen = false;
-    persistStore();
-    renderFloatingOutlineVisibility();
+    renderNavVisibility();
   });
 
   el.notesArea.addEventListener('input', (event) => {
@@ -113,9 +104,8 @@ function bindGlobalEvents() {
     renderCurrentDoc();
   });
 
-  window.addEventListener('scroll', () => {
-    updateCurrentHeadingFromScroll();
-  }, { passive: true });
+  window.addEventListener('scroll', updateCurrentHeadingFromScroll, { passive: true });
+  window.addEventListener('resize', renderNavVisibility);
 }
 
 function applyTheme() {
@@ -175,6 +165,13 @@ function setCurrentDoc(docId, anchor = null) {
   renderCurrentDoc();
 }
 
+function renderNavVisibility() {
+  const mobile = window.innerWidth <= 980;
+  el.floatingNavColumn.classList.toggle('open', mobile && state.navOpen);
+  el.navToggle.setAttribute('aria-expanded', String(mobile ? state.navOpen : true));
+  el.navToggle.textContent = mobile ? (state.navOpen ? '목차 닫기' : '목차 보기') : '목차 보기';
+}
+
 function renderSidebar() {
   const docs = getVisibleDocs();
   el.tocCount.textContent = `${docs.length}개`;
@@ -192,7 +189,15 @@ function renderSidebar() {
     .join('');
 
   el.docList.querySelectorAll('[data-doc-id]').forEach((button) => {
-    button.addEventListener('click', () => setCurrentDoc(button.dataset.docId));
+    button.addEventListener('click', () => {
+      setCurrentDoc(button.dataset.docId);
+      if (window.innerWidth <= 980) {
+        state.navOpen = false;
+        state.store.navOpen = false;
+        persistStore();
+        renderNavVisibility();
+      }
+    });
   });
 }
 
@@ -208,29 +213,15 @@ function renderCurrentDoc() {
   el.docHeader.innerHTML = `
     <div class="doc-path">${escapeHtml(doc.path)}</div>
     <h2>${escapeHtml(doc.title)}</h2>
-    <p class="doc-summary">${escapeHtml(doc.excerpt || '선택한 문서의 내용을 우측에서 바로 읽습니다.')}</p>
+    <p class="doc-summary">${escapeHtml(doc.excerpt || '선택한 문서의 내용을 오른쪽에서 읽습니다.')}</p>
     <div class="doc-meta-row">${badges.join('')}</div>
   `;
 
-  const headings = getRenderableHeadings(doc);
-  el.docOutline.innerHTML = headings.length
-    ? `
-      <div class="outline-card">
-        <h3>현재 문서 목차</h3>
-        <div class="outline-list">
-          ${headings.map((item) => `<button class="outline-button" type="button" data-scroll-target="${item.id}">${escapeHtml(item.text)}</button>`).join('')}
-        </div>
-      </div>
-    `
-    : '';
-
   el.docContent.innerHTML = doc.html;
   el.notesArea.value = state.store.notes[doc.id] || '';
-  state.currentHeadingId = headings[0]?.id || null;
 
   bindDocLinkInterception(el.docContent);
-  bindOutlineButtons();
-  renderFloatingOutline(doc, headings);
+  renderCurrentOutline(doc);
   handlePendingAnchor();
   updateCurrentHeadingFromScroll();
 }
@@ -241,6 +232,36 @@ function getRenderableHeadings(doc) {
     if (item.level === 3 && /^Step\s+\d+/.test(item.text)) return true;
     return false;
   });
+}
+
+function renderCurrentOutline(doc) {
+  const headings = getRenderableHeadings(doc);
+  if (!headings.length) {
+    el.floatingOutlineList.innerHTML = '<div class="empty-state">이 문서에는 이동 가능한 목차가 없습니다.</div>';
+    el.floatingCurrentSection.textContent = doc.title || '문서 상단';
+    return;
+  }
+  state.currentHeadingId = headings[0].id;
+  el.floatingOutlineList.innerHTML = headings
+    .map((item) => `
+      <button class="floating-outline-item level-${item.level}" type="button" data-heading-id="${item.id}">
+        ${escapeHtml(item.text)}
+      </button>
+    `)
+    .join('');
+  el.floatingOutlineList.querySelectorAll('[data-heading-id]').forEach((button) => {
+    button.addEventListener('click', () => {
+      scrollToAnchor(button.dataset.headingId);
+      if (window.innerWidth <= 980) {
+        state.navOpen = false;
+        state.store.navOpen = false;
+        persistStore();
+        renderNavVisibility();
+      }
+    });
+  });
+  syncCurrentOutlineActive();
+  updateCurrentHeadingLabel(doc, headings);
 }
 
 function bindDocLinkInterception(root) {
@@ -261,37 +282,6 @@ function bindDocLinkInterception(root) {
   });
 }
 
-function bindOutlineButtons() {
-  el.docOutline.querySelectorAll('[data-scroll-target]').forEach((button) => {
-    button.addEventListener('click', () => scrollToAnchor(button.dataset.scrollTarget));
-  });
-}
-
-function renderFloatingOutline(doc, headings) {
-  if (!headings.length) {
-    el.floatingOutlineList.innerHTML = '<div class="empty-state">이 문서에는 이동 가능한 목차가 없습니다.</div>';
-    el.floatingCurrentSection.textContent = doc.title || '문서 상단';
-    return;
-  }
-  el.floatingOutlineList.innerHTML = headings
-    .map((item) => `
-      <button class="floating-outline-item level-${item.level}" type="button" data-floating-target="${item.id}">
-        ${escapeHtml(item.text)}
-      </button>
-    `)
-    .join('');
-  el.floatingOutlineList.querySelectorAll('[data-floating-target]').forEach((button) => {
-    button.addEventListener('click', () => scrollToAnchor(button.dataset.floatingTarget));
-  });
-  syncFloatingOutlineActiveState();
-  updateFloatingCurrentSectionLabel(doc, headings);
-}
-
-function renderFloatingOutlineVisibility() {
-  el.floatingOutlinePanel.classList.toggle('open', state.outlineOpen);
-  el.floatingOutlineToggle.setAttribute('aria-expanded', String(state.outlineOpen));
-}
-
 function handlePendingAnchor() {
   if (!state.pendingAnchor) return;
   const anchor = state.pendingAnchor;
@@ -301,12 +291,11 @@ function handlePendingAnchor() {
 
 function scrollToAnchor(anchor) {
   const target = el.docContent.querySelector(`#${cssEscape(anchor)}`);
-  if (target) {
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    state.currentHeadingId = anchor;
-    syncFloatingOutlineActiveState();
-    updateCurrentHeadingFromScroll();
-  }
+  if (!target) return;
+  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  state.currentHeadingId = anchor;
+  syncCurrentOutlineActive();
+  updateCurrentHeadingFromScroll();
 }
 
 function updateCurrentHeadingFromScroll() {
@@ -314,34 +303,33 @@ function updateCurrentHeadingFromScroll() {
   if (!doc) return;
   const headings = getRenderableHeadings(doc);
   const rendered = headings
-    .map((item) => el.docContent.querySelector(`#${cssEscape(item.id)}`))
-    .filter(Boolean);
+    .map((item) => ({ item, node: el.docContent.querySelector(`#${cssEscape(item.id)}`) }))
+    .filter((entry) => entry.node);
   if (!rendered.length) {
     state.currentHeadingId = null;
-    updateFloatingCurrentSectionLabel(doc, headings);
+    updateCurrentHeadingLabel(doc, headings);
     return;
   }
 
-  let active = rendered[0].id;
-  for (const heading of rendered) {
-    if (heading.getBoundingClientRect().top <= 160) active = heading.id;
+  let active = rendered[0].item.id;
+  for (const entry of rendered) {
+    if (entry.node.getBoundingClientRect().top <= 160) active = entry.item.id;
     else break;
   }
-
   if (state.currentHeadingId !== active) {
     state.currentHeadingId = active;
-    syncFloatingOutlineActiveState();
+    syncCurrentOutlineActive();
   }
-  updateFloatingCurrentSectionLabel(doc, headings);
+  updateCurrentHeadingLabel(doc, headings);
 }
 
-function syncFloatingOutlineActiveState() {
-  el.floatingOutlineList.querySelectorAll('.floating-outline-item').forEach((item) => {
-    item.classList.toggle('active', item.dataset.floatingTarget === state.currentHeadingId);
+function syncCurrentOutlineActive() {
+  el.floatingOutlineList.querySelectorAll('[data-heading-id]').forEach((button) => {
+    button.classList.toggle('active', button.dataset.headingId === state.currentHeadingId);
   });
 }
 
-function updateFloatingCurrentSectionLabel(doc, headings) {
+function updateCurrentHeadingLabel(doc, headings) {
   const current = headings.find((item) => item.id === state.currentHeadingId);
   el.floatingCurrentSection.textContent = current?.text || doc.title || '문서 상단';
 }
