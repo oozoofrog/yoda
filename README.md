@@ -29,8 +29,7 @@
 
 ```bash
 cd yoda
-python3 scripts/build_web_content.py
-python3 -m http.server 8123 -d docs
+./scripts/run_web.sh
 ```
 
 그 다음 브라우저에서 `http://127.0.0.1:8123`를 엽니다.

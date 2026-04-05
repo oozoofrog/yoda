@@ -16,8 +16,7 @@
 
 ```bash
 cd yoda
-python3 scripts/build_web_content.py
-python3 -m http.server 8123 -d docs
+./scripts/run_web.sh
 ```
 
 ---
