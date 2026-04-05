@@ -16,6 +16,25 @@
 처음이라면 **항상 개발 환경 문서부터** 시작하세요.  
 다른 문서들은 모두 로컬 빌드/테스트 루프가 잡혀 있다는 전제를 공유합니다.
 
+
+## 인터랙티브 웹 문서
+
+`yoda/docs/`에는 이 Markdown 문서들을 바탕으로 만든 **정적 인터랙티브 학습 웹앱**이 있습니다.
+
+- 기본 UX: **Coursera식 3열 코스 구조**
+- 보강 요소: **practice card / mastery / review queue / notes**
+- 배포 방식: **GitHub Pages용 정적 문서**
+
+로컬에서 미리보려면:
+
+```bash
+cd yoda
+python3 scripts/build_web_content.py
+python3 -m http.server 8123 -d docs
+```
+
+그 다음 브라우저에서 `http://127.0.0.1:8123`를 엽니다.
+
 ---
 
 ## 빠른 진입

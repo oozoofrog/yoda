@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>yoda interactive learning docs</title>
+    <meta
+      name="description"
+      content="Swift 컴파일러 학습 자료를 Coursera 하이브리드 방식으로 탐색하는 정적 인터랙티브 학습 페이지"
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-kicker">yoda · Coursera hybrid</div>
+          <h1>인터랙티브 학습 문서</h1>
+          <p>
+            Swift 컴파일러 학습 자료를 코스·사례·오픈 이슈 카드 중심으로 탐색합니다.
+            Coursera식 코스 골격에 practice, mastery, review queue를 결합한 정적 학습 cockpit입니다.
+          </p>
+        </div>
+        <div class="topbar-actions">
+          <label class="search-box">
+            <span>검색</span>
+            <input id="searchInput" type="search" placeholder="문서, 이슈, 키워드, 단계 검색" />
+          </label>
+
+          <div class="control-stack">
+            <div class="stack-label">보기 방식</div>
+            <div id="viewModeToggle" class="segmented-control" aria-label="보기 방식 선택">
+              <button type="button" class="segment active" data-view-mode="track">트랙 보기</button>
+              <button type="button" class="segment" data-view-mode="library">라이브러리</button>
+            </div>
+          </div>
+
+          <button id="themeToggle" class="ghost-button" type="button">다크/라이트</button>
+        </div>
+      </header>
+
+      <div class="layout-grid">
+        <aside class="sidebar">
+          <section class="sidebar-section">
+            <h2>오늘의 복습</h2>
+            <div id="todayReviewBox" class="review-queue"></div>
+          </section>
+
+          <section class="sidebar-section">
+            <h2>탐색</h2>
+            <div class="stack-label">트랙</div>
+            <div id="trackChips" class="chip-row spaced"></div>
+            <div class="stack-label top-gap">카테고리</div>
+            <div id="filterChips" class="chip-row"></div>
+          </section>
+
+          <section class="sidebar-section fill-grow">
+            <div class="section-header-inline">
+              <h2>문서 목록</h2>
+              <span id="docListCount" class="count-pill"></span>
+            </div>
+            <div id="docList" class="doc-list"></div>
+          </section>
+        </aside>
+
+        <main class="content-area">
+          <div id="docHero" class="doc-hero"></div>
+
+          <section class="hero-toolbar card-shell">
+            <div id="docQuickStats" class="stat-grid"></div>
+            <div>
+              <div class="stack-label">숙련도</div>
+              <div id="masteryToolbar" class="mastery-row"></div>
+            </div>
+          </section>
+
+          <nav class="tabbar" id="tabbar" aria-label="문서 탭">
+            <button data-tab="overview" class="tab active" type="button">개요</button>
+            <button data-tab="learn" class="tab" type="button">학습</button>
+            <button data-tab="practice" class="tab" type="button">질문/체크</button>
+            <button data-tab="notes" class="tab" type="button">노트</button>
+          </nav>
+
+          <section id="panel-overview" class="tab-panel active"></section>
+          <section id="panel-learn" class="tab-panel"></section>
+          <section id="panel-practice" class="tab-panel"></section>
+          <section id="panel-notes" class="tab-panel"></section>
+        </main>
+
+        <aside class="right-rail">
+          <section class="rail-card">
+            <h2>학습 진행</h2>
+            <div id="globalProgress" class="progress-block"></div>
+            <button id="completeToggle" class="primary-button" type="button">완료로 표시</button>
+          </section>
+
+          <section class="rail-card">
+            <h2>일관성 / 복습</h2>
+            <div id="consistencyBox" class="meta-summary"></div>
+          </section>
+
+          <section class="rail-card">
+            <h2>이 문서 요약</h2>
+            <div id="docMetaSummary" class="meta-summary"></div>
+          </section>
+
+          <section class="rail-card">
+            <h2>추천 다음 문서</h2>
+            <div id="nextDocBox" class="next-doc-box"></div>
+          </section>
+
+          <section class="rail-card">
+            <h2>원문 링크</h2>
+            <div id="sourceLinksBox" class="source-links-box"></div>
+          </section>
+
+          <section class="rail-card">
+            <h2>학습 UX 메모</h2>
+            <p class="small-note">
+              기본 뼈대는 <strong>Coursera식 진행형 코스 페이지</strong>입니다. 좌측 syllabus, 중앙 lesson,
+              우측 progress를 유지합니다.
+            </p>
+            <p class="small-note">
+              여기에 <strong>Codecademy식 practice card</strong>, <strong>Khan식 mastery/consistency</strong>,
+              <strong>Duolingo식 review resurfacing</strong>를 얹어 “많은 자료를 오래 배우는” 흐름을 만듭니다.
+            </p>
+          </section>
+        </aside>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>

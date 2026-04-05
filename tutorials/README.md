@@ -12,6 +12,25 @@
 처음이라면 먼저 [00-curriculum-and-method.md](00-curriculum-and-method.md)부터 읽고,  
 그 다음 [01-build-environment-lab.md](01-build-environment-lab.md) → [02-debugging-environment-lab.md](02-debugging-environment-lab.md) 순서로 진행하세요.
 
+
+## 인터랙티브 웹앱으로 보는 방법
+
+튜토리얼과 사례 문서는 `../docs/`의 정적 웹앱에서도 탐색할 수 있습니다.
+웹앱은 다음 흐름을 지원합니다.
+
+- track/library 전환
+- 문서별 progress / mastery / notes
+- 1/3/7일 review queue
+- good first issue 카드와 merged 사례를 같은 UI에서 탐색
+
+로컬 미리보기:
+
+```bash
+cd yoda
+python3 scripts/build_web_content.py
+python3 -m http.server 8123 -d docs
+```
+
 ---
 
 ## 이 디렉토리를 어떻게 사용할까
@@ -55,6 +74,7 @@
 | [04-stage-modification-workflow.md](04-stage-modification-workflow.md) | 특정 단계 수정의 공통 절차 | 재현/수정/검증 체크리스트 |
 | [06-good-first-issues-swift-6.0-6.3.md](06-good-first-issues-swift-6.0-6.3.md) | Swift 6.0~6.3 `good first issue` 학습 코스 | open issue 기반 실전 과제 |
 | [07-open-issue-analysis-workbook.md](07-open-issue-analysis-workbook.md) | open issue를 분석하는 실전 워크북 | 분석 로그와 가설 기록 |
+| [08-interactive-web-learning-ui-rationale.md](08-interactive-web-learning-ui-rationale.md) | 인터랙티브 웹 UI 설계 배경 | Coursera 하이브리드 선택 근거 |
 | [good-first-issues/README.md](good-first-issues/README.md) | open `good first issue` 카드 허브 | 짧은 실전 탐색 카드 |
 | [open-issue-templates/](open-issue-templates/) | open issue 분석 템플릿 | 분석 템플릿 / 세션 로그 |
 | [courses/README.md](courses/README.md) | 장기 학습 코스 허브 | diagnostics / optimizer / core 30일 코스 |
