@@ -24,6 +24,7 @@ const el = {
   notesArea: document.getElementById('docNotesArea'),
   floatingOutlineList: document.getElementById('floatingOutlineList'),
   floatingCurrentSection: document.getElementById('floatingCurrentSection'),
+  spotlightStrip: document.getElementById('spotlightStrip'),
 };
 
 init().catch((error) => {
@@ -45,6 +46,7 @@ async function init() {
   });
   state.currentDocId = getInitialDocId();
   renderNavVisibility();
+  renderSpotlightStrip();
   renderSidebar();
   renderCurrentDoc();
 }
@@ -143,6 +145,38 @@ function getInitialDocId() {
 
 function getCurrentDoc() {
   return state.docById.get(state.currentDocId) || null;
+}
+
+function renderSpotlightStrip() {
+  if (!el.spotlightStrip) return;
+  const downloadDoc = state.docByPath.get('2026-04-10-swift-official-reference-downloads.md');
+  if (!downloadDoc) {
+    el.spotlightStrip.innerHTML = '';
+    return;
+  }
+
+  el.spotlightStrip.innerHTML = `
+    <section class="spotlight-card">
+      <div class="spotlight-copy">
+        <div class="spotlight-kicker">빠른 자료 접근</div>
+        <h2>Swift 공식/준공식 참고 문서 다운로드</h2>
+        <p>generics.pdf, TypeChecker, SIL, Compiler Architecture 등 정리된 다운로드 허브로 바로 이동합니다.</p>
+        <div class="spotlight-actions">
+          <button class="spotlight-button primary" type="button" data-spotlight-open="downloads">다운로드 허브 열기</button>
+          <a class="spotlight-button" href="downloads/swift-docs-20260410-081300.zip" download>전체 ZIP 받기</a>
+        </div>
+      </div>
+      <div class="spotlight-meta">
+        <span class="badge">21개 파일</span>
+        <span class="badge">ZIP + 개별 문서</span>
+        <span class="badge">공식 링크 동봉</span>
+      </div>
+    </section>
+  `;
+
+  el.spotlightStrip.querySelector('[data-spotlight-open="downloads"]')?.addEventListener('click', () => {
+    setCurrentDoc(downloadDoc.id);
+  });
 }
 
 function getVisibleDocs() {

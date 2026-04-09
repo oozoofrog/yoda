@@ -20,16 +20,16 @@
 - [Driver Internals](docs/downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/DriverInternals.md) — 원본: [https://github.com/swiftlang/swift/blob/main/docs/DriverInternals.md](https://github.com/swiftlang/swift/blob/main/docs/DriverInternals.md)
 - [Diagnostics](docs/downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/Diagnostics.md) — 원본: [https://github.com/swiftlang/swift/blob/main/docs/Diagnostics.md](https://github.com/swiftlang/swift/blob/main/docs/Diagnostics.md)
 - [ABI Stability Manifesto](docs/downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/ABIStabilityManifesto.md) — 원본: [https://github.com/swiftlang/swift/blob/main/docs/ABIStabilityManifesto.md](https://github.com/swiftlang/swift/blob/main/docs/ABIStabilityManifesto.md)
-- [Swift Compiler Architecture](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/swift-compiler/index.html) — 원본: [https://www.swift.org/documentation/swift-compiler/](https://www.swift.org/documentation/swift-compiler/)
-- [Swift docs index](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/index.html) — 원본: [https://www.swift.org/documentation/](https://www.swift.org/documentation/)
-- [TSPL](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/tspl/index.html) — 원본: [https://www.swift.org/documentation/tspl/](https://www.swift.org/documentation/tspl/)
-- [API Design Guidelines](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/api-design-guidelines/index.html) — 원본: [https://www.swift.org/documentation/api-design-guidelines/](https://www.swift.org/documentation/api-design-guidelines/)
-- [Standard Library](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/standard-library/index.html) — 원본: [https://www.swift.org/documentation/standard-library/](https://www.swift.org/documentation/standard-library/)
-- [Core Libraries](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/core-libraries/index.html) — 원본: [https://www.swift.org/documentation/core-libraries/](https://www.swift.org/documentation/core-libraries/)
-- [Package Manager](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/package-manager/index.html) — 원본: [https://www.swift.org/documentation/package-manager/](https://www.swift.org/documentation/package-manager/)
-- [LLDB](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/lldb/index.html) — 원본: [https://www.swift.org/documentation/lldb/](https://www.swift.org/documentation/lldb/)
-- [Value and Reference Types](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/articles/value-and-reference-types.html) — 원본: [https://www.swift.org/documentation/articles/value-and-reference-types.html](https://www.swift.org/documentation/articles/value-and-reference-types.html)
-- [Concurrency](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/concurrency/index.html) — 원본: [https://www.swift.org/documentation/concurrency/](https://www.swift.org/documentation/concurrency/)
+- [Swift Compiler Architecture](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/swift-compiler/index.html) — 다운로드 전용 HTML 미러 — 원본: [https://www.swift.org/documentation/swift-compiler/](https://www.swift.org/documentation/swift-compiler/)
+- [Swift docs index](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/index.html) — 다운로드 전용 HTML 미러 — 원본: [https://www.swift.org/documentation/](https://www.swift.org/documentation/)
+- [TSPL](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/tspl/index.html) — 다운로드 전용 HTML 미러 — 원본: [https://www.swift.org/documentation/tspl/](https://www.swift.org/documentation/tspl/)
+- [API Design Guidelines](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/api-design-guidelines/index.html) — 다운로드 전용 HTML 미러 — 원본: [https://www.swift.org/documentation/api-design-guidelines/](https://www.swift.org/documentation/api-design-guidelines/)
+- [Standard Library](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/standard-library/index.html) — 다운로드 전용 HTML 미러 — 원본: [https://www.swift.org/documentation/standard-library/](https://www.swift.org/documentation/standard-library/)
+- [Core Libraries](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/core-libraries/index.html) — 다운로드 전용 HTML 미러 — 원본: [https://www.swift.org/documentation/core-libraries/](https://www.swift.org/documentation/core-libraries/)
+- [Package Manager](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/package-manager/index.html) — 다운로드 전용 HTML 미러 — 원본: [https://www.swift.org/documentation/package-manager/](https://www.swift.org/documentation/package-manager/)
+- [LLDB](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/lldb/index.html) — 다운로드 전용 HTML 미러 — 원본: [https://www.swift.org/documentation/lldb/](https://www.swift.org/documentation/lldb/)
+- [Value and Reference Types](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/articles/value-and-reference-types.html) — 다운로드 전용 HTML 미러 — 원본: [https://www.swift.org/documentation/articles/value-and-reference-types.html](https://www.swift.org/documentation/articles/value-and-reference-types.html)
+- [Concurrency](docs/downloads/swift-docs-20260410-081300/files/swift.org/documentation/concurrency/index.html) — 다운로드 전용 HTML 미러 — 원본: [https://www.swift.org/documentation/concurrency/](https://www.swift.org/documentation/concurrency/)
 
 ## 추천 읽는 순서
 
@@ -46,4 +46,5 @@
 
 - 위 링크들은 yoda 정적 위키에서 같은 origin으로 서빙되므로 브라우저에서 바로 다운로드할 수 있습니다.
 - ZIP은 전체 묶음 보관용이고, 개별 링크는 바로 열어보거나 내려받는 용도입니다.
+- `다운로드 전용 HTML 미러` 라벨이 붙은 항목은 사이트 내부에서 완전한 렌더를 보장하기보다, 원문 보관/오프라인 확인용에 가깝습니다.
 - 원본 URL은 각 항목에 함께 적어두었습니다.

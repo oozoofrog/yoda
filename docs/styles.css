@@ -148,6 +148,75 @@ button { color: inherit; }
   align-items: flex-end;
 }
 
+.spotlight-strip {
+  margin-bottom: 18px;
+}
+
+.spotlight-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, var(--panel) 0%, var(--primary-soft) 100%);
+  box-shadow: var(--shadow);
+}
+
+.spotlight-copy h2 {
+  margin: 4px 0 8px;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.spotlight-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.spotlight-kicker {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.spotlight-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.spotlight-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--panel);
+  padding: 10px 14px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.spotlight-button.primary {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+}
+
+.spotlight-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
 .search-box {
   display: flex;
   flex-direction: column;
@@ -401,6 +470,15 @@ button { color: inherit; }
   .toolbar {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .spotlight-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .spotlight-meta {
+    justify-content: flex-start;
   }
 
   .search-box input {
