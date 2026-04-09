@@ -1,0 +1,239 @@
+{
+  "base_dir": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300",
+  "downloaded_count": 21,
+  "error_count": 0,
+  "downloaded": [
+    {
+      "label": "generics.pdf",
+      "original_url": "https://download.swift.org/docs/assets/generics.pdf",
+      "download_url": "https://download.swift.org/docs/assets/generics.pdf",
+      "save_as": "download.swift.org/docs/assets/generics.pdf",
+      "kind": "pdf",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/download.swift.org/docs/assets/generics.pdf",
+      "bytes": 2502370,
+      "sha256": "73b8bb80ebe3c7924fb4009658eea1a991ae4399023b22904a2f2a1d8a1980d1",
+      "content_type": "application/pdf"
+    },
+    {
+      "label": "Generics README",
+      "original_url": "https://github.com/swiftlang/swift/blob/main/docs/Generics/README.md",
+      "download_url": "https://raw.githubusercontent.com/swiftlang/swift/main/docs/Generics/README.md",
+      "save_as": "swiftlang-swift/docs/Generics/README.md",
+      "kind": "markdown",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/Generics/README.md",
+      "bytes": 1962,
+      "sha256": "1397d33c05070774f084081d0c773cd6b7ecc394a7952b132cd969b1c0bee4c5",
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "label": "Generics Manifesto",
+      "original_url": "https://github.com/swiftlang/swift/blob/main/docs/GenericsManifesto.md",
+      "download_url": "https://raw.githubusercontent.com/swiftlang/swift/main/docs/GenericsManifesto.md",
+      "save_as": "swiftlang-swift/docs/GenericsManifesto.md",
+      "kind": "markdown",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/GenericsManifesto.md",
+      "bytes": 36574,
+      "sha256": "958e977fae765a8a9a3fca0a4a2251fa7544182bfce1dcb3c28af259f1cabe7a",
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "label": "TypeChecker",
+      "original_url": "https://github.com/swiftlang/swift/blob/main/docs/TypeChecker.md",
+      "download_url": "https://raw.githubusercontent.com/swiftlang/swift/main/docs/TypeChecker.md",
+      "save_as": "swiftlang-swift/docs/TypeChecker.md",
+      "kind": "markdown",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/TypeChecker.md",
+      "bytes": 47921,
+      "sha256": "f1254a82e70a48c99bbf4f8c626c570fbdc30cd7b41ca7a590c301a30f4ee55d",
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "label": "SIL",
+      "original_url": "https://github.com/swiftlang/swift/blob/main/docs/SIL/SIL.md",
+      "download_url": "https://raw.githubusercontent.com/swiftlang/swift/main/docs/SIL/SIL.md",
+      "save_as": "swiftlang-swift/docs/SIL/SIL.md",
+      "kind": "markdown",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/SIL/SIL.md",
+      "bytes": 79133,
+      "sha256": "49d6ef7d7872ef5c67223f735e1a6f3d94d1d3b5333d893cdda958b48f3d76e9",
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "label": "Ownership",
+      "original_url": "https://github.com/swiftlang/swift/blob/main/docs/SIL/Ownership.md",
+      "download_url": "https://raw.githubusercontent.com/swiftlang/swift/main/docs/SIL/Ownership.md",
+      "save_as": "swiftlang-swift/docs/SIL/Ownership.md",
+      "kind": "markdown",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/SIL/Ownership.md",
+      "bytes": 47748,
+      "sha256": "2ba190df8531dc955c9e5d86e23525af3b69e7467bcb97d6f75337df4d63c9c1",
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "label": "HighLevelSILOptimizations",
+      "original_url": "https://github.com/swiftlang/swift/blob/main/docs/HighLevelSILOptimizations.rst",
+      "download_url": "https://raw.githubusercontent.com/swiftlang/swift/main/docs/HighLevelSILOptimizations.rst",
+      "save_as": "swiftlang-swift/docs/HighLevelSILOptimizations.rst",
+      "kind": "rst",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/HighLevelSILOptimizations.rst",
+      "bytes": 18422,
+      "sha256": "a7631107e286c2cc9d4d3471567233861c4662a13ec9b4fb7c3a21873c232f2c",
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "label": "Compiler Performance",
+      "original_url": "https://github.com/swiftlang/swift/blob/main/docs/CompilerPerformance.md",
+      "download_url": "https://raw.githubusercontent.com/swiftlang/swift/main/docs/CompilerPerformance.md",
+      "save_as": "swiftlang-swift/docs/CompilerPerformance.md",
+      "kind": "markdown",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/CompilerPerformance.md",
+      "bytes": 68221,
+      "sha256": "c49efc6b89cdf2b84e339f5e5d9ff8a51e0aec3ca4f9d1f2fa703d1e669c4f34",
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "label": "Driver Internals",
+      "original_url": "https://github.com/swiftlang/swift/blob/main/docs/DriverInternals.md",
+      "download_url": "https://raw.githubusercontent.com/swiftlang/swift/main/docs/DriverInternals.md",
+      "save_as": "swiftlang-swift/docs/DriverInternals.md",
+      "kind": "markdown",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/DriverInternals.md",
+      "bytes": 5993,
+      "sha256": "865ff652eb0e4c4e722df9e1516d4a1273eab1cf7579c4b6e5c5b44c5bb9953a",
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "label": "Diagnostics",
+      "original_url": "https://github.com/swiftlang/swift/blob/main/docs/Diagnostics.md",
+      "download_url": "https://raw.githubusercontent.com/swiftlang/swift/main/docs/Diagnostics.md",
+      "save_as": "swiftlang-swift/docs/Diagnostics.md",
+      "kind": "markdown",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/Diagnostics.md",
+      "bytes": 20014,
+      "sha256": "694187af65bb8a78bdeff08ddcdccc10bc44a254bbab15089ed35e3b90ffbecc",
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "label": "ABI Stability Manifesto",
+      "original_url": "https://github.com/swiftlang/swift/blob/main/docs/ABIStabilityManifesto.md",
+      "download_url": "https://raw.githubusercontent.com/swiftlang/swift/main/docs/ABIStabilityManifesto.md",
+      "save_as": "swiftlang-swift/docs/ABIStabilityManifesto.md",
+      "kind": "markdown",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/ABIStabilityManifesto.md",
+      "bytes": 57523,
+      "sha256": "df06fe6066182ae839bf83ae2aad2a7502de3e6dce74799d3513862c8c0b3c00",
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "label": "Swift docs index",
+      "original_url": "https://www.swift.org/documentation/",
+      "download_url": "https://www.swift.org/documentation/",
+      "save_as": "swift.org/documentation/index.html",
+      "kind": "html",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swift.org/documentation/index.html",
+      "bytes": 8155,
+      "sha256": "7ac2caf938fdfe85a078508052a5f1b04e2c3fc8f49de557a3e3d31b6eb50010",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "label": "Swift Compiler Architecture",
+      "original_url": "https://www.swift.org/documentation/swift-compiler/",
+      "download_url": "https://www.swift.org/documentation/swift-compiler/",
+      "save_as": "swift.org/documentation/swift-compiler/index.html",
+      "kind": "html",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swift.org/documentation/swift-compiler/index.html",
+      "bytes": 7256,
+      "sha256": "803c0eddd77254a8cfcbfeb00a6b1d194f5e2a55c61bea756de44ea40d3cf9d0",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "label": "TSPL",
+      "original_url": "https://www.swift.org/documentation/tspl/",
+      "download_url": "https://www.swift.org/documentation/tspl/",
+      "save_as": "swift.org/documentation/tspl/index.html",
+      "kind": "html",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swift.org/documentation/tspl/index.html",
+      "bytes": 6581,
+      "sha256": "18d25517abba99bd29b2549f205f470c7103f4952523cbc35afb0676a08ade9a",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "label": "API Design Guidelines",
+      "original_url": "https://www.swift.org/documentation/api-design-guidelines/",
+      "download_url": "https://www.swift.org/documentation/api-design-guidelines/",
+      "save_as": "swift.org/documentation/api-design-guidelines/index.html",
+      "kind": "html",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swift.org/documentation/api-design-guidelines/index.html",
+      "bytes": 28594,
+      "sha256": "e26e62b728fefbaf952e04fa6a003c27f9c562ad25db1635a55ca607dff1f625",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "label": "Standard Library",
+      "original_url": "https://www.swift.org/documentation/standard-library/",
+      "download_url": "https://www.swift.org/documentation/standard-library/",
+      "save_as": "swift.org/documentation/standard-library/index.html",
+      "kind": "html",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swift.org/documentation/standard-library/index.html",
+      "bytes": 8292,
+      "sha256": "724d0386cce5e5cef72ffb7b0da7f7b02f3de7c67fb345709e1b5018a2609cb0",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "label": "Core Libraries",
+      "original_url": "https://www.swift.org/documentation/core-libraries/",
+      "download_url": "https://www.swift.org/documentation/core-libraries/",
+      "save_as": "swift.org/documentation/core-libraries/index.html",
+      "kind": "html",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swift.org/documentation/core-libraries/index.html",
+      "bytes": 8261,
+      "sha256": "edd2e68beb7c202c4c9d5f7805e6b24ca5c7e4f0118529c92bfe1d9e1e582ba6",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "label": "Package Manager",
+      "original_url": "https://www.swift.org/documentation/package-manager/",
+      "download_url": "https://www.swift.org/documentation/package-manager/",
+      "save_as": "swift.org/documentation/package-manager/index.html",
+      "kind": "html",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swift.org/documentation/package-manager/index.html",
+      "bytes": 601,
+      "sha256": "4bcfac18ca504a1d5ccca297342527265bf51f08c32097afd277b55fa17b4773",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "label": "LLDB",
+      "original_url": "https://www.swift.org/documentation/lldb/",
+      "download_url": "https://www.swift.org/documentation/lldb/",
+      "save_as": "swift.org/documentation/lldb/index.html",
+      "kind": "html",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swift.org/documentation/lldb/index.html",
+      "bytes": 25832,
+      "sha256": "815bd59d8792e53cfee76906eed09e0b9e5cbc565df767f0dcab84559a2cf824",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "label": "Value and Reference Types",
+      "original_url": "https://www.swift.org/documentation/articles/value-and-reference-types.html",
+      "download_url": "https://www.swift.org/documentation/articles/value-and-reference-types.html",
+      "save_as": "swift.org/documentation/articles/value-and-reference-types.html",
+      "kind": "html",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swift.org/documentation/articles/value-and-reference-types.html",
+      "bytes": 11974,
+      "sha256": "5b36c84df1109bd6906719ec412d4b5eb19e36b10866d9518134e90ac01daa9c",
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "label": "Concurrency",
+      "original_url": "https://www.swift.org/documentation/concurrency/",
+      "download_url": "https://www.swift.org/documentation/concurrency/",
+      "save_as": "swift.org/documentation/concurrency/index.html",
+      "kind": "html",
+      "saved_path": "/Users/oozoofrog/Downloads/swift-docs-20260410-081300/files/swift.org/documentation/concurrency/index.html",
+      "bytes": 741,
+      "sha256": "dd43fdd19bd4b9c67189ef39e7058c08b5c066ce3d195e4d8ed029914fb4bfb1",
+      "content_type": "text/html; charset=UTF-8"
+    }
+  ],
+  "errors": []
+}

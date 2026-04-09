@@ -59,6 +59,9 @@ cd yoda
 2. [tutorials/00-curriculum-and-method.md](tutorials/00-curriculum-and-method.md)
 3. [tutorials/01-build-environment-lab.md](tutorials/01-build-environment-lab.md)
 
+### 공식 참고 문서를 같이 받아두고 싶다면
+- [Swift 공식/준공식 참고 문서 다운로드](2026-04-10-swift-official-reference-downloads.md)
+
 ### 완전 처음이라면
 1. [Swift 컴파일러 개발 환경 완전 정복](2026-04-04-swift-compiler-dev-environment.md)
 2. [Swift 컴파일러 기여자를 위한 체계적 학습 가이드](2026-04-04-swift-compiler-contributor-learning-guide.md)

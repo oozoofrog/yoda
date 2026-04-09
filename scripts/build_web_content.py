@@ -263,6 +263,25 @@ def extract_code_blocks(lines: list[str]) -> list[dict[str, str]]:
     return blocks
 
 
+def normalize_site_asset_link(href: str, current_rel: str, *, root: Path = ROOT) -> str | None:
+    href = href.strip()
+    if not href or '://' in href or href.startswith('mailto:') or href.startswith('#'):
+        return None
+
+    docs_root = root / 'docs'
+    link_path, _, fragment = href.partition('#')
+    candidate = docs_root / link_path.lstrip('/') if link_path.startswith('/') else (root / current_rel).parent / link_path
+    if not candidate.exists() or not candidate.is_file():
+        return None
+
+    try:
+        rel = candidate.resolve().relative_to(docs_root.resolve()).as_posix()
+    except Exception:
+        return None
+
+    return f'{rel}#{fragment}' if fragment else rel
+
+
 def normalize_internal_doc_link(href: str, current_rel: str) -> tuple[str | None, str | None]:
     href = href.strip()
     if not href or '://' in href or href.startswith('mailto:'):
@@ -315,6 +334,9 @@ def format_inline(raw: str, current_rel: str) -> str:
         href = m.group(2).strip()
         if '://' in href or href.startswith('mailto:'):
             return stash(f'<a href="{html.escape(href)}" target="_blank" rel="noopener noreferrer">{text}</a>')
+        asset_href = normalize_site_asset_link(href, current_rel)
+        if asset_href:
+            return stash(f'<a href="{html.escape(asset_href)}" download>{text}</a>')
         rel, anchor = normalize_internal_doc_link(href, current_rel)
         if rel == current_rel and anchor:
             return stash(f'<a href="#" data-scroll-target="{html.escape(anchor)}">{text}</a>')

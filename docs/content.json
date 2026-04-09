@@ -1,7 +1,7 @@
 {
   "title": "yoda interactive learning docs",
   "generatedFrom": "markdown+yaml",
-  "docCount": 56,
+  "docCount": 57,
   "docs": [
     {
       "id": "tutorials__courses__00-swift-compiler-first-contribution-track",
@@ -11,7 +11,7 @@
       "categoryLabel": "30일 코스",
       "track": "foundation",
       "trackLabel": "기초 학습 루프",
-      "order": 4034,
+      "order": 4035,
       "meta": {
         "대상": "Swift 앱/패키지 개발은 익숙하지만, Swift 컴파일러 내부는 처음인 개발자",
         "목표": "이 코스를 끝내면 **작은 diagnostics / fix-it / validation 변경을 재현·수정·검증하고, 첫 PR 설명까지 준비할 수 있는 수준**에 도달한다.",
@@ -936,7 +936,7 @@
       "categoryLabel": "튜토리얼",
       "track": "foundation",
       "trackLabel": "기초 학습 루프",
-      "order": 3006,
+      "order": 3007,
       "meta": {
         "대상": "빌드/테스트 루프를 아직 스스로 돌려보지 않은 학습자",
         "목표": "첫 빌드와 첫 증분 빌드, 첫 단일 테스트 실행까지 완료",
@@ -1216,7 +1216,7 @@
       "categoryLabel": "튜토리얼",
       "track": "foundation",
       "trackLabel": "기초 학습 루프",
-      "order": 3007,
+      "order": 3008,
       "meta": {
         "대상": "첫 빌드와 단일 테스트 실행까지는 성공했지만, 내부 관찰 루프는 아직 약한 학습자",
         "목표": "AST/SIL/IR dump, pass 추적, LLDB 진입, 테스트 재현의 네 가지 관찰 루프 확보",
@@ -1487,7 +1487,7 @@
       "categoryLabel": "튜토리얼",
       "track": "foundation",
       "trackLabel": "기초 학습 루프",
-      "order": 3008,
+      "order": 3009,
       "meta": {
         "대상": "어느 디렉토리부터 열어야 할지 자주 막히는 학습자",
         "목표": "Parse / Sema / SILGen / SILOptimizer / IRGen / LLVM 단계의 첫 진입점과 학습 순서를 확보",
@@ -1719,7 +1719,7 @@
       "categoryLabel": "튜토리얼",
       "track": "foundation",
       "trackLabel": "기초 학습 루프",
-      "order": 3009,
+      "order": 3010,
       "meta": {
         "대상": "어느 단계에서 고쳐야 할지는 대략 감이 오지만, 실제 수정 절차는 아직 흐릿한 학습자",
         "목표": "재현 → 위치 파악 → 최소 수정 → 좁은 검증 → 인접 회귀 확인의 공통 절차를 몸에 익히기",
@@ -1947,7 +1947,7 @@
       "categoryLabel": "Merged 사례 튜토리얼",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 6014,
+      "order": 6015,
       "meta": {
         "단계": "Sema / Diagnostics",
         "난이도": "입문 사례",
@@ -2249,7 +2249,7 @@
       "categoryLabel": "튜토리얼",
       "track": "open_issue_workflow",
       "trackLabel": "Open Issue 분석 루프",
-      "order": 3010,
+      "order": 3011,
       "meta": {
         "대상": "실제 open issue를 분석하고, 점진적으로 첫 기여까지 연결하고 싶은 학습자",
         "목표": "Swift 6.0 ~ 6.3의 `good first issue`를 버전/증상/난이도 기준으로 탐색하고, 분석 워크북과 카드 라이브러리로 연결하기",
@@ -2394,7 +2394,7 @@
       "categoryLabel": "Open GFI 허브",
       "track": "open_gfi_library",
       "trackLabel": "Open GFI 라이브러리",
-      "order": 8041,
+      "order": 8042,
       "meta": {},
       "excerpt": "이 디렉토리는 `swiftlang/swift`의 open `good first issue`를 **짧은 탐색 카드**로 정리한 곳입니다.",
       "headings": [
@@ -2481,7 +2481,7 @@
       "categoryLabel": "튜토리얼",
       "track": "open_issue_workflow",
       "trackLabel": "Open Issue 분석 루프",
-      "order": 3011,
+      "order": 3012,
       "meta": {
         "대상": "merged 사례는 따라가 봤지만, open issue는 아직 막막한 학습자",
         "목표": "open issue를 읽고 재현·단계 추정·진입 파일 후보·수정 유형 가설까지 스스로 정리할 수 있는 루프 만들기",
@@ -2680,7 +2680,7 @@
       "categoryLabel": "Open GFI 카드",
       "track": "open_gfi_library",
       "trackLabel": "Open GFI 라이브러리",
-      "order": 9042,
+      "order": 9043,
       "meta": {
         "Swift 버전 초점": "6.0",
         "이슈": "[#48759](https://github.com/swiftlang/swift/issues/48759)",
@@ -2911,7 +2911,7 @@
       "categoryLabel": "Open GFI 카드",
       "track": "open_gfi_library",
       "trackLabel": "Open GFI 라이브러리",
-      "order": 9044,
+      "order": 9045,
       "meta": {
         "Swift 버전 초점": "6.0",
         "이슈": "[#69241](https://github.com/swiftlang/swift/issues/69241)",
@@ -3141,7 +3141,7 @@
       "categoryLabel": "Open GFI 카드",
       "track": "open_gfi_library",
       "trackLabel": "Open GFI 라이브러리",
-      "order": 9047,
+      "order": 9048,
       "meta": {
         "Swift 버전 초점": "6.2",
         "이슈": "[#83344](https://github.com/swiftlang/swift/issues/83344)",
@@ -3371,7 +3371,7 @@
       "categoryLabel": "허브",
       "track": "hub",
       "trackLabel": "문서 허브",
-      "order": 4,
+      "order": 5,
       "meta": {},
       "excerpt": "`yoda/`는 Swift 컴파일러 기여와 학습을 위한 문서 모음입니다.",
       "headings": [
@@ -3399,6 +3399,11 @@
           "level": 3,
           "text": "연구 기반 튜토리얼로 시작하고 싶다면",
           "id": "연구-기반-튜토리얼로-시작하고-싶다면"
+        },
+        {
+          "level": 3,
+          "text": "공식 참고 문서를 같이 받아두고 싶다면",
+          "id": "공식-참고-문서를-같이-받아두고-싶다면"
         },
         {
           "level": 3,
@@ -3514,8 +3519,8 @@
           "content": "cd yoda\n./scripts/run_web.sh"
         }
       ],
-      "html": "<h1 id=\"yoda-문서-허브\">yoda 문서 허브</h1>\n<p><code>yoda/</code>는 Swift 컴파일러 기여와 학습을 위한 문서 모음입니다. 이제 문서는 크게 두 층으로 나뉩니다:</p>\n<ul>\n<li><strong>레퍼런스 문서</strong>: 환경, SIL, Demangling, 전체 기여 흐름을 설명하는 참고 문서</li>\n<li><strong>튜토리얼 문서</strong>: 실제 학습 순서, 실습, 사례 복원, 연구 기반 학습 루프를 제공하는 문서</li>\n</ul>\n<p>레퍼런스 축은 다시 아래 4가지 주제로 나뉩니다:</p>\n<ul>\n<li>개발 환경과 빌드/테스트 루프</li>\n<li>처음 기여를 시작하는 학습 순서</li>\n<li>SIL 중심의 내부 구조와 최적화</li>\n<li>Demangling/Mangling 중심의 심볼/ABI 이해</li>\n</ul>\n<p>처음이라면 <strong>항상 개발 환경 문서부터</strong> 시작하세요. 다른 문서들은 모두 로컬 빌드/테스트 루프가 잡혀 있다는 전제를 공유합니다.</p>\n<h2 id=\"가장-먼저-해야-할-일\">가장 먼저 해야 할 일</h2>\n<p>Swift는 알지만 Swift 컴파일러는 처음이라면, <strong>이 README에서 길을 찾으려 하지 말고 아래 문서 하나만 먼저 여세요.</strong></p>\n<ul>\n<li><a href=\"#\" data-doc-href=\"tutorials/courses/00-swift-compiler-first-contribution-track.md\">tutorials/courses/00-swift-compiler-first-contribution-track.md</a></li>\n</ul>\n<p>이 문서는</p>\n<ul>\n<li>지금 뭘 해야 하는지</li>\n<li>왜 그 순서가 맞는지</li>\n<li>어디서 멈추고 다음 단계로 넘어가야 하는지</li>\n</ul>\n<p>를 한 번에 정해줍니다.</p>\n<p>이 아래에 있는 문서 지도와 추천 트랙은 <strong>지금 바로 다 읽으라는 뜻이 아니라, 핵심 코스를 진행하다가 필요할 때만 여는 보조 자료</strong>입니다.</p>\n<hr />\n<h2 id=\"인터랙티브-웹-문서\">인터랙티브 웹 문서</h2>\n<p><code>yoda/docs/</code>에는 이 Markdown 문서들을 바탕으로 만든 <strong>정적 인터랙티브 학습 웹앱</strong>이 있습니다.</p>\n<ul>\n<li>기본 UX: <strong>개인용 2단 문서 뷰어</strong></li>\n<li>좌측: 전체 문서 목차 / 우측: 선택한 문서 내용 + 개인 메모</li>\n<li>배포 방식: <strong>GitHub Pages용 정적 문서</strong></li>\n</ul>\n<p>로컬에서 미리보려면:</p>\n<pre class=\"code-block\"><button class=\"copy-button\" type=\"button\">복사</button><code data-lang=\"bash\">cd yoda\n./scripts/run_web.sh</code></pre>\n<p>그 다음 브라우저에서 <code>http://127.0.0.1:8123</code>를 엽니다.</p>\n<hr />\n<h2 id=\"빠른-진입\">빠른 진입</h2>\n<h3 id=\"연구-기반-튜토리얼로-시작하고-싶다면\">연구 기반 튜토리얼로 시작하고 싶다면</h3>\n<ol>\n<li><a href=\"#\" data-doc-href=\"tutorials/README.md\">tutorials/README.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/00-curriculum-and-method.md\">tutorials/00-curriculum-and-method.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/01-build-environment-lab.md\">tutorials/01-build-environment-lab.md</a></li>\n</ol>\n<h3 id=\"완전-처음이라면\">완전 처음이라면</h3>\n<ol>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">Swift 컴파일러 개발 환경 완전 정복</a></li>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-contributor-learning-guide.md\">Swift 컴파일러 기여자를 위한 체계적 학습 가이드</a></li>\n</ol>\n<h3 id=\"빌드테스트-루프부터-잡고-싶다면\">빌드/테스트 루프부터 잡고 싶다면</h3>\n<ul>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">Swift 컴파일러 개발 환경 완전 정복</a></li>\n</ul>\n<h3 id=\"sil부터-파고들고-싶다면\">SIL부터 파고들고 싶다면</h3>\n<ol>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">Swift 컴파일러 개발 환경 완전 정복</a></li>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-sil-deep-dive.md\">SIL (Swift Intermediate Language) 심화 가이드</a></li>\n</ol>\n<h3 id=\"심볼abidemangling부터-보고-싶다면\">심볼/ABI/Demangling부터 보고 싶다면</h3>\n<ol>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">Swift 컴파일러 개발 환경 완전 정복</a></li>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-demangling-deep-dive.md\">Demangling 심화 가이드</a></li>\n</ol>\n<hr />\n<h2 id=\"문서-지도\">문서 지도</h2>\n<h3 id=\"레퍼런스-문서\">레퍼런스 문서</h3>\n<table><thead><tr><th>문서</th><th>대상 독자</th><th>핵심 질문</th><th>난이도</th><th>선행 문서</th></tr></thead><tbody><tr><td><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">Swift 컴파일러 개발 환경 완전 정복</a></td><td>처음 빌드/테스트 루프를 잡는 기여자</td><td>로컬 빌드, 증분 빌드, 테스트, 디버깅 루프를 어떻게 잡을까?</td><td>하</td><td>없음</td></tr><tr><td><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-contributor-learning-guide.md\">Swift 컴파일러 기여자를 위한 체계적 학습 가이드</a></td><td>컴파일러 구조가 처음인 Swift 개발자</td><td>무엇을 어떤 순서로 배우고 어디서 첫 기여를 시작할까?</td><td>하</td><td>개발 환경 문서</td></tr><tr><td><a href=\"#\" data-doc-href=\"2026-04-04-sil-deep-dive.md\">SIL (Swift Intermediate Language) 심화 가이드</a></td><td>SILOptimizer/SILGen 쪽에 관심 있는 기여자</td><td>SIL은 왜 필요하고, 어떻게 읽고, 어디를 고치고, 어떻게 테스트할까?</td><td>중</td><td>개발 환경 문서</td></tr><tr><td><a href=\"#\" data-doc-href=\"2026-04-04-demangling-deep-dive.md\">Demangling 심화 가이드</a></td><td>심볼, ABI, 런타임 표현에 관심 있는 기여자</td><td>맹글링/디맹글링은 어떻게 동작하고 어디서 검증할까?</td><td>중</td><td>개발 환경 문서</td></tr></tbody></table>\n<h3 id=\"튜토리얼-문서\">튜토리얼 문서</h3>\n<table><thead><tr><th>문서</th><th>역할</th><th>산출물</th></tr></thead><tbody><tr><td><a href=\"#\" data-doc-href=\"tutorials/courses/00-swift-compiler-first-contribution-track.md\">tutorials/courses/00-swift-compiler-first-contribution-track.md</a></td><td>Swift 개발자에서 첫 컴파일러 기여까지 가는 단일 핵심 코스</td><td>빌드→테스트→관찰→작은 수정→PR 준비</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/README.md\">tutorials/README.md</a></td><td>튜토리얼 허브와 추천 순서</td><td>개인 학습 진입점</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/00-curriculum-and-method.md\">tutorials/00-curriculum-and-method.md</a></td><td>학습법, 복습 루프, 연구 기반 설계 원칙</td><td>학습 로그와 주간 계획</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/01-build-environment-lab.md\">tutorials/01-build-environment-lab.md</a></td><td>빌드 환경 실습</td><td>첫 빌드/첫 증분 빌드/첫 테스트</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/02-debugging-environment-lab.md\">tutorials/02-debugging-environment-lab.md</a></td><td>AST/SIL/IR/LLDB 관찰 루프 실습</td><td>디버깅 명령 세트</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/03-pipeline-entrypoints-and-knowledge-map.md\">tutorials/03-pipeline-entrypoints-and-knowledge-map.md</a></td><td>단계별 진입점과 지식 지도</td><td>단계-파일-문서 매핑</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/04-stage-modification-workflow.md\">tutorials/04-stage-modification-workflow.md</a></td><td>재현 → 수정 → 검증 공통 절차</td><td>수정 체크리스트</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/06-good-first-issues-swift-6.0-6.3.md\">tutorials/06-good-first-issues-swift-6.0-6.3.md</a></td><td>Swift 6.0~6.3 <code>good first issue</code> 학습 코스</td><td>open issue 기반 실전 진입</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/07-open-issue-analysis-workbook.md\">tutorials/07-open-issue-analysis-workbook.md</a></td><td>open issue 분석 워크북</td><td>분석 로그와 가설 훈련</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/good-first-issues/README.md\">tutorials/good-first-issues/README.md</a></td><td>open <code>good first issue</code> 카드 허브</td><td>버전별 짧은 실전 과제</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/courses/README.md\">tutorials/courses/README.md</a></td><td>장기 학습 코스 허브</td><td>diagnostics / optimizer / compiler core 30일 코스</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/case-studies/README.md\">tutorials/case-studies/README.md</a></td><td>사례 카탈로그와 백로그</td><td>다음 사례 선택과 난이도 조절</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/case-studies/cards\">tutorials/case-studies/cards/</a></td><td>많은 사례를 빠르게 탐색하는 case card 모음</td><td>넓은 사례 학습</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/case-studies/README.md\">tutorials/case-studies/</a></td><td>부모 커밋에서 merged fix를 다시 구현하는 사례 실습</td><td>사례별 worktree 실습 기록</td></tr></tbody></table>\n<hr />\n<h2 id=\"추천-학습-트랙\">추천 학습 트랙</h2>\n<h3 id=\"1-입문자-트랙\">1) 입문자 트랙</h3>\n<p>처음 기여를 준비한다면 이 순서가 가장 안전합니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">개발 환경 문서</a>의 빠른 시작으로 빌드/테스트 루프 확보</li>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-contributor-learning-guide.md\">기여자 학습 가이드</a>로 전체 파이프라인과 학습 순서 파악</li>\n<li>이후 관심 분야에 따라 SIL 또는 Demangling 문서로 진입</li>\n</ol>\n<h3 id=\"1-보강-연구-기반-튜토리얼-트랙\">1-보강) 연구 기반 튜토리얼 트랙</h3>\n<p>읽기만 하지 않고, 실제로 학습 루프를 설계하며 따라가고 싶다면 이 순서가 가장 좋습니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"tutorials/README.md\">tutorials/README.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/00-curriculum-and-method.md\">tutorials/00-curriculum-and-method.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/01-build-environment-lab.md\">tutorials/01-build-environment-lab.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/02-debugging-environment-lab.md\">tutorials/02-debugging-environment-lab.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/03-pipeline-entrypoints-and-knowledge-map.md\">tutorials/03-pipeline-entrypoints-and-knowledge-map.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/04-stage-modification-workflow.md\">tutorials/04-stage-modification-workflow.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/06-good-first-issues-swift-6.0-6.3.md\">tutorials/06-good-first-issues-swift-6.0-6.3.md</a>로 open issue 코스를 섞어 본다</li>\n<li><a href=\"#\" data-doc-href=\"tutorials/07-open-issue-analysis-workbook.md\">tutorials/07-open-issue-analysis-workbook.md</a>로 실제 issue 분석 로그를 남긴다</li>\n<li>full tutorial 5개를 순서대로 진행하거나, <code>tutorials/case-studies/cards/</code>와 <code>tutorials/good-first-issues/cards/</code>에서 짧은 사례를 병행</li>\n</ol>\n<h3 id=\"2-sil-트랙\">2) SIL 트랙</h3>\n<p>SILOptimizer, SILGen, Ownership SSA, 검증기 흐름을 이해하려면 이 순서가 좋습니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">개발 환경 문서</a></li>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-sil-deep-dive.md\">SIL 심화 가이드</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/02-debugging-environment-lab.md\">tutorials/02-debugging-environment-lab.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/case-studies/02-sil-location-explicitness.md\">tutorials/case-studies/02-sil-location-explicitness.md</a></li>\n</ol>\n<h3 id=\"3-심볼abi-트랙\">3) 심볼/ABI 트랙</h3>\n<p>심볼 이름, Node Tree, ABI 표기, <code>swift-demangle</code> 도구에 관심이 있다면 이 순서로 읽습니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">개발 환경 문서</a></li>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-demangling-deep-dive.md\">Demangling 심화 가이드</a></li>\n<li>필요 시 <a href=\"#\" data-doc-href=\"2026-04-04-sil-deep-dive.md\">SIL 심화 가이드</a>의 SIL 심볼 예시와 교차 참고</li>\n</ol>\n<h3 id=\"4-이미-고쳐진-이슈를-내가-다시-고쳐보기-트랙\">4) “이미 고쳐진 이슈를 내가 다시 고쳐보기” 트랙</h3>\n<p>실제 수정 사례를 복원하며 배우고 싶다면 아래 순서가 좋습니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"tutorials/04-stage-modification-workflow.md\">tutorials/04-stage-modification-workflow.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/case-studies/01-sema-fixit-source-locs.md\">tutorials/case-studies/01-sema-fixit-source-locs.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/case-studies/02-sil-location-explicitness.md\">tutorials/case-studies/02-sil-location-explicitness.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/case-studies/03-irgen-fast-existential-casts.md\">tutorials/case-studies/03-irgen-fast-existential-casts.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/case-studies/04-optimizer-cond-fail-pass-architecture.md\">tutorials/case-studies/04-optimizer-cond-fail-pass-architecture.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/case-studies/05-optimizer-enum-tag-comparison-correctness.md\">tutorials/case-studies/05-optimizer-enum-tag-comparison-correctness.md</a></li>\n</ol>\n<h3 id=\"5-이제-실제-open-issue에-들어가기-트랙\">5) “이제 실제 open issue에 들어가기” 트랙</h3>\n<p>실제 기여 후보를 단계적으로 경험하고 싶다면 이 순서가 좋습니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"tutorials/06-good-first-issues-swift-6.0-6.3.md\">tutorials/06-good-first-issues-swift-6.0-6.3.md</a></li>\n<li>diagnostics/fix-it 계열 open issue 1개 선택</li>\n<li><a href=\"#\" data-doc-href=\"tutorials/04-stage-modification-workflow.md\">tutorials/04-stage-modification-workflow.md</a> 체크리스트로 분석</li>\n<li>관련 case card / full tutorial과 교차 학습</li>\n</ol>\n<h3 id=\"6-30일-루프로-꾸준히-밀어붙이기-트랙\">6) “30일 루프로 꾸준히 밀어붙이기” 트랙</h3>\n<p>문서를 읽는 데서 그치지 않고 실제 학습 프로그램으로 운영하고 싶다면 아래 순서가 좋습니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"tutorials/courses/30-day-diagnostics-track.md\">tutorials/courses/30-day-diagnostics-track.md</a></li>\n<li>매일 해당 day의 문서 / 카드 / issue를 수행</li>\n<li><a href=\"#\" data-doc-href=\"tutorials/open-issue-templates/session-log-template.md\">tutorials/open-issue-templates/session-log-template.md</a>으로 로그 축적</li>\n</ol>\n<hr />\n<h2 id=\"시간-기준-추천-순서\">시간 기준 추천 순서</h2>\n<h3 id=\"30분\">30분</h3>\n<ul>\n<li>튜토리얼 허브와 <code>00-curriculum-and-method</code></li>\n<li>개발 환경 문서의 <strong>빠른 시작</strong></li>\n<li>기여자 학습 가이드의 <strong>빠른 시작 + Layer 1</strong></li>\n<li>SIL 또는 Demangling 문서의 <strong>빠른 시작</strong> 중 하나</li>\n</ul>\n<h3 id=\"반나절\">반나절</h3>\n<ul>\n<li>튜토리얼의 <strong>01 / 02</strong></li>\n<li>개발 환경 문서의 <strong>빌드 / 증분 빌드 / 테스트 / 디버깅</strong> 장</li>\n<li>기여자 학습 가이드의 <strong>Phase 1~5</strong></li>\n<li>관심 deep dive 문서 하나의 <strong>빠른 시작 / 코드 지도 / 테스트</strong> 섹션</li>\n</ul>\n<h3 id=\"1주\">1주</h3>\n<ul>\n<li>튜토리얼 <strong>00~04 + 사례 1개 이상</strong></li>\n<li>개발 환경 문서 전체</li>\n<li>기여자 학습 가이드 전체</li>\n<li>SIL 또는 Demangling 문서 하나를 끝까지 정독</li>\n<li>나머지 deep dive 문서는 필요한 섹션만 선택해서 읽기</li>\n</ul>\n<hr />\n<h2 id=\"문서-운영-규칙\">문서 운영 규칙</h2>\n<p>새 문서를 추가하거나 기존 문서를 크게 확장할 때는 아래 원칙을 유지합니다.</p>\n<ol>\n<li><strong>파일명 규칙</strong>: <code>YYYY-MM-DD-topic.md</code></li>\n<li><strong>문서 구조 규칙</strong>: 가능하면 <code>대상 / 목표 / 전제 → 빠른 시작 → Layer 1/2/3</code> 흐름 유지</li>\n<li><strong>공통 설명 집중화</strong>: 빌드/테스트/디버깅의 공통 설명은 가능한 한 개발 환경 문서에 모으고, deep dive 문서에서는 링크로 참조</li>\n<li><strong>README 동기화</strong>: 새 문서를 추가하면 이 README의 <code>문서 지도</code>와 <code>추천 학습 트랙</code>도 함께 갱신</li>\n<li><strong>중복 최소화</strong>: 같은 명령/배경 설명을 여러 문서에 길게 반복하지 않고, 각 문서는 자기 주제의 핵심 의사결정에 집중</li>\n<li><strong>튜토리얼 분리 원칙</strong>: 설명형 레퍼런스와 실습형 튜토리얼을 한 문서에 과도하게 섞지 않음</li>\n<li><strong>연구 기반 명시</strong>: 튜토리얼 문서는 가능하면 학습 설계 근거를 짧게 남기고, 자세한 근거는 <code>tutorials/00-curriculum-and-method.md</code>에 집중</li>\n</ol>\n<hr />\n<h2 id=\"현재-추천-시작점\">현재 추천 시작점</h2>\n<ul>\n<li><strong>무조건 한 문서만 먼저 읽어야 한다면</strong>: <a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">Swift 컴파일러 개발 환경 완전 정복</a></li>\n<li><strong>실습형으로 시작하고 싶다면</strong>: <a href=\"#\" data-doc-href=\"tutorials/README.md\">tutorials/README.md</a></li>\n<li><strong>처음 기여까지 가장 빨리 가고 싶다면</strong>: 개발 환경 → 기여자 학습 가이드</li>\n<li><strong>기술적으로 가장 먼저 깊게 파고들 주제를 고른다면</strong>: SIL 또는 Demangling 중 하나만 먼저 선택</li>\n</ul>",
-      "wordCount": 1188,
+      "html": "<h1 id=\"yoda-문서-허브\">yoda 문서 허브</h1>\n<p><code>yoda/</code>는 Swift 컴파일러 기여와 학습을 위한 문서 모음입니다. 이제 문서는 크게 두 층으로 나뉩니다:</p>\n<ul>\n<li><strong>레퍼런스 문서</strong>: 환경, SIL, Demangling, 전체 기여 흐름을 설명하는 참고 문서</li>\n<li><strong>튜토리얼 문서</strong>: 실제 학습 순서, 실습, 사례 복원, 연구 기반 학습 루프를 제공하는 문서</li>\n</ul>\n<p>레퍼런스 축은 다시 아래 4가지 주제로 나뉩니다:</p>\n<ul>\n<li>개발 환경과 빌드/테스트 루프</li>\n<li>처음 기여를 시작하는 학습 순서</li>\n<li>SIL 중심의 내부 구조와 최적화</li>\n<li>Demangling/Mangling 중심의 심볼/ABI 이해</li>\n</ul>\n<p>처음이라면 <strong>항상 개발 환경 문서부터</strong> 시작하세요. 다른 문서들은 모두 로컬 빌드/테스트 루프가 잡혀 있다는 전제를 공유합니다.</p>\n<h2 id=\"가장-먼저-해야-할-일\">가장 먼저 해야 할 일</h2>\n<p>Swift는 알지만 Swift 컴파일러는 처음이라면, <strong>이 README에서 길을 찾으려 하지 말고 아래 문서 하나만 먼저 여세요.</strong></p>\n<ul>\n<li><a href=\"#\" data-doc-href=\"tutorials/courses/00-swift-compiler-first-contribution-track.md\">tutorials/courses/00-swift-compiler-first-contribution-track.md</a></li>\n</ul>\n<p>이 문서는</p>\n<ul>\n<li>지금 뭘 해야 하는지</li>\n<li>왜 그 순서가 맞는지</li>\n<li>어디서 멈추고 다음 단계로 넘어가야 하는지</li>\n</ul>\n<p>를 한 번에 정해줍니다.</p>\n<p>이 아래에 있는 문서 지도와 추천 트랙은 <strong>지금 바로 다 읽으라는 뜻이 아니라, 핵심 코스를 진행하다가 필요할 때만 여는 보조 자료</strong>입니다.</p>\n<hr />\n<h2 id=\"인터랙티브-웹-문서\">인터랙티브 웹 문서</h2>\n<p><code>yoda/docs/</code>에는 이 Markdown 문서들을 바탕으로 만든 <strong>정적 인터랙티브 학습 웹앱</strong>이 있습니다.</p>\n<ul>\n<li>기본 UX: <strong>개인용 2단 문서 뷰어</strong></li>\n<li>좌측: 전체 문서 목차 / 우측: 선택한 문서 내용 + 개인 메모</li>\n<li>배포 방식: <strong>GitHub Pages용 정적 문서</strong></li>\n</ul>\n<p>로컬에서 미리보려면:</p>\n<pre class=\"code-block\"><button class=\"copy-button\" type=\"button\">복사</button><code data-lang=\"bash\">cd yoda\n./scripts/run_web.sh</code></pre>\n<p>그 다음 브라우저에서 <code>http://127.0.0.1:8123</code>를 엽니다.</p>\n<hr />\n<h2 id=\"빠른-진입\">빠른 진입</h2>\n<h3 id=\"연구-기반-튜토리얼로-시작하고-싶다면\">연구 기반 튜토리얼로 시작하고 싶다면</h3>\n<ol>\n<li><a href=\"#\" data-doc-href=\"tutorials/README.md\">tutorials/README.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/00-curriculum-and-method.md\">tutorials/00-curriculum-and-method.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/01-build-environment-lab.md\">tutorials/01-build-environment-lab.md</a></li>\n</ol>\n<h3 id=\"공식-참고-문서를-같이-받아두고-싶다면\">공식 참고 문서를 같이 받아두고 싶다면</h3>\n<ul>\n<li><a href=\"#\" data-doc-href=\"2026-04-10-swift-official-reference-downloads.md\">Swift 공식/준공식 참고 문서 다운로드</a></li>\n</ul>\n<h3 id=\"완전-처음이라면\">완전 처음이라면</h3>\n<ol>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">Swift 컴파일러 개발 환경 완전 정복</a></li>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-contributor-learning-guide.md\">Swift 컴파일러 기여자를 위한 체계적 학습 가이드</a></li>\n</ol>\n<h3 id=\"빌드테스트-루프부터-잡고-싶다면\">빌드/테스트 루프부터 잡고 싶다면</h3>\n<ul>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">Swift 컴파일러 개발 환경 완전 정복</a></li>\n</ul>\n<h3 id=\"sil부터-파고들고-싶다면\">SIL부터 파고들고 싶다면</h3>\n<ol>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">Swift 컴파일러 개발 환경 완전 정복</a></li>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-sil-deep-dive.md\">SIL (Swift Intermediate Language) 심화 가이드</a></li>\n</ol>\n<h3 id=\"심볼abidemangling부터-보고-싶다면\">심볼/ABI/Demangling부터 보고 싶다면</h3>\n<ol>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">Swift 컴파일러 개발 환경 완전 정복</a></li>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-demangling-deep-dive.md\">Demangling 심화 가이드</a></li>\n</ol>\n<hr />\n<h2 id=\"문서-지도\">문서 지도</h2>\n<h3 id=\"레퍼런스-문서\">레퍼런스 문서</h3>\n<table><thead><tr><th>문서</th><th>대상 독자</th><th>핵심 질문</th><th>난이도</th><th>선행 문서</th></tr></thead><tbody><tr><td><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">Swift 컴파일러 개발 환경 완전 정복</a></td><td>처음 빌드/테스트 루프를 잡는 기여자</td><td>로컬 빌드, 증분 빌드, 테스트, 디버깅 루프를 어떻게 잡을까?</td><td>하</td><td>없음</td></tr><tr><td><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-contributor-learning-guide.md\">Swift 컴파일러 기여자를 위한 체계적 학습 가이드</a></td><td>컴파일러 구조가 처음인 Swift 개발자</td><td>무엇을 어떤 순서로 배우고 어디서 첫 기여를 시작할까?</td><td>하</td><td>개발 환경 문서</td></tr><tr><td><a href=\"#\" data-doc-href=\"2026-04-04-sil-deep-dive.md\">SIL (Swift Intermediate Language) 심화 가이드</a></td><td>SILOptimizer/SILGen 쪽에 관심 있는 기여자</td><td>SIL은 왜 필요하고, 어떻게 읽고, 어디를 고치고, 어떻게 테스트할까?</td><td>중</td><td>개발 환경 문서</td></tr><tr><td><a href=\"#\" data-doc-href=\"2026-04-04-demangling-deep-dive.md\">Demangling 심화 가이드</a></td><td>심볼, ABI, 런타임 표현에 관심 있는 기여자</td><td>맹글링/디맹글링은 어떻게 동작하고 어디서 검증할까?</td><td>중</td><td>개발 환경 문서</td></tr></tbody></table>\n<h3 id=\"튜토리얼-문서\">튜토리얼 문서</h3>\n<table><thead><tr><th>문서</th><th>역할</th><th>산출물</th></tr></thead><tbody><tr><td><a href=\"#\" data-doc-href=\"tutorials/courses/00-swift-compiler-first-contribution-track.md\">tutorials/courses/00-swift-compiler-first-contribution-track.md</a></td><td>Swift 개발자에서 첫 컴파일러 기여까지 가는 단일 핵심 코스</td><td>빌드→테스트→관찰→작은 수정→PR 준비</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/README.md\">tutorials/README.md</a></td><td>튜토리얼 허브와 추천 순서</td><td>개인 학습 진입점</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/00-curriculum-and-method.md\">tutorials/00-curriculum-and-method.md</a></td><td>학습법, 복습 루프, 연구 기반 설계 원칙</td><td>학습 로그와 주간 계획</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/01-build-environment-lab.md\">tutorials/01-build-environment-lab.md</a></td><td>빌드 환경 실습</td><td>첫 빌드/첫 증분 빌드/첫 테스트</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/02-debugging-environment-lab.md\">tutorials/02-debugging-environment-lab.md</a></td><td>AST/SIL/IR/LLDB 관찰 루프 실습</td><td>디버깅 명령 세트</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/03-pipeline-entrypoints-and-knowledge-map.md\">tutorials/03-pipeline-entrypoints-and-knowledge-map.md</a></td><td>단계별 진입점과 지식 지도</td><td>단계-파일-문서 매핑</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/04-stage-modification-workflow.md\">tutorials/04-stage-modification-workflow.md</a></td><td>재현 → 수정 → 검증 공통 절차</td><td>수정 체크리스트</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/06-good-first-issues-swift-6.0-6.3.md\">tutorials/06-good-first-issues-swift-6.0-6.3.md</a></td><td>Swift 6.0~6.3 <code>good first issue</code> 학습 코스</td><td>open issue 기반 실전 진입</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/07-open-issue-analysis-workbook.md\">tutorials/07-open-issue-analysis-workbook.md</a></td><td>open issue 분석 워크북</td><td>분석 로그와 가설 훈련</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/good-first-issues/README.md\">tutorials/good-first-issues/README.md</a></td><td>open <code>good first issue</code> 카드 허브</td><td>버전별 짧은 실전 과제</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/courses/README.md\">tutorials/courses/README.md</a></td><td>장기 학습 코스 허브</td><td>diagnostics / optimizer / compiler core 30일 코스</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/case-studies/README.md\">tutorials/case-studies/README.md</a></td><td>사례 카탈로그와 백로그</td><td>다음 사례 선택과 난이도 조절</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/case-studies/cards\">tutorials/case-studies/cards/</a></td><td>많은 사례를 빠르게 탐색하는 case card 모음</td><td>넓은 사례 학습</td></tr><tr><td><a href=\"#\" data-doc-href=\"tutorials/case-studies/README.md\">tutorials/case-studies/</a></td><td>부모 커밋에서 merged fix를 다시 구현하는 사례 실습</td><td>사례별 worktree 실습 기록</td></tr></tbody></table>\n<hr />\n<h2 id=\"추천-학습-트랙\">추천 학습 트랙</h2>\n<h3 id=\"1-입문자-트랙\">1) 입문자 트랙</h3>\n<p>처음 기여를 준비한다면 이 순서가 가장 안전합니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">개발 환경 문서</a>의 빠른 시작으로 빌드/테스트 루프 확보</li>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-contributor-learning-guide.md\">기여자 학습 가이드</a>로 전체 파이프라인과 학습 순서 파악</li>\n<li>이후 관심 분야에 따라 SIL 또는 Demangling 문서로 진입</li>\n</ol>\n<h3 id=\"1-보강-연구-기반-튜토리얼-트랙\">1-보강) 연구 기반 튜토리얼 트랙</h3>\n<p>읽기만 하지 않고, 실제로 학습 루프를 설계하며 따라가고 싶다면 이 순서가 가장 좋습니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"tutorials/README.md\">tutorials/README.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/00-curriculum-and-method.md\">tutorials/00-curriculum-and-method.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/01-build-environment-lab.md\">tutorials/01-build-environment-lab.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/02-debugging-environment-lab.md\">tutorials/02-debugging-environment-lab.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/03-pipeline-entrypoints-and-knowledge-map.md\">tutorials/03-pipeline-entrypoints-and-knowledge-map.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/04-stage-modification-workflow.md\">tutorials/04-stage-modification-workflow.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/06-good-first-issues-swift-6.0-6.3.md\">tutorials/06-good-first-issues-swift-6.0-6.3.md</a>로 open issue 코스를 섞어 본다</li>\n<li><a href=\"#\" data-doc-href=\"tutorials/07-open-issue-analysis-workbook.md\">tutorials/07-open-issue-analysis-workbook.md</a>로 실제 issue 분석 로그를 남긴다</li>\n<li>full tutorial 5개를 순서대로 진행하거나, <code>tutorials/case-studies/cards/</code>와 <code>tutorials/good-first-issues/cards/</code>에서 짧은 사례를 병행</li>\n</ol>\n<h3 id=\"2-sil-트랙\">2) SIL 트랙</h3>\n<p>SILOptimizer, SILGen, Ownership SSA, 검증기 흐름을 이해하려면 이 순서가 좋습니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">개발 환경 문서</a></li>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-sil-deep-dive.md\">SIL 심화 가이드</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/02-debugging-environment-lab.md\">tutorials/02-debugging-environment-lab.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/case-studies/02-sil-location-explicitness.md\">tutorials/case-studies/02-sil-location-explicitness.md</a></li>\n</ol>\n<h3 id=\"3-심볼abi-트랙\">3) 심볼/ABI 트랙</h3>\n<p>심볼 이름, Node Tree, ABI 표기, <code>swift-demangle</code> 도구에 관심이 있다면 이 순서로 읽습니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">개발 환경 문서</a></li>\n<li><a href=\"#\" data-doc-href=\"2026-04-04-demangling-deep-dive.md\">Demangling 심화 가이드</a></li>\n<li>필요 시 <a href=\"#\" data-doc-href=\"2026-04-04-sil-deep-dive.md\">SIL 심화 가이드</a>의 SIL 심볼 예시와 교차 참고</li>\n</ol>\n<h3 id=\"4-이미-고쳐진-이슈를-내가-다시-고쳐보기-트랙\">4) “이미 고쳐진 이슈를 내가 다시 고쳐보기” 트랙</h3>\n<p>실제 수정 사례를 복원하며 배우고 싶다면 아래 순서가 좋습니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"tutorials/04-stage-modification-workflow.md\">tutorials/04-stage-modification-workflow.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/case-studies/01-sema-fixit-source-locs.md\">tutorials/case-studies/01-sema-fixit-source-locs.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/case-studies/02-sil-location-explicitness.md\">tutorials/case-studies/02-sil-location-explicitness.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/case-studies/03-irgen-fast-existential-casts.md\">tutorials/case-studies/03-irgen-fast-existential-casts.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/case-studies/04-optimizer-cond-fail-pass-architecture.md\">tutorials/case-studies/04-optimizer-cond-fail-pass-architecture.md</a></li>\n<li><a href=\"#\" data-doc-href=\"tutorials/case-studies/05-optimizer-enum-tag-comparison-correctness.md\">tutorials/case-studies/05-optimizer-enum-tag-comparison-correctness.md</a></li>\n</ol>\n<h3 id=\"5-이제-실제-open-issue에-들어가기-트랙\">5) “이제 실제 open issue에 들어가기” 트랙</h3>\n<p>실제 기여 후보를 단계적으로 경험하고 싶다면 이 순서가 좋습니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"tutorials/06-good-first-issues-swift-6.0-6.3.md\">tutorials/06-good-first-issues-swift-6.0-6.3.md</a></li>\n<li>diagnostics/fix-it 계열 open issue 1개 선택</li>\n<li><a href=\"#\" data-doc-href=\"tutorials/04-stage-modification-workflow.md\">tutorials/04-stage-modification-workflow.md</a> 체크리스트로 분석</li>\n<li>관련 case card / full tutorial과 교차 학습</li>\n</ol>\n<h3 id=\"6-30일-루프로-꾸준히-밀어붙이기-트랙\">6) “30일 루프로 꾸준히 밀어붙이기” 트랙</h3>\n<p>문서를 읽는 데서 그치지 않고 실제 학습 프로그램으로 운영하고 싶다면 아래 순서가 좋습니다.</p>\n<ol>\n<li><a href=\"#\" data-doc-href=\"tutorials/courses/30-day-diagnostics-track.md\">tutorials/courses/30-day-diagnostics-track.md</a></li>\n<li>매일 해당 day의 문서 / 카드 / issue를 수행</li>\n<li><a href=\"#\" data-doc-href=\"tutorials/open-issue-templates/session-log-template.md\">tutorials/open-issue-templates/session-log-template.md</a>으로 로그 축적</li>\n</ol>\n<hr />\n<h2 id=\"시간-기준-추천-순서\">시간 기준 추천 순서</h2>\n<h3 id=\"30분\">30분</h3>\n<ul>\n<li>튜토리얼 허브와 <code>00-curriculum-and-method</code></li>\n<li>개발 환경 문서의 <strong>빠른 시작</strong></li>\n<li>기여자 학습 가이드의 <strong>빠른 시작 + Layer 1</strong></li>\n<li>SIL 또는 Demangling 문서의 <strong>빠른 시작</strong> 중 하나</li>\n</ul>\n<h3 id=\"반나절\">반나절</h3>\n<ul>\n<li>튜토리얼의 <strong>01 / 02</strong></li>\n<li>개발 환경 문서의 <strong>빌드 / 증분 빌드 / 테스트 / 디버깅</strong> 장</li>\n<li>기여자 학습 가이드의 <strong>Phase 1~5</strong></li>\n<li>관심 deep dive 문서 하나의 <strong>빠른 시작 / 코드 지도 / 테스트</strong> 섹션</li>\n</ul>\n<h3 id=\"1주\">1주</h3>\n<ul>\n<li>튜토리얼 <strong>00~04 + 사례 1개 이상</strong></li>\n<li>개발 환경 문서 전체</li>\n<li>기여자 학습 가이드 전체</li>\n<li>SIL 또는 Demangling 문서 하나를 끝까지 정독</li>\n<li>나머지 deep dive 문서는 필요한 섹션만 선택해서 읽기</li>\n</ul>\n<hr />\n<h2 id=\"문서-운영-규칙\">문서 운영 규칙</h2>\n<p>새 문서를 추가하거나 기존 문서를 크게 확장할 때는 아래 원칙을 유지합니다.</p>\n<ol>\n<li><strong>파일명 규칙</strong>: <code>YYYY-MM-DD-topic.md</code></li>\n<li><strong>문서 구조 규칙</strong>: 가능하면 <code>대상 / 목표 / 전제 → 빠른 시작 → Layer 1/2/3</code> 흐름 유지</li>\n<li><strong>공통 설명 집중화</strong>: 빌드/테스트/디버깅의 공통 설명은 가능한 한 개발 환경 문서에 모으고, deep dive 문서에서는 링크로 참조</li>\n<li><strong>README 동기화</strong>: 새 문서를 추가하면 이 README의 <code>문서 지도</code>와 <code>추천 학습 트랙</code>도 함께 갱신</li>\n<li><strong>중복 최소화</strong>: 같은 명령/배경 설명을 여러 문서에 길게 반복하지 않고, 각 문서는 자기 주제의 핵심 의사결정에 집중</li>\n<li><strong>튜토리얼 분리 원칙</strong>: 설명형 레퍼런스와 실습형 튜토리얼을 한 문서에 과도하게 섞지 않음</li>\n<li><strong>연구 기반 명시</strong>: 튜토리얼 문서는 가능하면 학습 설계 근거를 짧게 남기고, 자세한 근거는 <code>tutorials/00-curriculum-and-method.md</code>에 집중</li>\n</ol>\n<hr />\n<h2 id=\"현재-추천-시작점\">현재 추천 시작점</h2>\n<ul>\n<li><strong>무조건 한 문서만 먼저 읽어야 한다면</strong>: <a href=\"#\" data-doc-href=\"2026-04-04-swift-compiler-dev-environment.md\">Swift 컴파일러 개발 환경 완전 정복</a></li>\n<li><strong>실습형으로 시작하고 싶다면</strong>: <a href=\"#\" data-doc-href=\"tutorials/README.md\">tutorials/README.md</a></li>\n<li><strong>처음 기여까지 가장 빨리 가고 싶다면</strong>: 개발 환경 → 기여자 학습 가이드</li>\n<li><strong>기술적으로 가장 먼저 깊게 파고들 주제를 고른다면</strong>: SIL 또는 Demangling 중 하나만 먼저 선택</li>\n</ul>",
+      "wordCount": 1201,
       "readingMinutes": 5,
       "difficulty": null,
       "durationMinutes": null,
@@ -3530,6 +3535,7 @@
         "tutorials/README.md",
         "tutorials/00-curriculum-and-method.md",
         "tutorials/01-build-environment-lab.md",
+        "2026-04-10-swift-official-reference-downloads.md",
         "2026-04-04-swift-compiler-dev-environment.md",
         "2026-04-04-swift-compiler-contributor-learning-guide.md",
         "2026-04-04-sil-deep-dive.md",
@@ -3580,7 +3586,7 @@
       "categoryLabel": "튜토리얼 허브",
       "track": "hub",
       "trackLabel": "문서 허브",
-      "order": 2013,
+      "order": 2014,
       "meta": {},
       "excerpt": "이 디렉토리는 `yoda/`의 **튜토리얼 전용 트랙**입니다.",
       "headings": [
@@ -3702,7 +3708,7 @@
       "categoryLabel": "30일 코스",
       "track": "foundation",
       "trackLabel": "기초 학습 루프",
-      "order": 4038,
+      "order": 4039,
       "meta": {},
       "excerpt": "이 디렉토리는 `yoda/tutorials/`에 흩어진 문서들을 **실제 학습 순서**로 묶은 코스 문서를 모아둡니다.",
       "headings": [
@@ -3774,7 +3780,7 @@
       "categoryLabel": "튜토리얼",
       "track": "foundation",
       "trackLabel": "기초 학습 루프",
-      "order": 3005,
+      "order": 3006,
       "meta": {
         "대상": "Swift 사용 경험은 있지만 컴파일러 내부 학습은 체계적으로 해본 적이 없는 개발자",
         "목표": "환경 구성, 관찰, 디버깅, 단계별 수정, 사례 복원의 전 과정을 반복 가능한 학습 루프로 바꾸기",
@@ -3978,7 +3984,7 @@
       "categoryLabel": "튜토리얼",
       "track": "foundation",
       "trackLabel": "기초 학습 루프",
-      "order": 3012,
+      "order": 3013,
       "meta": {
         "대상": "`yoda` 문서를 웹으로 소비하는 학습자와 향후 UI를 확장할 기여자",
         "목표": "왜 서비스형 UI를 버리고 개인용 2단 리더 구조를 택했는지 기록한다.",
@@ -4068,7 +4074,7 @@
       "categoryLabel": "템플릿",
       "track": "open_issue_workflow",
       "trackLabel": "Open Issue 분석 루프",
-      "order": 11054,
+      "order": 11055,
       "meta": {},
       "excerpt": "",
       "headings": [
@@ -4120,7 +4126,7 @@
       "categoryLabel": "템플릿",
       "track": "open_issue_workflow",
       "trackLabel": "Open Issue 분석 루프",
-      "order": 11055,
+      "order": 11056,
       "meta": {},
       "excerpt": "",
       "headings": [
@@ -4177,7 +4183,7 @@
       "categoryLabel": "튜토리얼 허브",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 2019,
+      "order": 2020,
       "meta": {},
       "excerpt": "이 디렉토리는 Swift 컴파일러의 **실제 merged fix**를 바탕으로 학습하는 사례 저장소입니다.",
       "headings": [
@@ -4302,7 +4308,7 @@
       "categoryLabel": "Merged 사례 튜토리얼",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 6015,
+      "order": 6016,
       "meta": {
         "단계": "SIL / DebugInfo 경계",
         "난이도": "중간",
@@ -4606,7 +4612,7 @@
       "categoryLabel": "Merged 사례 튜토리얼",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 6016,
+      "order": 6017,
       "meta": {
         "단계": "IRGen (SIL/Serialization 경계 포함)",
         "난이도": "중상",
@@ -4925,7 +4931,7 @@
       "categoryLabel": "Merged 사례 튜토리얼",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 6017,
+      "order": 6018,
       "meta": {
         "단계": "Optimizer / SILCombine",
         "난이도": "중상",
@@ -5229,7 +5235,7 @@
       "categoryLabel": "Merged 사례 튜토리얼",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 6018,
+      "order": 6019,
       "meta": {
         "단계": "Optimizer / Correctness",
         "난이도": "중상",
@@ -5524,7 +5530,7 @@
       "categoryLabel": "조사 원자료",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 10033,
+      "order": 10034,
       "meta": {
         "목적": "full tutorial / case card로 확장하기 전에, PR/issue 본문·핵심 파일·테스트·학습 포인트를 한 곳에 모아둔 원자료",
         "대상 범위": "첫 웨이브에서 우선 채택한 5개 PR 기반 사례",
@@ -5610,7 +5616,7 @@
       "categoryLabel": "템플릿",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 11020,
+      "order": 11021,
       "meta": {
         "문서 종류": "<card / tutorial>",
         "단계": "<Sema / SILGen / SIL / IRGen / ...>",
@@ -5772,7 +5778,7 @@
       "categoryLabel": "Merged 사례 카드",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 7021,
+      "order": 7022,
       "meta": {
         "단계": "Optimizer / SILCombine",
         "난이도": "중",
@@ -5936,7 +5942,7 @@
       "categoryLabel": "Merged 사례 카드",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 7022,
+      "order": 7023,
       "meta": {
         "단계": "Optimizer / Correctness",
         "난이도": "중",
@@ -6096,7 +6102,7 @@
       "categoryLabel": "Merged 사례 카드",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 7023,
+      "order": 7024,
       "meta": {
         "단계": "Sema / Availability",
         "난이도": "하",
@@ -6255,7 +6261,7 @@
       "categoryLabel": "Merged 사례 카드",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 7024,
+      "order": 7025,
       "meta": {
         "단계": "Sema / CSOptimizer",
         "난이도": "중상",
@@ -6409,7 +6415,7 @@
       "categoryLabel": "Merged 사례 카드",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 7025,
+      "order": 7026,
       "meta": {
         "단계": "Concurrency / Tests",
         "난이도": "하",
@@ -6563,7 +6569,7 @@
       "categoryLabel": "Merged 사례 카드",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 7026,
+      "order": 7027,
       "meta": {
         "단계": "IRGen",
         "난이도": "중상",
@@ -6724,7 +6730,7 @@
       "categoryLabel": "Merged 사례 카드",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 7027,
+      "order": 7028,
       "meta": {
         "단계": "Sema / Diagnostics",
         "난이도": "하",
@@ -6882,7 +6888,7 @@
       "categoryLabel": "Merged 사례 카드",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 7028,
+      "order": 7029,
       "meta": {
         "단계": "Sema / Fix-It",
         "난이도": "하",
@@ -7036,7 +7042,7 @@
       "categoryLabel": "Merged 사례 카드",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 7029,
+      "order": 7030,
       "meta": {
         "단계": "Optimizer / SIL",
         "난이도": "하",
@@ -7190,7 +7196,7 @@
       "categoryLabel": "Merged 사례 카드",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 7030,
+      "order": 7031,
       "meta": {
         "단계": "SIL / Utils",
         "난이도": "하",
@@ -7343,7 +7349,7 @@
       "categoryLabel": "Merged 사례 카드",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 7031,
+      "order": 7032,
       "meta": {
         "단계": "IRGen / Debugging",
         "난이도": "하",
@@ -7496,7 +7502,7 @@
       "categoryLabel": "Merged 사례 카드",
       "track": "merged_case_library",
       "trackLabel": "Merged 사례 라이브러리",
-      "order": 7032,
+      "order": 7033,
       "meta": {
         "단계": "SILGen / Diagnostics",
         "난이도": "하",
@@ -7649,7 +7655,7 @@
       "categoryLabel": "Open GFI 카드",
       "track": "open_gfi_library",
       "trackLabel": "Open GFI 라이브러리",
-      "order": 9043,
+      "order": 9044,
       "meta": {
         "Swift 버전 초점": "6.0",
         "이슈": "[#72662](https://github.com/swiftlang/swift/issues/72662)",
@@ -7872,7 +7878,7 @@
       "categoryLabel": "Open GFI 카드",
       "track": "open_gfi_library",
       "trackLabel": "Open GFI 라이브러리",
-      "order": 9045,
+      "order": 9046,
       "meta": {
         "Swift 버전 초점": "6.1",
         "이슈": "[#77835](https://github.com/swiftlang/swift/issues/77835)",
@@ -8101,7 +8107,7 @@
       "categoryLabel": "Open GFI 카드",
       "track": "open_gfi_library",
       "trackLabel": "Open GFI 라이브러리",
-      "order": 9046,
+      "order": 9047,
       "meta": {
         "Swift 버전 초점": "6.2",
         "이슈": "[#78362](https://github.com/swiftlang/swift/issues/78362)",
@@ -8328,7 +8334,7 @@
       "categoryLabel": "Open GFI 카드",
       "track": "open_gfi_library",
       "trackLabel": "Open GFI 라이브러리",
-      "order": 9048,
+      "order": 9049,
       "meta": {
         "Swift 버전 초점": "6.2",
         "이슈": "[#76320](https://github.com/swiftlang/swift/issues/76320)",
@@ -8558,7 +8564,7 @@
       "categoryLabel": "Open GFI 카드",
       "track": "open_gfi_library",
       "trackLabel": "Open GFI 라이브러리",
-      "order": 9049,
+      "order": 9050,
       "meta": {
         "Swift 버전 초점": "6.3",
         "이슈": "[#87830](https://github.com/swiftlang/swift/issues/87830)",
@@ -8788,7 +8794,7 @@
       "categoryLabel": "Open GFI 카드",
       "track": "open_gfi_library",
       "trackLabel": "Open GFI 라이브러리",
-      "order": 9050,
+      "order": 9051,
       "meta": {
         "Swift 버전 초점": "6.3",
         "이슈": "[#87322](https://github.com/swiftlang/swift/issues/87322)",
@@ -9029,7 +9035,7 @@
       "categoryLabel": "Open GFI 카드",
       "track": "open_gfi_library",
       "trackLabel": "Open GFI 라이브러리",
-      "order": 9051,
+      "order": 9052,
       "meta": {
         "Swift 버전 초점": "6.3",
         "이슈": "[#87324](https://github.com/swiftlang/swift/issues/87324)",
@@ -9249,7 +9255,7 @@
       "categoryLabel": "Open GFI 카드",
       "track": "open_gfi_library",
       "trackLabel": "Open GFI 라이브러리",
-      "order": 9052,
+      "order": 9053,
       "meta": {
         "Swift 버전 초점": "6.3",
         "이슈": "[#85882](https://github.com/swiftlang/swift/issues/85882)",
@@ -9479,7 +9485,7 @@
       "categoryLabel": "Open GFI 카드",
       "track": "open_gfi_library",
       "trackLabel": "Open GFI 라이브러리",
-      "order": 9053,
+      "order": 9054,
       "meta": {
         "Swift 버전 초점": "6.3",
         "이슈": "[#86693](https://github.com/swiftlang/swift/issues/86693)",
@@ -9700,7 +9706,7 @@
       "categoryLabel": "30일 코스",
       "track": "compiler_core_course",
       "trackLabel": "Compiler Core 30일 트랙",
-      "order": 4035,
+      "order": 4036,
       "meta": {
         "대상": "Parse / Sema / SILGen / IRGen 중심의 핵심 파이프라인을 폭넓게 이해하고 싶은 학습자",
         "목표": "30일 동안 컴파일러 단계별 진입점, 대표 버그 유형, 진단/IR/debug 경계를 체계적으로 익히는 수준 도달",
@@ -9983,7 +9989,7 @@
       "categoryLabel": "30일 코스",
       "track": "diagnostics_course",
       "trackLabel": "Diagnostics 30일 트랙",
-      "order": 4036,
+      "order": 4037,
       "meta": {
         "대상": "Swift 컴파일러 diagnostics와 fix-it 개선을 실제 기여 수준까지 배우고 싶은 학습자",
         "목표": "30일 동안 레퍼런스, merged 사례, open issue를 함께 소비해 diagnostics/fix-it 문제를 직접 분석하고 시도할 수 있는 수준 도달",
@@ -10290,7 +10296,7 @@
       "categoryLabel": "30일 코스",
       "track": "optimizer_course",
       "trackLabel": "Optimizer 30일 트랙",
-      "order": 4037,
+      "order": 4038,
       "meta": {
         "대상": "SILOptimizer, Swift optimizer pass, correctness/perf trade-off를 집중적으로 배우고 싶은 학습자",
         "목표": "30일 동안 optimizer 사례와 코드를 따라가며 pass 구조, legality, verifier, 테스트 전략을 이해하는 수준 도달",
@@ -10569,7 +10575,7 @@
       "categoryLabel": "코스 로그 샘플",
       "track": "diagnostics_course",
       "trackLabel": "Diagnostics 30일 트랙",
-      "order": 5039,
+      "order": 5040,
       "meta": {},
       "excerpt": "이 디렉토리는 `tutorials/courses/`를 실제로 따라갈 때 남길 수 있는 로그 예시를 모아둡니다.",
       "headings": [
@@ -10627,7 +10633,7 @@
       "categoryLabel": "코스 로그 샘플",
       "track": "diagnostics_course",
       "trackLabel": "Diagnostics 30일 트랙",
-      "order": 5040,
+      "order": 5041,
       "meta": {},
       "excerpt": "이 문서는 `30-day-diagnostics-track.md`를 따라갈 때 남길 수 있는 로그 예시입니다.",
       "headings": [
@@ -13328,6 +13334,86 @@
       ],
       "questionCount": 2,
       "practiceCount": 2
+    },
+    {
+      "id": "2026-04-10-swift-official-reference-downloads",
+      "path": "2026-04-10-swift-official-reference-downloads.md",
+      "title": "Swift 공식/준공식 참고 문서 다운로드",
+      "category": "reference",
+      "categoryLabel": "레퍼런스",
+      "track": "reference_library",
+      "trackLabel": "레퍼런스 라이브러리",
+      "order": 1004,
+      "meta": {},
+      "excerpt": "이 문서는 yoda 위키 안에서 바로 내려받을 수 있게 묶어둔 Swift 참고 문서 모음입니다.",
+      "headings": [
+        {
+          "level": 1,
+          "text": "Swift 공식/준공식 참고 문서 다운로드",
+          "id": "swift-공식준공식-참고-문서-다운로드"
+        },
+        {
+          "level": 2,
+          "text": "포함 문서",
+          "id": "포함-문서"
+        },
+        {
+          "level": 2,
+          "text": "추천 읽는 순서",
+          "id": "추천-읽는-순서"
+        },
+        {
+          "level": 2,
+          "text": "메모",
+          "id": "메모"
+        }
+      ],
+      "questionSections": [],
+      "days": [],
+      "codeBlocks": [],
+      "html": "<h1 id=\"swift-공식준공식-참고-문서-다운로드\">Swift 공식/준공식 참고 문서 다운로드</h1>\n<p>이 문서는 yoda 위키 안에서 바로 내려받을 수 있게 묶어둔 Swift 참고 문서 모음입니다.</p>\n<ul>\n<li>전체 ZIP 번들: <a href=\"downloads/swift-docs-20260410-081300.zip\" download>swift-docs-20260410-081300.zip</a></li>\n<li>번들 설명: <a href=\"downloads/swift-docs-20260410-081300/README.txt\" download>README.txt</a></li>\n<li>파일/해시 manifest: <a href=\"downloads/swift-docs-20260410-081300/MANIFEST.json\" download>MANIFEST.json</a></li>\n<li>원본 소스 묶음 폴더: <a href=\"downloads/swift-docs-20260410-081300/README.txt\" download>swift-docs-20260410-081300/</a></li>\n</ul>\n<h2 id=\"포함-문서\">포함 문서</h2>\n<ul>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/download.swift.org/docs/assets/generics.pdf\" download>generics.pdf</a> — 원본: <a href=\"https://download.swift.org/docs/assets/generics.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">https://download.swift.org/docs/assets/generics.pdf</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/Generics/README.md\" download>Generics README</a> — 원본: <a href=\"https://github.com/swiftlang/swift/blob/main/docs/Generics/README.md\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/swiftlang/swift/blob/main/docs/Generics/README.md</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/GenericsManifesto.md\" download>Generics Manifesto</a> — 원본: <a href=\"https://github.com/swiftlang/swift/blob/main/docs/GenericsManifesto.md\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/swiftlang/swift/blob/main/docs/GenericsManifesto.md</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/TypeChecker.md\" download>TypeChecker</a> — 원본: <a href=\"https://github.com/swiftlang/swift/blob/main/docs/TypeChecker.md\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/swiftlang/swift/blob/main/docs/TypeChecker.md</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/SIL/SIL.md\" download>SIL</a> — 원본: <a href=\"https://github.com/swiftlang/swift/blob/main/docs/SIL/SIL.md\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/swiftlang/swift/blob/main/docs/SIL/SIL.md</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/SIL/Ownership.md\" download>Ownership</a> — 원본: <a href=\"https://github.com/swiftlang/swift/blob/main/docs/SIL/Ownership.md\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/swiftlang/swift/blob/main/docs/SIL/Ownership.md</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/HighLevelSILOptimizations.rst\" download>HighLevelSILOptimizations</a> — 원본: <a href=\"https://github.com/swiftlang/swift/blob/main/docs/HighLevelSILOptimizations.rst\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/swiftlang/swift/blob/main/docs/HighLevelSILOptimizations.rst</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/CompilerPerformance.md\" download>Compiler Performance</a> — 원본: <a href=\"https://github.com/swiftlang/swift/blob/main/docs/CompilerPerformance.md\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/swiftlang/swift/blob/main/docs/CompilerPerformance.md</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/DriverInternals.md\" download>Driver Internals</a> — 원본: <a href=\"https://github.com/swiftlang/swift/blob/main/docs/DriverInternals.md\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/swiftlang/swift/blob/main/docs/DriverInternals.md</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/Diagnostics.md\" download>Diagnostics</a> — 원본: <a href=\"https://github.com/swiftlang/swift/blob/main/docs/Diagnostics.md\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/swiftlang/swift/blob/main/docs/Diagnostics.md</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/ABIStabilityManifesto.md\" download>ABI Stability Manifesto</a> — 원본: <a href=\"https://github.com/swiftlang/swift/blob/main/docs/ABIStabilityManifesto.md\" target=\"_blank\" rel=\"noopener noreferrer\">https://github.com/swiftlang/swift/blob/main/docs/ABIStabilityManifesto.md</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swift.org/documentation/swift-compiler/index.html\" download>Swift Compiler Architecture</a> — 원본: <a href=\"https://www.swift.org/documentation/swift-compiler/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.swift.org/documentation/swift-compiler/</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swift.org/documentation/index.html\" download>Swift docs index</a> — 원본: <a href=\"https://www.swift.org/documentation/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.swift.org/documentation/</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swift.org/documentation/tspl/index.html\" download>TSPL</a> — 원본: <a href=\"https://www.swift.org/documentation/tspl/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.swift.org/documentation/tspl/</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swift.org/documentation/api-design-guidelines/index.html\" download>API Design Guidelines</a> — 원본: <a href=\"https://www.swift.org/documentation/api-design-guidelines/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.swift.org/documentation/api-design-guidelines/</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swift.org/documentation/standard-library/index.html\" download>Standard Library</a> — 원본: <a href=\"https://www.swift.org/documentation/standard-library/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.swift.org/documentation/standard-library/</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swift.org/documentation/core-libraries/index.html\" download>Core Libraries</a> — 원본: <a href=\"https://www.swift.org/documentation/core-libraries/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.swift.org/documentation/core-libraries/</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swift.org/documentation/package-manager/index.html\" download>Package Manager</a> — 원본: <a href=\"https://www.swift.org/documentation/package-manager/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.swift.org/documentation/package-manager/</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swift.org/documentation/lldb/index.html\" download>LLDB</a> — 원본: <a href=\"https://www.swift.org/documentation/lldb/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.swift.org/documentation/lldb/</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swift.org/documentation/articles/value-and-reference-types.html\" download>Value and Reference Types</a> — 원본: <a href=\"https://www.swift.org/documentation/articles/value-and-reference-types.html\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.swift.org/documentation/articles/value-and-reference-types.html</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swift.org/documentation/concurrency/index.html\" download>Concurrency</a> — 원본: <a href=\"https://www.swift.org/documentation/concurrency/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.swift.org/documentation/concurrency/</a></li>\n</ul>\n<h2 id=\"추천-읽는-순서\">추천 읽는 순서</h2>\n<ol>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swift.org/documentation/swift-compiler/index.html\" download>Swift Compiler Architecture</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/Generics/README.md\" download>Generics README</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/GenericsManifesto.md\" download>Generics Manifesto</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/TypeChecker.md\" download>TypeChecker</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/SIL/SIL.md\" download>SIL</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/SIL/Ownership.md\" download>Ownership</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/HighLevelSILOptimizations.rst\" download>HighLevelSILOptimizations</a></li>\n<li><a href=\"downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/ABIStabilityManifesto.md\" download>ABI Stability Manifesto</a></li>\n</ol>\n<h2 id=\"메모\">메모</h2>\n<ul>\n<li>위 링크들은 yoda 정적 위키에서 같은 origin으로 서빙되므로 브라우저에서 바로 다운로드할 수 있습니다.</li>\n<li>ZIP은 전체 묶음 보관용이고, 개별 링크는 바로 열어보거나 내려받는 용도입니다.</li>\n<li>원본 URL은 각 항목에 함께 적어두었습니다.</li>\n</ul>",
+      "wordCount": 225,
+      "readingMinutes": 1,
+      "difficulty": null,
+      "durationMinutes": null,
+      "stageGuess": null,
+      "kindLabel": "reference",
+      "labels": [],
+      "concepts": [],
+      "whyItMatters": null,
+      "prContextSummary": null,
+      "relatedDocs": [
+        "docs/downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/Generics/README.md",
+        "docs/downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/GenericsManifesto.md",
+        "docs/downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/TypeChecker.md",
+        "docs/downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/SIL/SIL.md",
+        "docs/downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/SIL/Ownership.md",
+        "docs/downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/CompilerPerformance.md",
+        "docs/downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/DriverInternals.md",
+        "docs/downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/Diagnostics.md",
+        "docs/downloads/swift-docs-20260410-081300/files/swiftlang-swift/docs/ABIStabilityManifesto.md"
+      ],
+      "isPrimaryCourse": false,
+      "focusGroup": "later",
+      "coreOrder": 130,
+      "repoTestCandidates": [],
+      "entryFileGuesses": [],
+      "reproCommandGuesses": [],
+      "primaryTests": [],
+      "primaryFiles": [],
+      "sourceLinks": [],
+      "reviewAfterDays": [
+        3,
+        7
+      ],
+      "issueNumber": null,
+      "mergedPr": null,
+      "fixCommit": null,
+      "parentCommit": null,
+      "searchText": "Swift 공식/준공식 참고 문서 다운로드 이 문서는 yoda 위키 안에서 바로 내려받을 수 있게 묶어둔 Swift 참고 문서 모음입니다. 레퍼런스 레퍼런스 라이브러리 2026-04-10-swift-official-reference-downloads.md",
+      "practiceCards": [],
+      "questionCount": 0,
+      "practiceCount": 0
     }
   ],
   "categories": [

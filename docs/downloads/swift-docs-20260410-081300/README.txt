@@ -1,0 +1,25 @@
+Swift docs local bundle
+Base: /Users/oozoofrog/Downloads/swift-docs-20260410-081300
+
+Downloaded files:
+- generics.pdf: files/download.swift.org/docs/assets/generics.pdf (2502370 bytes)
+- Generics README: files/swiftlang-swift/docs/Generics/README.md (1962 bytes)
+- Generics Manifesto: files/swiftlang-swift/docs/GenericsManifesto.md (36574 bytes)
+- TypeChecker: files/swiftlang-swift/docs/TypeChecker.md (47921 bytes)
+- SIL: files/swiftlang-swift/docs/SIL/SIL.md (79133 bytes)
+- Ownership: files/swiftlang-swift/docs/SIL/Ownership.md (47748 bytes)
+- HighLevelSILOptimizations: files/swiftlang-swift/docs/HighLevelSILOptimizations.rst (18422 bytes)
+- Compiler Performance: files/swiftlang-swift/docs/CompilerPerformance.md (68221 bytes)
+- Driver Internals: files/swiftlang-swift/docs/DriverInternals.md (5993 bytes)
+- Diagnostics: files/swiftlang-swift/docs/Diagnostics.md (20014 bytes)
+- ABI Stability Manifesto: files/swiftlang-swift/docs/ABIStabilityManifesto.md (57523 bytes)
+- Swift docs index: files/swift.org/documentation/index.html (8155 bytes)
+- Swift Compiler Architecture: files/swift.org/documentation/swift-compiler/index.html (7256 bytes)
+- TSPL: files/swift.org/documentation/tspl/index.html (6581 bytes)
+- API Design Guidelines: files/swift.org/documentation/api-design-guidelines/index.html (28594 bytes)
+- Standard Library: files/swift.org/documentation/standard-library/index.html (8292 bytes)
+- Core Libraries: files/swift.org/documentation/core-libraries/index.html (8261 bytes)
+- Package Manager: files/swift.org/documentation/package-manager/index.html (601 bytes)
+- LLDB: files/swift.org/documentation/lldb/index.html (25832 bytes)
+- Value and Reference Types: files/swift.org/documentation/articles/value-and-reference-types.html (11974 bytes)
+- Concurrency: files/swift.org/documentation/concurrency/index.html (741 bytes)
